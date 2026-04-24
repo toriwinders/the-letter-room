@@ -21,7 +21,9 @@ alter table public.waitlist_signups
   add column if not exists stripe_subscription_id text,
   add column if not exists stripe_payment_link_id text,
   add column if not exists shipping_name text,
-  add column if not exists confirmation_email_sent_at timestamptz;
+  add column if not exists confirmation_email_sent_at timestamptz,
+  add column if not exists confirmation_email_attempted_at timestamptz,
+  add column if not exists confirmation_email_error text;
 
 create unique index if not exists waitlist_signups_stripe_checkout_session_id_key
   on public.waitlist_signups (stripe_checkout_session_id)

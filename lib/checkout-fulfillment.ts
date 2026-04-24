@@ -9,6 +9,8 @@ type WaitlistSignupRecord = {
   id: number;
   email: string;
   confirmation_email_sent_at: string | null;
+  confirmation_email_attempted_at?: string | null;
+  confirmation_email_error?: string | null;
 };
 
 function splitName(fullName: string | null | undefined) {
@@ -79,16 +81,33 @@ function buildConfirmationEmailHtml() {
 async function sendConfirmationEmail(to: string) {
   const resend = createResendClient();
 
-  const { error } = await resend.emails.send({
+  const { data, error } = await resend.emails.send({
     from: getResendFromEmail(),
     to: [to],
     subject: "Being offline is cool again.",
     html: buildConfirmationEmailHtml(),
+    text: [
+      "Hey there!",
+      "",
+      "You're officially a part of The Letter Room.",
+      "",
+      "In a world where everything is digital-first, this is intentionally not.",
+      "",
+      "Here's how it works. Something shows up addressed to you. You sit with it. And then get to bring it into real conversation.",
+      "",
+      "Your first issue is already in motion and will be arriving by mail soon.",
+      "",
+      "If you like it, tell me. Write back. Share it on social. Text your friends. Better yet, tell your friends about it next time you see them.",
+      "",
+      "Excited to hear what you think.",
+    ].join("\n"),
   });
 
   if (error) {
     throw new Error(error.message);
   }
+
+  return data;
 }
 
 export async function handleCompletedCheckoutSession(
@@ -106,7 +125,9 @@ export async function handleCompletedCheckoutSession(
 
   const { data: existingBySession, error: sessionLookupError } = await supabase
     .from("waitlist_signups")
-    .select("id,email,confirmation_email_sent_at")
+    .select(
+      "id,email,confirmation_email_sent_at,confirmation_email_attempted_at,confirmation_email_error",
+    )
     .eq("stripe_checkout_session_id", session.id)
     .maybeSingle();
 
@@ -146,7 +167,9 @@ export async function handleCompletedCheckoutSession(
         onConflict: "email",
       },
     )
-    .select("id,email,confirmation_email_sent_at")
+    .select(
+      "id,email,confirmation_email_sent_at,confirmation_email_attempted_at,confirmation_email_error",
+    )
     .single();
 
   if (upsertError) {
@@ -161,13 +184,17 @@ export async function handleCompletedCheckoutSession(
   }
 
   if (!existingRecord?.confirmation_email_sent_at && !savedRecord.confirmation_email_sent_at) {
+    const attemptedAt = new Date().toISOString();
+
     try {
       await sendConfirmationEmail(savedRecord.email);
 
       const { error: updateError } = await supabase
         .from("waitlist_signups")
         .update({
+          confirmation_email_attempted_at: attemptedAt,
           confirmation_email_sent_at: new Date().toISOString(),
+          confirmation_email_error: null,
           updated_at: new Date().toISOString(),
         })
         .eq("id", savedRecord.id);
@@ -176,7 +203,21 @@ export async function handleCompletedCheckoutSession(
         throw new Error(updateError.message);
       }
     } catch (error) {
-      console.error("Resend confirmation email failed", error);
+      const message =
+        error instanceof Error
+          ? error.message
+          : "Unknown Resend confirmation email error.";
+
+      await supabase
+        .from("waitlist_signups")
+        .update({
+          confirmation_email_attempted_at: attemptedAt,
+          confirmation_email_error: message,
+          updated_at: new Date().toISOString(),
+        })
+        .eq("id", savedRecord.id);
+
+      console.error("Resend confirmation email failed", message);
     }
   }
 
