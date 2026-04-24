@@ -13,8 +13,7 @@
   --color-line: rgba(23, 21, 20, 0.1);
   --font-brand: "Canela", "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
     Palatino, Georgia, serif;
-  --font-copy: "Lancelot", "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
-    Palatino, Georgia, serif;
+  --font-copy: "Neue Montreal", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -43,8 +42,8 @@ body {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 18% 0%, rgba(20, 93, 160, 0.05), transparent 28%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.26), transparent 22%);
+    radial-gradient(circle at 18% 0%, rgba(20, 93, 160, 0.035), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), transparent 22%);
 }
 
 .page-grid {
@@ -107,6 +106,7 @@ body {
   border: 1px solid transparent;
   background: var(--color-ink);
   color: var(--color-background);
+  cursor: pointer;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
@@ -129,6 +129,7 @@ body {
   border: 1px solid var(--color-border-strong);
   background: transparent;
   color: var(--color-ink);
+  cursor: pointer;
   transition: background-color 180ms ease;
 }
 
@@ -138,6 +139,7 @@ body {
 
 .text-link {
   color: var(--color-muted);
+  cursor: pointer;
   text-decoration: underline;
   text-decoration-color: rgba(20, 93, 160, 0.32);
   text-underline-offset: 0.22em;

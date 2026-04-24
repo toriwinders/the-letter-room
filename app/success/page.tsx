@@ -1,7 +1,13 @@
 import { BrandLockup } from "@/components/brand-lockup";
-import { WaitlistFlow } from "@/components/waitlist-flow";
+import { SuccessFlow } from "@/components/success-flow";
 
-export default function HomePage() {
+export default async function SuccessPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ email?: string }>;
+}) {
+  const { email } = await searchParams;
+
   return (
     <main className="min-h-screen bg-[var(--color-background)] text-[var(--color-ink)]">
       <div className="page-glow" aria-hidden="true" />
@@ -17,12 +23,9 @@ export default function HomePage() {
           <BrandLockup />
         </header>
 
-        <section
-          aria-labelledby="waitlist-heading"
-          className="relative mt-2 flex flex-1 items-start lg:mt-4"
-        >
+        <section className="relative mt-2 flex flex-1 items-start lg:mt-4">
           <div className="w-full max-w-[44rem] lg:pl-8 xl:pl-16">
-            <WaitlistFlow />
+            <SuccessFlow email={email} />
           </div>
         </section>
       </div>
