@@ -30,12 +30,13 @@ function splitName(fullName: string | null | undefined) {
 }
 
 function getBestAddress(session: Stripe.Checkout.Session) {
-  const shippingAddress = session.shipping_details?.address;
+  const shippingDetails = session.collected_information?.shipping_details;
+  const shippingAddress = shippingDetails?.address;
   const billingAddress = session.customer_details?.address;
   const address = shippingAddress ?? billingAddress ?? null;
 
   return {
-    name: session.shipping_details?.name ?? session.customer_details?.name ?? null,
+    name: shippingDetails?.name ?? session.customer_details?.name ?? null,
     line1: address?.line1 ?? null,
     line2: address?.line2 ?? null,
     city: address?.city ?? null,
