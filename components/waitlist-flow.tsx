@@ -6,9 +6,6 @@ import { FormEvent, useId, useState } from "react";
 const headline =
   "A monthly mailed letter for people craving more depth and conversation in a chronically online world.";
 
-const supportingCopy =
-  "Musings on modern life, delivered by mail. For people who want more interesting things to talk about.";
-
 export function WaitlistFlow() {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -95,13 +92,10 @@ function WaitlistForm({
     <div className="mx-auto max-w-3xl text-center">
       <h1
         id="waitlist-heading"
-        className="copy-rhythm mx-auto max-w-[16ch] text-balance text-[1.5rem] leading-[0.98] sm:max-w-[18ch] sm:text-[2rem] md:max-w-[22ch] md:text-[2.35rem] lg:max-w-[24ch] lg:text-[2.7rem]"
+        className="copy-rhythm mx-auto max-w-[18ch] text-balance text-[1.5rem] leading-[0.98] sm:max-w-[22ch] sm:text-[2rem] md:max-w-[26ch] md:text-[2.35rem] lg:max-w-[34ch] lg:text-[2.7rem]"
       >
         {headline}
       </h1>
-      <p className="copy-rhythm mx-auto mt-5 max-w-[38rem] text-[0.84rem] leading-[1.3] text-[var(--color-muted)] sm:text-[0.88rem] lg:max-w-none lg:whitespace-nowrap">
-        {supportingCopy}
-      </p>
 
       <form className="mx-auto mt-9 max-w-[38rem]" noValidate onSubmit={onSubmit}>
         <label className="sr-only" htmlFor={emailId}>
