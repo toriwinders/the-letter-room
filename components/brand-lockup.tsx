@@ -2,16 +2,20 @@ import Image from "next/image";
 
 export function BrandLockup() {
   return (
-    <div className="relative ml-0 max-w-[56rem] pt-3 sm:pt-4 lg:pt-5">
-      <div className="relative w-full max-w-[46rem] md:max-w-[50rem] lg:max-w-[54rem]">
+    <div className="relative mx-auto w-full max-w-[56rem] pt-2 sm:pt-3 lg:pt-4">
+      <div className="relative mx-auto w-full max-w-[40rem] overflow-hidden sm:max-w-[44rem] lg:max-w-[50rem]">
+        <div className="relative h-[10.5rem] sm:h-[13rem] md:h-[15rem] lg:h-[17rem]">
         <Image
           src="/the-letter-room-logo.png"
           alt="The Letter Room. Something worth talking about."
           width={1992}
           height={2300}
           priority
-          className="h-auto w-full"
+          className="object-contain object-bottom"
+          fill
+          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 44rem, 50rem"
         />
+        </div>
       </div>
     </div>
   );

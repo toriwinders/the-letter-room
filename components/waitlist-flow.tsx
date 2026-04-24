@@ -65,7 +65,7 @@ function WaitlistForm({
     <div className="mx-auto max-w-3xl text-center">
       <h1
         id="waitlist-heading"
-        className="copy-rhythm mx-auto max-w-[16ch] text-balance text-[2rem] leading-[0.98] sm:text-[2.8rem] md:max-w-[18ch] md:text-[3.2rem] lg:max-w-[20ch] lg:text-[3.75rem]"
+        className="copy-rhythm mx-auto max-w-[16ch] text-balance text-[2rem] leading-[0.98] sm:max-w-[18ch] sm:text-[2.8rem] md:max-w-[22ch] md:text-[3.2rem] lg:max-w-[24ch] lg:text-[3.75rem]"
       >
         {headline}
       </h1>
