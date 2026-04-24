@@ -1,4 +1,4 @@
-create table public.waitlist_signups (
+create table if not exists public.waitlist_signups (
   id bigint generated always as identity primary key,
   email text not null unique,
   first_name text,
@@ -14,3 +14,15 @@ create table public.waitlist_signups (
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+alter table public.waitlist_signups
+  add column if not exists stripe_checkout_session_id text,
+  add column if not exists stripe_customer_id text,
+  add column if not exists stripe_subscription_id text,
+  add column if not exists stripe_payment_link_id text,
+  add column if not exists shipping_name text,
+  add column if not exists confirmation_email_sent_at timestamptz;
+
+create unique index if not exists waitlist_signups_stripe_checkout_session_id_key
+  on public.waitlist_signups (stripe_checkout_session_id)
+  where stripe_checkout_session_id is not null;
