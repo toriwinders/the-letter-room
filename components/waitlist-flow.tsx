@@ -65,7 +65,7 @@ export function WaitlistFlow() {
       >
         <h2
           id="how-it-works-heading"
-          className="copy-rhythm mx-auto mb-5 text-[0.84rem] leading-tight text-[var(--color-muted)] sm:mb-6 sm:text-[0.88rem]"
+          className="copy-rhythm mx-auto mb-5 text-[0.96rem] leading-tight text-[var(--color-muted)] sm:mb-6 sm:text-[1.06rem] md:text-[1.22rem]"
         >
           How it works
         </h2>
@@ -87,7 +87,7 @@ export function WaitlistFlow() {
         </div>
       </section>
 
-      <div className="mx-auto mt-10 max-w-[28rem] sm:mt-11">
+      <div className="mx-auto mt-12 max-w-[28rem] sm:mt-14">
         <Link
           className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
           href="https://buy.stripe.com/dRmfZgckpge52St2t84gg00"
