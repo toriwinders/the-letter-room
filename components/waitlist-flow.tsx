@@ -29,22 +29,55 @@ const headline: ReactNode = (
   </>
 );
 
-const supportingCopy =
-  "Each month receive reflections on modern life, paired with a prompt for more interesting conversations.";
+const ritualColumns = [
+  {
+    title: "Get your letter",
+    body: "Delivered by mail each month.",
+  },
+  {
+    title: "Read it",
+    body: "A short reflection on modern life, paired with a conversation prompt.",
+  },
+  {
+    title: "Bring it with you",
+    body: "Dinner. Walks. Group chats. Nights with friends.",
+  },
+] as const;
 
 export function WaitlistFlow() {
   return (
-    <div className="mx-auto w-full max-w-4xl text-center">
+    <div className="mx-auto w-full max-w-[64rem] text-center">
       <h1
         id="waitlist-heading"
-        className="copy-rhythm mx-auto max-w-[21ch] text-balance text-[0.98rem] leading-[1.08] sm:max-w-[24ch] sm:text-[1.12rem] md:max-w-[34ch] md:text-[1.56rem] lg:max-w-[36ch] lg:text-[1.78rem]"
+        className="copy-rhythm mx-auto max-w-[23ch] text-balance text-[0.98rem] leading-[1.08] sm:max-w-[28ch] sm:text-[1.12rem] md:max-w-[40ch] md:text-[1.56rem] lg:max-w-[44ch] lg:text-[1.78rem]"
       >
         {headline}
       </h1>
 
-      <p className="copy-rhythm mx-auto mt-5 max-w-[19rem] text-[0.9rem] leading-[1.42] text-[var(--color-muted)] sm:max-w-[28rem] sm:text-[0.94rem] md:max-w-[34rem] md:text-[0.98rem]">
-        {supportingCopy}
-      </p>
+      <section
+        aria-labelledby="how-it-works-heading"
+        className="mx-auto mt-7 w-full max-w-[60rem] sm:mt-8"
+      >
+        <h2 id="how-it-works-heading" className="sr-only">
+          How it works
+        </h2>
+
+        <div className="flex flex-col divide-y divide-[var(--color-line)] md:flex-row md:divide-x md:divide-y-0">
+          {ritualColumns.map((column) => (
+            <div
+              key={column.title}
+              className="flex-1 px-0 py-5 first:pt-0 last:pb-0 md:px-6 md:py-0"
+            >
+              <h3 className="copy-rhythm text-[0.98rem] leading-tight text-[var(--color-ink)] sm:text-[1rem]">
+                {column.title}
+              </h3>
+              <p className="copy-rhythm mx-auto mt-2 max-w-[16rem] text-[0.88rem] leading-[1.42] text-[var(--color-muted)] sm:max-w-[18rem] sm:text-[0.92rem] md:max-w-[15rem] lg:max-w-[17rem]">
+                {column.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <div className="mx-auto mt-8 max-w-[28rem]">
         <Link
