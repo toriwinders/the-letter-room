@@ -3,7 +3,7 @@ import Image from "next/image";
 export function BrandLockup() {
   return (
     <div className="relative mx-auto w-full max-w-[96rem] pt-2 sm:pt-3 lg:pt-4">
-      <div className="relative mx-auto w-full max-w-[20rem] sm:max-w-[28rem] md:max-w-[36rem] lg:max-w-[46rem]">
+      <div className="relative mx-auto w-full max-w-[24rem] sm:max-w-[34rem] md:max-w-[46rem] lg:max-w-[60rem]">
         <div className="relative aspect-[7/3]">
           <Image
             src="/the-letter-room-lockup.png"
@@ -13,7 +13,7 @@ export function BrandLockup() {
             priority
             className="object-contain"
             fill
-            sizes="(max-width: 640px) 18rem, (max-width: 768px) 24rem, (max-width: 1024px) 30rem, 38rem"
+            sizes="(max-width: 640px) 24rem, (max-width: 768px) 34rem, (max-width: 1024px) 46rem, 60rem"
           />
         </div>
       </div>
