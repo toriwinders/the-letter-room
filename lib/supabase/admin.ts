@@ -24,7 +24,9 @@ function decodeJwtPayload(token: string) {
   }
 }
 
-const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const SERVICE_ROLE_KEY =
+  process.env.SUPABASE_SERVICE_ROLE_KEY ??
+  process.env.NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY;
 const EXPLICIT_SUPABASE_URL = process.env.SUPABASE_URL ?? process.env.NEXT_PUBLIC_SUPABASE_URL;
 
 const DERIVED_SUPABASE_URL =
