@@ -4,10 +4,10 @@ import { useRouter } from "next/navigation";
 import { FormEvent, useId, useState } from "react";
 
 const headline =
-  "Musings on modern life, delivered by mail. For people who want more interesting things to talk about.";
+  "A monthly mailed letter for people craving more depth and conversation in a chronically online world.";
 
 const supportingCopy =
-  "Each month, receive a printed essay and a conversation card designed to be brought into real life.";
+  "Musings on modern life, delivered by mail. For people who want more interesting things to talk about.";
 
 export function WaitlistFlow() {
   const router = useRouter();
@@ -62,18 +62,18 @@ function WaitlistForm({
   const emailErrorId = useId();
 
   return (
-    <div className="max-w-3xl">
+    <div className="mx-auto max-w-3xl text-center">
       <h1
         id="waitlist-heading"
-        className="copy-rhythm max-w-[16ch] text-balance text-[2rem] leading-[0.98] sm:text-[2.8rem] md:text-[3.2rem] lg:text-[3.75rem]"
+        className="copy-rhythm mx-auto max-w-[16ch] text-balance text-[2rem] leading-[0.98] sm:text-[2.8rem] md:max-w-[18ch] md:text-[3.2rem] lg:max-w-[20ch] lg:text-[3.75rem]"
       >
         {headline}
       </h1>
-      <p className="copy-rhythm mt-5 max-w-[38rem] text-[1rem] leading-relaxed text-[var(--color-muted)] sm:text-[1.08rem]">
+      <p className="copy-rhythm mx-auto mt-5 max-w-[38rem] text-[1rem] leading-relaxed text-[var(--color-muted)] sm:text-[1.08rem] lg:max-w-none lg:whitespace-nowrap">
         {supportingCopy}
       </p>
 
-      <form className="mt-9 max-w-[38rem]" noValidate onSubmit={onSubmit}>
+      <form className="mx-auto mt-9 max-w-[38rem]" noValidate onSubmit={onSubmit}>
         <label className="sr-only" htmlFor={emailId}>
           Email address
         </label>
@@ -94,10 +94,7 @@ function WaitlistForm({
               required
             />
           </div>
-          <button
-            className="button-primary min-h-12 px-6 py-3 text-base"
-            type="submit"
-          >
+          <button className="button-primary min-h-12 px-6 py-3 text-base" type="submit">
             Join the waitlist
           </button>
         </div>
@@ -110,7 +107,7 @@ function WaitlistForm({
           {emailError}
         </p>
 
-        <p className="copy-rhythm mt-3 max-w-lg text-sm leading-relaxed text-[var(--color-muted)] sm:text-[0.96rem]">
+        <p className="copy-rhythm mx-auto mt-3 max-w-lg text-sm leading-relaxed text-[var(--color-muted)] sm:text-[0.96rem]">
           Join the waitlist to receive your first letter, our complimentary
           mailing before founding spots open.
         </p>
