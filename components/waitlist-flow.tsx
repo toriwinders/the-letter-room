@@ -1,10 +1,14 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { FormEvent, useId, useState } from "react";
+import { FormEvent, ReactNode, useId, useState } from "react";
 
-const headline =
-  "A monthly mailed letter for people craving more depth and conversation in a chronically online world.";
+const headline: ReactNode = (
+  <>
+    A monthly mailed letter for people craving more depth and conversation
+    <br className="hidden md:block" /> in a chronically online world.
+  </>
+);
 
 export function WaitlistFlow() {
   const router = useRouter();
@@ -92,7 +96,7 @@ function WaitlistForm({
     <div className="mx-auto max-w-4xl text-center">
       <h1
         id="waitlist-heading"
-        className="copy-rhythm mx-auto max-w-[16ch] text-balance text-[1.4rem] leading-[1.02] sm:text-[1.85rem] md:max-w-[20ch] md:text-[2.15rem] lg:max-w-[22ch] lg:text-[2.45rem]"
+        className="copy-rhythm mx-auto max-w-[18ch] text-balance text-[1.12rem] leading-[1.05] sm:max-w-[20ch] sm:text-[1.35rem] md:max-w-[38ch] md:text-[1.68rem] lg:max-w-[40ch] lg:text-[1.9rem]"
       >
         {headline}
       </h1>
