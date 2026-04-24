@@ -13,9 +13,9 @@ export default function HomePage() {
 
         <section
           aria-labelledby="waitlist-heading"
-          className="relative mt-8 flex flex-1 items-start justify-center sm:mt-10 lg:mt-12"
+          className="relative mt-6 flex flex-1 items-start justify-center sm:mt-8 lg:mt-10"
         >
-          <div className="w-full max-w-[52rem]">
+          <div className="w-full max-w-[56rem]">
             <WaitlistFlow />
           </div>
         </section>

@@ -1,157 +1,68 @@
-"use client";
-
-import { useRouter } from "next/navigation";
-import { FormEvent, ReactNode, useId, useState } from "react";
+import Link from "next/link";
+import { ReactNode } from "react";
 
 const headline: ReactNode = (
   <>
-    <span className="md:hidden">
-      A monthly mailed letter
+    <span className="sm:hidden">
+      A monthly mailed
       <br />
-      for people craving more
+      letter for people
       <br />
-      depth and conversation
+      craving more depth
+      <br />
+      and conversation
       <br />
       in a chronically online world.
     </span>
+    <span className="hidden sm:inline md:hidden">
+      A monthly mailed letter for
+      <br />
+      people craving more depth
+      <br />
+      and conversation in a
+      <br />
+      chronically online world.
+    </span>
     <span className="hidden md:inline">
       A monthly mailed letter for people craving more depth and conversation
-      <br className="hidden md:block" /> in a chronically online world.
+      <br />
+      in a chronically online world.
     </span>
   </>
 );
 
+const supportingCopy =
+  "Each month receive a monthly letter, delivered by mail. Reflections on modern life, paired with a prompt so you have more interesting conversations.";
+
 export function WaitlistFlow() {
-  const router = useRouter();
-  const [email, setEmail] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleWaitlistSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    void submitWaitlist();
-  };
-
-  const submitWaitlist = async () => {
-    const normalizedEmail = email.trim();
-
-    if (!normalizedEmail) {
-      setEmailError("Please enter your email address.");
-      return;
-    }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
-      setEmailError("Please enter a valid email address.");
-      return;
-    }
-
-    setEmailError("");
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch("/api/waitlist", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email: normalizedEmail }),
-      });
-
-      const payload = (await response.json()) as { error?: string };
-
-      if (!response.ok) {
-        throw new Error(payload.error || "Something went wrong while saving your email.");
-      }
-
-      router.push(`/success?email=${encodeURIComponent(normalizedEmail)}`);
-    } catch (error) {
-      setEmailError(
-        error instanceof Error
-          ? error.message
-          : "Something went wrong while saving your email.",
-      );
-      setIsSubmitting(false);
-    }
-  };
-
   return (
-    <div className="w-full">
-      <WaitlistForm
-        email={email}
-        emailError={emailError}
-        isSubmitting={isSubmitting}
-        onEmailChange={setEmail}
-        onSubmit={handleWaitlistSubmit}
-      />
-    </div>
-  );
-}
-
-function WaitlistForm({
-  email,
-  emailError,
-  isSubmitting,
-  onEmailChange,
-  onSubmit,
-}: {
-  email: string;
-  emailError: string;
-  isSubmitting: boolean;
-  onEmailChange: (value: string) => void;
-  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
-}) {
-  const emailId = useId();
-  const emailErrorId = useId();
-
-  return (
-    <div className="mx-auto max-w-4xl text-center">
+    <div className="mx-auto w-full max-w-4xl text-center">
       <h1
         id="waitlist-heading"
-        className="copy-rhythm mx-auto max-w-[20ch] text-balance text-[0.94rem] leading-[1.06] sm:max-w-[21ch] sm:text-[1.08rem] md:max-w-[38ch] md:text-[1.68rem] lg:max-w-[40ch] lg:text-[1.9rem]"
+        className="copy-rhythm mx-auto max-w-[18ch] text-balance text-[1.02rem] leading-[1.08] sm:max-w-[20ch] sm:text-[1.18rem] md:max-w-[34ch] md:text-[1.56rem] lg:max-w-[36ch] lg:text-[1.78rem]"
       >
         {headline}
       </h1>
 
-      <form className="mx-auto mt-8 max-w-[40rem]" noValidate onSubmit={onSubmit}>
-        <label className="sr-only" htmlFor={emailId}>
-          Email address
-        </label>
-        <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
-          <div className="field-shell px-0 py-3 sm:flex-1">
-            <input
-              id={emailId}
-              className="field-input text-base"
-              type="email"
-              name="email"
-              autoComplete="email"
-              enterKeyHint="go"
-              placeholder="Email address"
-              value={email}
-              onChange={(event) => onEmailChange(event.target.value)}
-              aria-invalid={emailError ? "true" : "false"}
-              aria-describedby={emailError ? emailErrorId : undefined}
-              disabled={isSubmitting}
-              required
-            />
-          </div>
-          <button className="button-primary min-h-12 px-6 py-3 text-base" type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Joining..." : "Join the waitlist"}
-          </button>
-        </div>
+      <p className="copy-rhythm mx-auto mt-5 max-w-[19rem] text-[0.9rem] leading-[1.42] text-[var(--color-muted)] sm:max-w-[28rem] sm:text-[0.94rem] md:max-w-[36rem] md:text-[0.98rem]">
+        {supportingCopy}
+      </p>
 
-        <p
-          id={emailError ? emailErrorId : undefined}
-          className="mt-3 min-h-6 text-sm text-[#9a3e36]"
-          aria-live="polite"
+      <div className="mx-auto mt-8 max-w-[28rem]">
+        <Link
+          className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
+          href="https://buy.stripe.com/cNi8wI4Xe3P90ErdR63gk01"
+          target="_blank"
+          rel="noreferrer"
         >
-          {emailError}
-        </p>
+          Join the club
+        </Link>
 
-        <p className="copy-rhythm mx-auto mt-4 max-w-[22rem] text-sm leading-relaxed text-[var(--color-muted)] sm:max-w-[34rem] sm:text-[0.94rem]">
-          Join the waitlist to receive your first letter, our complimentary
-          mailing before founding spots open.
+        <p className="copy-rhythm mx-auto mt-4 max-w-[22rem] text-sm leading-relaxed text-[var(--color-muted)] sm:max-w-[28rem] sm:text-[0.94rem]">
+          Receive the first issue complimentary as a founding member. We have
+          limited spots open.
         </p>
-      </form>
+      </div>
     </div>
   );
 }
