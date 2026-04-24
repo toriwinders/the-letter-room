@@ -3,6 +3,8 @@ import { NextResponse } from "next/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { normalizeEmail } from "@/lib/waitlist";
 
+export const runtime = "nodejs";
+
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as { email?: string };
@@ -34,8 +36,11 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("waitlist signup failed", error);
 
+    const message =
+      error instanceof Error ? error.message : "Something went wrong while saving your email.";
+
     return NextResponse.json(
-      { error: "Something went wrong while saving your email." },
+      { error: message },
       { status: 500 },
     );
   }

@@ -3,6 +3,8 @@ import { NextResponse } from "next/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { normalizeAddressPayload, normalizeEmail, type WaitlistAddressPayload } from "@/lib/waitlist";
 
+export const runtime = "nodejs";
+
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as { email?: string } & Partial<WaitlistAddressPayload>;
@@ -44,8 +46,13 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("mailing details save failed", error);
 
+    const message =
+      error instanceof Error
+        ? error.message
+        : "Something went wrong while saving your mailing details.";
+
     return NextResponse.json(
-      { error: "Something went wrong while saving your mailing details." },
+      { error: message },
       { status: 500 },
     );
   }

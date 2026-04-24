@@ -92,12 +92,12 @@ function WaitlistForm({
     <div className="mx-auto max-w-3xl text-center">
       <h1
         id="waitlist-heading"
-        className="copy-rhythm mx-auto max-w-[18ch] text-balance text-[1.5rem] leading-[0.98] sm:max-w-[22ch] sm:text-[2rem] md:max-w-[26ch] md:text-[2.35rem] lg:max-w-[34ch] lg:text-[2.7rem]"
+        className="copy-rhythm mx-auto max-w-[18ch] text-balance text-[1.35rem] leading-[1.02] sm:max-w-[22ch] sm:text-[1.75rem] md:max-w-[26ch] md:text-[2.05rem] lg:max-w-[28ch] lg:text-[2.25rem]"
       >
         {headline}
       </h1>
 
-      <form className="mx-auto mt-9 max-w-[38rem]" noValidate onSubmit={onSubmit}>
+      <form className="mx-auto mt-7 max-w-[38rem]" noValidate onSubmit={onSubmit}>
         <label className="sr-only" htmlFor={emailId}>
           Email address
         </label>
