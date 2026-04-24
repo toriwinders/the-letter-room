@@ -49,7 +49,7 @@ export function WaitlistFlow() {
       <div className="mx-auto mt-8 max-w-[28rem]">
         <Link
           className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
-          href="https://buy.stripe.com/cNi8wI4Xe3P90ErdR63gk01"
+          href="https://buy.stripe.com/dRmfZgckpge52St2t84gg00"
           target="_blank"
           rel="noreferrer"
         >
