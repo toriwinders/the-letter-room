@@ -3,8 +3,8 @@ import Image from "next/image";
 export function BrandLockup() {
   return (
     <div className="relative mx-auto w-full max-w-[56rem] pt-2 sm:pt-3 lg:pt-4">
-      <div className="relative mx-auto w-full max-w-[40rem] overflow-hidden sm:max-w-[44rem] lg:max-w-[50rem]">
-        <div className="relative h-[10.5rem] sm:h-[13rem] md:h-[15rem] lg:h-[17rem]">
+      <div className="relative mx-auto w-full max-w-[48rem] overflow-hidden sm:max-w-[54rem] lg:max-w-[62rem]">
+        <div className="relative h-[12.5rem] sm:h-[15rem] md:h-[18rem] lg:h-[21rem]">
         <Image
           src="/the-letter-room-logo.png"
           alt="The Letter Room. Something worth talking about."

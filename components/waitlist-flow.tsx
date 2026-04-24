@@ -69,7 +69,7 @@ function WaitlistForm({
       >
         {headline}
       </h1>
-      <p className="copy-rhythm mx-auto mt-5 max-w-[38rem] text-[1rem] leading-relaxed text-[var(--color-muted)] sm:text-[1.08rem] lg:max-w-none lg:whitespace-nowrap">
+      <p className="copy-rhythm mx-auto mt-5 max-w-[38rem] text-[0.84rem] leading-[1.3] text-[var(--color-muted)] sm:text-[0.88rem] lg:max-w-none lg:whitespace-nowrap">
         {supportingCopy}
       </p>
 
