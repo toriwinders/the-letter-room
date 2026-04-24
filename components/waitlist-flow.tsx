@@ -90,7 +90,7 @@ export function WaitlistFlow() {
   };
 
   return (
-    <div className="editorial-card rounded-[2rem] border border-[var(--color-border)] px-5 py-7 sm:px-10 sm:py-10">
+    <div className="w-full">
       {step === "waitlist" ? (
         <WaitlistForm
           email={email}
@@ -135,23 +135,23 @@ function WaitlistForm({
   const emailErrorId = useId();
 
   return (
-    <div className="mx-auto max-w-2xl text-center">
+    <div className="max-w-3xl">
       <h1
         id="waitlist-heading"
-        className="text-balance text-[2rem] leading-[1.06] sm:text-[2.8rem]"
+        className="max-w-4xl text-balance text-[2.25rem] leading-[0.96] tracking-[-0.03em] sm:text-[3.35rem] lg:text-[4.6rem]"
       >
         {headline}
       </h1>
-      <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-[var(--color-muted)] sm:text-[1.28rem]">
+      <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--color-muted)] sm:text-[1.22rem]">
         {supportingCopy}
       </p>
 
-      <form className="mt-8" noValidate onSubmit={onSubmit}>
+      <form className="mt-10 max-w-xl" noValidate onSubmit={onSubmit}>
         <label className="sr-only" htmlFor={emailId}>
           Email address
         </label>
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <div className="field-shell rounded-full px-5 py-4 sm:flex-1">
+        <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+          <div className="field-shell px-0 py-3 sm:flex-1">
             <input
               id={emailId}
               className="field-input text-base"
@@ -167,7 +167,7 @@ function WaitlistForm({
             />
           </div>
           <button
-            className="button-primary rounded-full px-7 py-4 text-sm uppercase tracking-[0.18em] sm:px-8"
+            className="button-primary min-h-12 px-6 py-3 text-sm uppercase tracking-[0.18em]"
             type="submit"
           >
             Join the waitlist
@@ -182,7 +182,7 @@ function WaitlistForm({
           {emailError}
         </p>
 
-        <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-[var(--color-muted)] sm:text-base">
+        <p className="mt-3 max-w-lg text-sm leading-relaxed text-[var(--color-muted)] sm:text-base">
           Join the waitlist to receive Letter Zero, our complimentary first
           mailing before founding spots open.
         </p>
@@ -212,15 +212,15 @@ function AddressForm({
   };
 
   return (
-    <div className="mx-auto max-w-2xl">
-      <div className="text-center">
+    <div className="max-w-2xl">
+      <div>
         <p className="text-sm uppercase tracking-[0.24em] text-[var(--color-brand)]">
           You’re in.
         </p>
-        <h1 className="mt-3 text-balance text-[2rem] leading-[1.08] sm:text-[2.65rem]">
+        <h1 className="mt-3 max-w-2xl text-balance text-[2rem] leading-[1.02] tracking-[-0.03em] sm:text-[3rem]">
           You’re officially on the waitlist for The Letter Room.
         </h1>
-        <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-[var(--color-muted)] sm:text-[1.18rem]">
+        <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--color-muted)] sm:text-[1.18rem]">
           Want to receive the first letter by mail? Share your mailing address
           below and we’ll send you our complimentary first edition before
           launch.
@@ -297,10 +297,7 @@ function AddressForm({
         </p>
 
         <div className="flex flex-col items-center gap-3 sm:flex-row">
-          <button
-            className="button-primary w-full rounded-full px-7 py-4 text-sm uppercase tracking-[0.18em] sm:w-auto"
-            type="submit"
-          >
+          <button className="button-primary w-full px-7 py-4 text-sm uppercase tracking-[0.18em] sm:w-auto" type="submit">
             Submit mailing info
           </button>
           <button
@@ -336,14 +333,14 @@ function CompletionState({
       : "We’ll be in touch when Letter Zero is ready, and you can share your mailing details later.";
 
   return (
-    <div className="mx-auto max-w-2xl text-center">
+    <div className="max-w-2xl">
       <p className="text-sm uppercase tracking-[0.24em] text-[var(--color-brand)]">
         You’re in.
       </p>
-      <h1 className="mt-3 text-balance text-[2rem] leading-[1.08] sm:text-[2.6rem]">
+      <h1 className="mt-3 max-w-2xl text-balance text-[2rem] leading-[1.02] tracking-[-0.03em] sm:text-[2.9rem]">
         {heading}
       </h1>
-      <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-[var(--color-muted)] sm:text-[1.18rem]">
+      <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--color-muted)] sm:text-[1.18rem]">
         {body}
       </p>
     </div>
@@ -371,7 +368,7 @@ function TextField({
         {label}
         {required ? " *" : ""}
       </label>
-      <div className="field-shell rounded-[1.4rem] px-4 py-3">
+      <div className="field-shell px-0 py-3">
         <input
           id={id}
           className="field-input text-base"
