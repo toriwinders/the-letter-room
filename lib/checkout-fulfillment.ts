@@ -49,12 +49,27 @@ function getBestAddress(session: Stripe.Checkout.Session) {
 function buildConfirmationEmailHtml() {
   return `
     <div style="background:#fffdf6;padding:40px 24px;font-family:Georgia,'Times New Roman',serif;color:#161311;">
-      <div style="margin:0 auto;max-width:560px;text-align:center;">
-        <h1 style="margin:0 0 20px;font-size:32px;line-height:1.05;font-weight:500;">
-          You're officially part of<br />The Letter Room.
-        </h1>
-        <p style="margin:0;font-size:18px;line-height:1.6;color:#4d4640;">
-          Your email will have all the details. And we promise, only letters from here on out.
+      <div style="margin:0 auto;max-width:560px;">
+        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;color:#161311;">
+          Hey there!
+        </p>
+        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;color:#161311;">
+          You&apos;re officially a part of The Letter Room.
+        </p>
+        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;color:#161311;">
+          In a world where everything is digital-first, this is intentionally not.
+        </p>
+        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;color:#161311;">
+          Here&apos;s how it works. Something shows up addressed to you. You sit with it. And then get to bring it into real conversation.
+        </p>
+        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;color:#161311;">
+          Your first issue is already in motion and will be arriving by mail soon.
+        </p>
+        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;color:#161311;">
+          If you like it, tell me. Write back. Share it on social. Text your friends. Better yet, tell your friends about it next time you see them.
+        </p>
+        <p style="margin:0;font-size:18px;line-height:1.65;color:#161311;">
+          Excited to hear what you think.
         </p>
       </div>
     </div>
@@ -67,7 +82,7 @@ async function sendConfirmationEmail(to: string) {
   const { error } = await resend.emails.send({
     from: getResendFromEmail(),
     to: [to],
-    subject: "You're officially part of The Letter Room",
+    subject: "Being offline is cool again.",
     html: buildConfirmationEmailHtml(),
   });
 
