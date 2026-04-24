@@ -89,15 +89,15 @@ function WaitlistForm({
   const emailErrorId = useId();
 
   return (
-    <div className="mx-auto max-w-3xl text-center">
+    <div className="mx-auto max-w-4xl text-center">
       <h1
         id="waitlist-heading"
-        className="copy-rhythm mx-auto max-w-[18ch] text-balance text-[1.35rem] leading-[1.02] sm:max-w-[22ch] sm:text-[1.75rem] md:max-w-[26ch] md:text-[2.05rem] lg:max-w-[28ch] lg:text-[2.25rem]"
+        className="copy-rhythm mx-auto max-w-[16ch] text-balance text-[1.4rem] leading-[1.02] sm:text-[1.85rem] md:max-w-[20ch] md:text-[2.15rem] lg:max-w-[22ch] lg:text-[2.45rem]"
       >
         {headline}
       </h1>
 
-      <form className="mx-auto mt-7 max-w-[38rem]" noValidate onSubmit={onSubmit}>
+      <form className="mx-auto mt-10 max-w-[40rem]" noValidate onSubmit={onSubmit}>
         <label className="sr-only" htmlFor={emailId}>
           Email address
         </label>
@@ -132,7 +132,7 @@ function WaitlistForm({
           {emailError}
         </p>
 
-        <p className="copy-rhythm mx-auto mt-3 max-w-lg text-sm leading-relaxed text-[var(--color-muted)] sm:text-[0.96rem]">
+        <p className="copy-rhythm mx-auto mt-4 max-w-[34rem] text-sm leading-relaxed text-[var(--color-muted)] sm:text-[0.94rem]">
           Join the waitlist to receive your first letter, our complimentary
           mailing before founding spots open.
         </p>
