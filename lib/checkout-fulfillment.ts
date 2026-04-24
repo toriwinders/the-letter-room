@@ -61,6 +61,10 @@ function buildConfirmationEmailHtml() {
   `;
 }
 
+function shouldSendConfirmationEmails() {
+  return process.env.ENABLE_RESEND_CONFIRMATION_EMAILS === "true";
+}
+
 async function sendConfirmationEmail(to: string) {
   const resend = createResendClient();
 
@@ -145,7 +149,11 @@ export async function handleCompletedCheckoutSession(
     throw new Error("Stripe signup could not be saved.");
   }
 
-  if (!existingRecord?.confirmation_email_sent_at && !savedRecord.confirmation_email_sent_at) {
+  if (
+    shouldSendConfirmationEmails() &&
+    !existingRecord?.confirmation_email_sent_at &&
+    !savedRecord.confirmation_email_sent_at
+  ) {
     await sendConfirmationEmail(savedRecord.email);
 
     const { error: updateError } = await supabase
