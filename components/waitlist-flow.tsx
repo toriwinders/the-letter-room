@@ -36,16 +36,16 @@ const headline: ReactNode = (
 
 const ritualColumns = [
   {
-    title: "Get your letter",
-    body: "Delivered by mail each month.",
+    title: "Sign up",
+    body: "Go full analog in a world of endless email newsletters.",
   },
   {
-    title: "Read it",
+    title: "Get your monthly letter",
     body: "A short reflection on modern life, paired with a conversation prompt.",
   },
   {
-    title: "Bring it with you",
-    body: "Dinner. Walks. Group chats. Nights with friends.",
+    title: "Start the conversation",
+    body: "Make things interesting. Bring it to dinner, walks, + nights with friends.",
   },
 ] as const;
 
@@ -63,7 +63,10 @@ export function WaitlistFlow() {
         aria-labelledby="how-it-works-heading"
         className="mx-auto mt-7 w-full max-w-[60rem] sm:mt-8"
       >
-        <h2 id="how-it-works-heading" className="sr-only">
+        <h2
+          id="how-it-works-heading"
+          className="copy-rhythm mx-auto mb-5 text-[0.92rem] leading-tight text-[var(--color-muted)] sm:mb-6 sm:text-[0.96rem]"
+        >
           How it works
         </h2>
 
@@ -84,7 +87,7 @@ export function WaitlistFlow() {
         </div>
       </section>
 
-      <div className="mx-auto mt-8 max-w-[28rem]">
+      <div className="mx-auto mt-10 max-w-[28rem] sm:mt-11">
         <Link
           className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
           href="https://buy.stripe.com/dRmfZgckpge52St2t84gg00"
