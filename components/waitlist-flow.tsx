@@ -65,7 +65,7 @@ export function WaitlistFlow() {
       >
         <h2
           id="how-it-works-heading"
-          className="copy-rhythm mx-auto mb-5 text-[0.92rem] leading-tight text-[var(--color-muted)] sm:mb-6 sm:text-[0.96rem]"
+          className="copy-rhythm mx-auto mb-5 text-[0.84rem] leading-tight text-[var(--color-muted)] sm:mb-6 sm:text-[0.88rem]"
         >
           How it works
         </h2>
