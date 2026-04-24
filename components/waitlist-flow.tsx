@@ -13,9 +13,14 @@ export function WaitlistFlow() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleWaitlistSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    void submitWaitlist();
+  };
+
+  const submitWaitlist = async () => {
     const normalizedEmail = email.trim();
 
     if (!normalizedEmail) {
@@ -29,10 +34,32 @@ export function WaitlistFlow() {
     }
 
     setEmailError("");
+    setIsSubmitting(true);
 
-    // TODO: Replace with real waitlist integration.
-    // Example: await createWaitlistLead({ email: normalizedEmail });
-    router.push(`/success?email=${encodeURIComponent(normalizedEmail)}`);
+    try {
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: normalizedEmail }),
+      });
+
+      const payload = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        throw new Error(payload.error || "Something went wrong while saving your email.");
+      }
+
+      router.push(`/success?email=${encodeURIComponent(normalizedEmail)}`);
+    } catch (error) {
+      setEmailError(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong while saving your email.",
+      );
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -40,6 +67,7 @@ export function WaitlistFlow() {
       <WaitlistForm
         email={email}
         emailError={emailError}
+        isSubmitting={isSubmitting}
         onEmailChange={setEmail}
         onSubmit={handleWaitlistSubmit}
       />
@@ -50,11 +78,13 @@ export function WaitlistFlow() {
 function WaitlistForm({
   email,
   emailError,
+  isSubmitting,
   onEmailChange,
   onSubmit,
 }: {
   email: string;
   emailError: string;
+  isSubmitting: boolean;
   onEmailChange: (value: string) => void;
   onSubmit: (event: FormEvent<HTMLFormElement>) => void;
 }) {
@@ -65,7 +95,7 @@ function WaitlistForm({
     <div className="mx-auto max-w-3xl text-center">
       <h1
         id="waitlist-heading"
-        className="copy-rhythm mx-auto max-w-[16ch] text-balance text-[2rem] leading-[0.98] sm:max-w-[18ch] sm:text-[2.8rem] md:max-w-[22ch] md:text-[3.2rem] lg:max-w-[24ch] lg:text-[3.75rem]"
+        className="copy-rhythm mx-auto max-w-[16ch] text-balance text-[1.5rem] leading-[0.98] sm:max-w-[18ch] sm:text-[2rem] md:max-w-[22ch] md:text-[2.35rem] lg:max-w-[24ch] lg:text-[2.7rem]"
       >
         {headline}
       </h1>
@@ -91,11 +121,12 @@ function WaitlistForm({
               onChange={(event) => onEmailChange(event.target.value)}
               aria-invalid={emailError ? "true" : "false"}
               aria-describedby={emailError ? emailErrorId : undefined}
+              disabled={isSubmitting}
               required
             />
           </div>
-          <button className="button-primary min-h-12 px-6 py-3 text-base" type="submit">
-            Join the waitlist
+          <button className="button-primary min-h-12 px-6 py-3 text-base" type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Joining..." : "Join the waitlist"}
           </button>
         </div>
 

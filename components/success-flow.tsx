@@ -34,9 +34,18 @@ export function SuccessFlow({ email }: { email?: string }) {
   const [addressFields, setAddressFields] =
     useState<AddressFields>(initialAddressFields);
   const [addressError, setAddressError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleAddressSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    void submitAddress();
+  };
+
+  const submitAddress = async () => {
+    if (!email) {
+      setAddressError("Missing waitlist email. Please join the waitlist again.");
+      return;
+    }
 
     const requiredValues = [
       addressFields.firstName,
@@ -53,11 +62,38 @@ export function SuccessFlow({ email }: { email?: string }) {
     }
 
     setAddressError("");
+    setIsSubmitting(true);
 
-    // TODO: Replace with real mailing details integration.
-    // Example: await saveMailingDetails({ email, ...addressFields });
-    setCompletionVariant("address-saved");
-    setStep("complete");
+    try {
+      const response = await fetch("/api/waitlist/address", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          ...addressFields,
+        }),
+      });
+
+      const payload = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        throw new Error(
+          payload.error || "Something went wrong while saving your mailing details.",
+        );
+      }
+
+      setCompletionVariant("address-saved");
+      setStep("complete");
+    } catch (error) {
+      setAddressError(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong while saving your mailing details.",
+      );
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -67,6 +103,7 @@ export function SuccessFlow({ email }: { email?: string }) {
           addressError={addressError}
           email={email}
           fields={addressFields}
+          isSubmitting={isSubmitting}
           onChange={setAddressFields}
           onSkip={() => {
             setCompletionVariant("waitlist-only");
@@ -85,6 +122,7 @@ function AddressForm({
   addressError,
   email,
   fields,
+  isSubmitting,
   onChange,
   onSkip,
   onSubmit,
@@ -92,6 +130,7 @@ function AddressForm({
   addressError: string;
   email?: string;
   fields: AddressFields;
+  isSubmitting: boolean;
   onChange: (value: AddressFields) => void;
   onSkip: () => void;
   onSubmit: (event: FormEvent<HTMLFormElement>) => void;
@@ -104,15 +143,15 @@ function AddressForm({
   };
 
   return (
-    <div className="max-w-2xl pt-6 sm:pt-10">
+    <div className="mx-auto max-w-2xl pt-6 text-center sm:pt-10">
       <div>
         <p className="copy-rhythm text-sm text-[var(--color-brand)]">
           You’re in.
         </p>
-        <h1 className="copy-rhythm mt-3 max-w-2xl text-balance text-[2rem] leading-[1.02] sm:text-[2.6rem]">
+        <h1 className="copy-rhythm mx-auto mt-3 max-w-2xl text-balance text-[2rem] leading-[1.02] sm:text-[2.6rem]">
           You’re officially on the waitlist for The Letter Room.
         </h1>
-        <p className="copy-rhythm mt-5 max-w-xl text-[1rem] leading-relaxed text-[var(--color-muted)] sm:text-[1.08rem]">
+        <p className="copy-rhythm mx-auto mt-5 max-w-xl text-[1rem] leading-relaxed text-[var(--color-muted)] sm:text-[1.08rem]">
           Want to receive the first letter by mail? Share your mailing address
           below and we’ll send you our complimentary first edition before
           launch.
@@ -124,7 +163,7 @@ function AddressForm({
         ) : null}
       </div>
 
-      <form className="mt-8 max-w-[38rem] space-y-4" noValidate onSubmit={onSubmit}>
+      <form className="mx-auto mt-8 max-w-[38rem] space-y-4" noValidate onSubmit={onSubmit}>
         <div className="grid gap-4 sm:grid-cols-2">
           <TextField
             label="First name"
@@ -193,14 +232,15 @@ function AddressForm({
           {addressError}
         </p>
 
-        <div className="flex flex-col items-center gap-3 sm:flex-row">
+        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
           <button
             className="button-primary w-full px-7 py-4 text-base sm:w-auto"
             type="submit"
+            disabled={isSubmitting}
           >
-            Submit mailing info
+            {isSubmitting ? "Saving..." : "Submit mailing info"}
           </button>
-          <button className="text-link text-sm" type="button" onClick={onSkip}>
+          <button className="text-link text-sm" type="button" onClick={onSkip} disabled={isSubmitting}>
             Skip for now
           </button>
         </div>
@@ -229,14 +269,14 @@ function CompletionState({
       : "We’ll be in touch when your first letter is ready, and you can share your mailing details later.";
 
   return (
-    <div className="max-w-2xl pt-6 sm:pt-10">
+    <div className="mx-auto max-w-2xl pt-6 text-center sm:pt-10">
       <p className="copy-rhythm text-sm text-[var(--color-brand)]">
         You’re in.
       </p>
-      <h1 className="copy-rhythm mt-3 max-w-2xl text-balance text-[2rem] leading-[1.02] sm:text-[2.6rem]">
+      <h1 className="copy-rhythm mx-auto mt-3 max-w-2xl text-balance text-[2rem] leading-[1.02] sm:text-[2.6rem]">
         {heading}
       </h1>
-      <p className="copy-rhythm mt-5 max-w-xl text-[1rem] leading-relaxed text-[var(--color-muted)] sm:text-[1.08rem]">
+      <p className="copy-rhythm mx-auto mt-5 max-w-xl text-[1rem] leading-relaxed text-[var(--color-muted)] sm:text-[1.08rem]">
         {body}
       </p>
       <Link className="text-link copy-rhythm mt-6 inline-flex text-sm" href="/">
