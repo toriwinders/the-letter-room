@@ -21,10 +21,15 @@ const headline: ReactNode = (
       <br />
       online world.
     </span>
-    <span className="hidden md:inline">
-      A mailed letter for people craving more depth and conversation
+    <span className="hidden md:inline lg:hidden">
+      A mailed letter for people craving more depth
       <br />
-      in a chronically online world.
+      and conversation in a chronically online world.
+    </span>
+    <span className="hidden lg:inline">
+      A mailed letter for people craving
+      <br />
+      more depth and conversation in a chronically online world.
     </span>
   </>
 );
@@ -49,7 +54,7 @@ export function WaitlistFlow() {
     <div className="mx-auto w-full max-w-[64rem] text-center">
       <h1
         id="waitlist-heading"
-        className="copy-rhythm mx-auto max-w-[23ch] text-balance text-[0.98rem] leading-[1.08] sm:max-w-[28ch] sm:text-[1.12rem] md:max-w-[40ch] md:text-[1.56rem] lg:max-w-[44ch] lg:text-[1.78rem]"
+        className="copy-rhythm mx-auto max-w-[23ch] text-balance text-[0.98rem] leading-[1.08] sm:max-w-[28ch] sm:text-[1.12rem] md:max-w-[38rem] md:text-[1.5rem] md:leading-[1.06] lg:max-w-[43.75rem] lg:text-[1.72rem] lg:leading-[1.04]"
       >
         {headline}
       </h1>
