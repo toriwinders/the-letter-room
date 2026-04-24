@@ -65,11 +65,11 @@ function WaitlistForm({
     <div className="max-w-3xl">
       <h1
         id="waitlist-heading"
-        className="max-w-[16ch] text-balance text-[2rem] leading-[0.98] tracking-[-0.04em] sm:text-[2.8rem] md:text-[3.2rem] lg:text-[3.75rem]"
+        className="copy-rhythm max-w-[16ch] text-balance text-[2rem] leading-[0.98] sm:text-[2.8rem] md:text-[3.2rem] lg:text-[3.75rem]"
       >
         {headline}
       </h1>
-      <p className="mt-5 max-w-[38rem] text-[1rem] leading-relaxed text-[var(--color-muted)] sm:text-[1.08rem]">
+      <p className="copy-rhythm mt-5 max-w-[38rem] text-[1rem] leading-relaxed text-[var(--color-muted)] sm:text-[1.08rem]">
         {supportingCopy}
       </p>
 
@@ -95,7 +95,7 @@ function WaitlistForm({
             />
           </div>
           <button
-            className="button-primary min-h-12 px-6 py-3 text-sm uppercase tracking-[0.18em]"
+            className="button-primary min-h-12 px-6 py-3 text-base"
             type="submit"
           >
             Join the waitlist
@@ -110,7 +110,7 @@ function WaitlistForm({
           {emailError}
         </p>
 
-        <p className="mt-3 max-w-lg text-sm leading-relaxed text-[var(--color-muted)] sm:text-[0.96rem]">
+        <p className="copy-rhythm mt-3 max-w-lg text-sm leading-relaxed text-[var(--color-muted)] sm:text-[0.96rem]">
           Join the waitlist to receive your first letter, our complimentary
           mailing before founding spots open.
         </p>

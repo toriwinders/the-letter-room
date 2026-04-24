@@ -1,4 +1,3 @@
-import { BrandLockup } from "@/components/brand-lockup";
 import { SuccessFlow } from "@/components/success-flow";
 
 export default async function SuccessPage({
@@ -18,12 +17,8 @@ export default async function SuccessPage({
         <span />
       </div>
 
-      <div className="relative mx-auto flex min-h-screen w-full max-w-[96rem] flex-col px-5 py-5 sm:px-8 sm:py-8 lg:px-12 lg:py-10">
-        <header className="pt-3 sm:pt-5 lg:pt-6">
-          <BrandLockup />
-        </header>
-
-        <section className="relative mt-2 flex flex-1 items-start lg:mt-4">
+      <div className="relative mx-auto flex min-h-screen w-full max-w-[96rem] flex-col px-5 py-8 sm:px-8 sm:py-12 lg:px-12 lg:py-16">
+        <section className="relative flex flex-1 items-start">
           <div className="w-full max-w-[44rem] lg:pl-8 xl:pl-16">
             <SuccessFlow email={email} />
           </div>

@@ -71,6 +71,10 @@ body {
   font-family: var(--font-copy);
 }
 
+.copy-rhythm {
+  letter-spacing: -0.04em;
+}
+
 .wordmark-tracking {
   letter-spacing: -0.079em;
 }
@@ -95,6 +99,7 @@ body {
   background: transparent;
   color: var(--color-ink);
   font: inherit;
+  letter-spacing: -0.04em;
   outline: none;
 }
 
@@ -107,6 +112,7 @@ body {
   background: var(--color-ink);
   color: var(--color-background);
   cursor: pointer;
+  letter-spacing: -0.04em;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
@@ -130,6 +136,7 @@ body {
   background: transparent;
   color: var(--color-ink);
   cursor: pointer;
+  letter-spacing: -0.04em;
   transition: background-color 180ms ease;
 }
 
@@ -140,6 +147,7 @@ body {
 .text-link {
   color: var(--color-muted);
   cursor: pointer;
+  letter-spacing: -0.04em;
   text-decoration: underline;
   text-decoration-color: rgba(20, 93, 160, 0.32);
   text-underline-offset: 0.22em;

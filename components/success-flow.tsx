@@ -104,21 +104,21 @@ function AddressForm({
   };
 
   return (
-    <div className="max-w-2xl">
+    <div className="max-w-2xl pt-6 sm:pt-10">
       <div>
-        <p className="text-sm uppercase tracking-[0.24em] text-[var(--color-brand)]">
+        <p className="copy-rhythm text-sm text-[var(--color-brand)]">
           You’re in.
         </p>
-        <h1 className="mt-3 max-w-2xl text-balance text-[2rem] leading-[1.02] tracking-[-0.03em] sm:text-[2.6rem]">
+        <h1 className="copy-rhythm mt-3 max-w-2xl text-balance text-[2rem] leading-[1.02] sm:text-[2.6rem]">
           You’re officially on the waitlist for The Letter Room.
         </h1>
-        <p className="mt-5 max-w-xl text-[1rem] leading-relaxed text-[var(--color-muted)] sm:text-[1.08rem]">
+        <p className="copy-rhythm mt-5 max-w-xl text-[1rem] leading-relaxed text-[var(--color-muted)] sm:text-[1.08rem]">
           Want to receive the first letter by mail? Share your mailing address
           below and we’ll send you our complimentary first edition before
           launch.
         </p>
         {email ? (
-          <p className="mt-4 text-sm text-[var(--color-muted)]">
+          <p className="copy-rhythm mt-4 text-sm text-[var(--color-muted)]">
             Signed up as <span className="text-[var(--color-ink)]">{email}</span>
           </p>
         ) : null}
@@ -195,7 +195,7 @@ function AddressForm({
 
         <div className="flex flex-col items-center gap-3 sm:flex-row">
           <button
-            className="button-primary w-full px-7 py-4 text-sm uppercase tracking-[0.18em] sm:w-auto"
+            className="button-primary w-full px-7 py-4 text-base sm:w-auto"
             type="submit"
           >
             Submit mailing info
@@ -205,7 +205,7 @@ function AddressForm({
           </button>
         </div>
 
-        <p className="text-sm text-[var(--color-muted)]">
+        <p className="copy-rhythm text-sm text-[var(--color-muted)]">
           The first letter is free and only available to waitlist members.
         </p>
       </form>
@@ -229,17 +229,17 @@ function CompletionState({
       : "We’ll be in touch when your first letter is ready, and you can share your mailing details later.";
 
   return (
-    <div className="max-w-2xl">
-      <p className="text-sm uppercase tracking-[0.24em] text-[var(--color-brand)]">
+    <div className="max-w-2xl pt-6 sm:pt-10">
+      <p className="copy-rhythm text-sm text-[var(--color-brand)]">
         You’re in.
       </p>
-      <h1 className="mt-3 max-w-2xl text-balance text-[2rem] leading-[1.02] tracking-[-0.03em] sm:text-[2.6rem]">
+      <h1 className="copy-rhythm mt-3 max-w-2xl text-balance text-[2rem] leading-[1.02] sm:text-[2.6rem]">
         {heading}
       </h1>
-      <p className="mt-5 max-w-xl text-[1rem] leading-relaxed text-[var(--color-muted)] sm:text-[1.08rem]">
+      <p className="copy-rhythm mt-5 max-w-xl text-[1rem] leading-relaxed text-[var(--color-muted)] sm:text-[1.08rem]">
         {body}
       </p>
-      <Link className="text-link mt-6 inline-flex text-sm" href="/">
+      <Link className="text-link copy-rhythm mt-6 inline-flex text-sm" href="/">
         Back to home
       </Link>
     </div>
@@ -263,7 +263,7 @@ function TextField({
 
   return (
     <div>
-      <label className="mb-2 block text-sm text-[var(--color-muted)]" htmlFor={id}>
+      <label className="copy-rhythm mb-2 block text-sm text-[var(--color-muted)]" htmlFor={id}>
         {label}
         {required ? " *" : ""}
       </label>
