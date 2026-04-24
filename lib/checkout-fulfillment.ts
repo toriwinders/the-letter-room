@@ -61,10 +61,6 @@ function buildConfirmationEmailHtml() {
   `;
 }
 
-function shouldSendConfirmationEmails() {
-  return process.env.ENABLE_RESEND_CONFIRMATION_EMAILS === "true";
-}
-
 async function sendConfirmationEmail(to: string) {
   const resend = createResendClient();
 
@@ -149,23 +145,23 @@ export async function handleCompletedCheckoutSession(
     throw new Error("Stripe signup could not be saved.");
   }
 
-  if (
-    shouldSendConfirmationEmails() &&
-    !existingRecord?.confirmation_email_sent_at &&
-    !savedRecord.confirmation_email_sent_at
-  ) {
-    await sendConfirmationEmail(savedRecord.email);
+  if (!existingRecord?.confirmation_email_sent_at && !savedRecord.confirmation_email_sent_at) {
+    try {
+      await sendConfirmationEmail(savedRecord.email);
 
-    const { error: updateError } = await supabase
-      .from("waitlist_signups")
-      .update({
-        confirmation_email_sent_at: new Date().toISOString(),
-        updated_at: new Date().toISOString(),
-      })
-      .eq("id", savedRecord.id);
+      const { error: updateError } = await supabase
+        .from("waitlist_signups")
+        .update({
+          confirmation_email_sent_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
+        })
+        .eq("id", savedRecord.id);
 
-    if (updateError) {
-      throw new Error(updateError.message);
+      if (updateError) {
+        throw new Error(updateError.message);
+      }
+    } catch (error) {
+      console.error("Resend confirmation email failed", error);
     }
   }
 
