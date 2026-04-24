@@ -5,8 +5,17 @@ import { FormEvent, ReactNode, useId, useState } from "react";
 
 const headline: ReactNode = (
   <>
-    A monthly mailed letter for people craving more depth and conversation
-    <br className="hidden md:block" /> in a chronically online world.
+    <span className="md:hidden">
+      A monthly mailed letter
+      <br />
+      for people craving more depth
+      <br />
+      and conversation in a chronically online world.
+    </span>
+    <span className="hidden md:inline">
+      A monthly mailed letter for people craving more depth and conversation
+      <br className="hidden md:block" /> in a chronically online world.
+    </span>
   </>
 );
 
@@ -96,12 +105,12 @@ function WaitlistForm({
     <div className="mx-auto max-w-4xl text-center">
       <h1
         id="waitlist-heading"
-        className="copy-rhythm mx-auto max-w-[18ch] text-balance text-[1.12rem] leading-[1.05] sm:max-w-[20ch] sm:text-[1.35rem] md:max-w-[38ch] md:text-[1.68rem] lg:max-w-[40ch] lg:text-[1.9rem]"
+        className="copy-rhythm mx-auto max-w-[17ch] text-balance text-[1.08rem] leading-[1.08] sm:max-w-[18ch] sm:text-[1.2rem] md:max-w-[38ch] md:text-[1.68rem] lg:max-w-[40ch] lg:text-[1.9rem]"
       >
         {headline}
       </h1>
 
-      <form className="mx-auto mt-10 max-w-[40rem]" noValidate onSubmit={onSubmit}>
+      <form className="mx-auto mt-8 max-w-[40rem]" noValidate onSubmit={onSubmit}>
         <label className="sr-only" htmlFor={emailId}>
           Email address
         </label>
@@ -136,7 +145,7 @@ function WaitlistForm({
           {emailError}
         </p>
 
-        <p className="copy-rhythm mx-auto mt-4 max-w-[34rem] text-sm leading-relaxed text-[var(--color-muted)] sm:text-[0.94rem]">
+        <p className="copy-rhythm mx-auto mt-4 max-w-[22rem] text-sm leading-relaxed text-[var(--color-muted)] sm:max-w-[34rem] sm:text-[0.94rem]">
           Join the waitlist to receive your first letter, our complimentary
           mailing before founding spots open.
         </p>
