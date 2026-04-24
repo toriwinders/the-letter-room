@@ -6,11 +6,13 @@ import { FormEvent, ReactNode, useId, useState } from "react";
 const headline: ReactNode = (
   <>
     <span className="md:hidden">
-      A monthly mailed letter
+      A monthly mailed
       <br />
-      for people craving more depth
+      letter for people
       <br />
-      and conversation in a chronically online world.
+      craving more depth and
+      <br />
+      conversation in a chronically online world.
     </span>
     <span className="hidden md:inline">
       A monthly mailed letter for people craving more depth and conversation
@@ -105,7 +107,7 @@ function WaitlistForm({
     <div className="mx-auto max-w-4xl text-center">
       <h1
         id="waitlist-heading"
-        className="copy-rhythm mx-auto max-w-[17ch] text-balance text-[1.08rem] leading-[1.08] sm:max-w-[18ch] sm:text-[1.2rem] md:max-w-[38ch] md:text-[1.68rem] lg:max-w-[40ch] lg:text-[1.9rem]"
+        className="copy-rhythm mx-auto max-w-[17ch] text-balance text-[1rem] leading-[1.06] sm:max-w-[18ch] sm:text-[1.12rem] md:max-w-[38ch] md:text-[1.68rem] lg:max-w-[40ch] lg:text-[1.9rem]"
       >
         {headline}
       </h1>

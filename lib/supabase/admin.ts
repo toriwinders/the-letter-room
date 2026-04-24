@@ -24,36 +24,31 @@ function decodeJwtPayload(token: string) {
   }
 }
 
-function getServiceRoleKey() {
-  const value = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const EXPLICIT_SUPABASE_URL = process.env.SUPABASE_URL ?? process.env.NEXT_PUBLIC_SUPABASE_URL;
 
-  if (!value) {
+const DERIVED_SUPABASE_URL =
+  SERVICE_ROLE_KEY && !EXPLICIT_SUPABASE_URL
+    ? (() => {
+        const payload = decodeJwtPayload(SERVICE_ROLE_KEY);
+        return payload?.ref ? `https://${payload.ref}.supabase.co` : null;
+      })()
+    : null;
+
+export function createSupabaseAdminClient() {
+  if (!SERVICE_ROLE_KEY) {
     throw new Error("Missing environment variable: SUPABASE_SERVICE_ROLE_KEY");
   }
 
-  return value;
-}
+  const supabaseUrl = EXPLICIT_SUPABASE_URL ?? DERIVED_SUPABASE_URL;
 
-function getSupabaseUrl() {
-  const explicitUrl = process.env.SUPABASE_URL ?? process.env.NEXT_PUBLIC_SUPABASE_URL;
-
-  if (explicitUrl) {
-    return explicitUrl;
+  if (!supabaseUrl) {
+    throw new Error(
+      "Missing Supabase URL. Add SUPABASE_URL or NEXT_PUBLIC_SUPABASE_URL in Vercel.",
+    );
   }
 
-  const payload = decodeJwtPayload(getServiceRoleKey());
-
-  if (payload?.ref) {
-    return `https://${payload.ref}.supabase.co`;
-  }
-
-  throw new Error(
-    "Missing Supabase URL. Add SUPABASE_URL or NEXT_PUBLIC_SUPABASE_URL in Vercel.",
-  );
-}
-
-export function createSupabaseAdminClient() {
-  return createClient(getSupabaseUrl(), getServiceRoleKey(), {
+  return createClient(supabaseUrl, SERVICE_ROLE_KEY, {
     auth: {
       autoRefreshToken: false,
       persistSession: false,
