@@ -188,7 +188,7 @@ export async function handleCompletedCheckoutSession(
     throw new Error("Stripe signup could not be saved.");
   }
 
-  if (!existingRecord?.confirmation_email_sent_at && !savedRecord.confirmation_email_sent_at) {
+  if (!existingRecord?.confirmation_email_sent_at) {
     const attemptedAt = new Date().toISOString();
 
     try {
