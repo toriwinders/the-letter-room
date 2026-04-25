@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
+import { FaqList } from "@/components/faq-list";
+import { ProductPreview } from "@/components/product-preview";
 
 const headline: ReactNode = (
   <>
@@ -36,16 +38,16 @@ const headline: ReactNode = (
 
 const ritualColumns = [
   {
-    title: "Sign up",
-    body: "Go full analog in a world of endless email newsletters.",
+    title: "Subscribe by the 1st",
+    body: "If you join by the 1st, that month’s letter is already on its way to you.",
   },
   {
-    title: "Get your monthly letter",
-    body: "A short reflection on modern life, paired with a conversation prompt.",
+    title: "A letter arrives",
+    body: "Each issue pairs a reflection on modern life with a question worth staying with.",
   },
   {
-    title: "Start the conversation",
-    body: "Make things interesting. Bring it to dinner, walks, + nights with friends.",
+    title: "Bring it into real life",
+    body: "Carry it into dinner, walks, and nights with friends when the conversation deserves more depth.",
   },
 ] as const;
 
@@ -67,7 +69,7 @@ export function WaitlistFlow() {
           id="how-it-works-heading"
           className="copy-rhythm mx-auto mb-5 text-[0.96rem] leading-tight text-[var(--color-muted)] sm:mb-6 sm:text-[1.06rem] md:text-[1.22rem]"
         >
-          How it works
+          Month by month
         </h2>
 
         <div className="flex flex-col divide-y divide-[var(--color-line)] md:flex-row md:divide-x md:divide-y-0">
@@ -87,22 +89,43 @@ export function WaitlistFlow() {
         </div>
       </section>
 
-      <div className="mx-auto mt-12 max-w-[28rem] sm:mt-14">
+      <ProductPreview />
+
+      <section
+        aria-labelledby="founding-member-heading"
+        className="mx-auto mt-14 w-full max-w-[44rem] text-center sm:mt-16"
+      >
+        <p className="eyebrow">Founding member offer</p>
+        <h2
+          id="founding-member-heading"
+          className="copy-rhythm mx-auto mt-3 max-w-[20ch] text-[1.55rem] leading-[1.03] sm:text-[1.85rem] md:text-[2.1rem]"
+        >
+          $8/month. Your first letter is on us if you subscribe before June 1.
+        </h2>
+
+        <p className="copy-rhythm mx-auto mt-4 max-w-[30rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
+          If you&apos;re subscribed by the 1st of the month, you&apos;ll receive
+          that month&apos;s letter. Cancel before the end of the month if
+          you&apos;d like to pause.
+        </p>
+      </section>
+
+      <div className="mx-auto mt-10 max-w-[28rem] sm:mt-12">
         <Link
           className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
           href="https://buy.stripe.com/dRmfZgckpge52St2t84gg00"
-          target="_blank"
-          rel="noreferrer"
         >
-          Join the club
+          Get your first letter
         </Link>
 
-        <p className="copy-rhythm mx-auto mt-4 max-w-[22rem] text-sm leading-relaxed text-[var(--color-muted)] sm:max-w-[28rem] sm:text-[0.94rem]">
-          Receive the first issue complimentary as a founding member.
+        <p className="copy-rhythm mx-auto mt-4 max-w-[24rem] text-sm leading-relaxed text-[var(--color-muted)] sm:max-w-[28rem] sm:text-[0.94rem]">
+          Subscribe before June 1 to join as a founding member.
           <br />
-          We have limited spots open.
+          $8/month after your first letter.
         </p>
       </div>
+
+      <FaqList />
     </div>
   );
 }

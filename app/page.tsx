@@ -1,11 +1,10 @@
 import { BrandLockup } from "@/components/brand-lockup";
+import { SiteFooter } from "@/components/site-footer";
 import { WaitlistFlow } from "@/components/waitlist-flow";
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-[var(--color-background)] text-[var(--color-ink)]">
-      <div className="page-glow" aria-hidden="true" />
-
       <div className="relative mx-auto flex min-h-screen w-full max-w-[96rem] flex-col px-5 py-6 sm:px-8 sm:py-8 lg:px-12 lg:py-10">
         <header className="pt-2 sm:pt-3 lg:pt-4">
           <BrandLockup />
@@ -19,6 +18,8 @@ export default function HomePage() {
             <WaitlistFlow />
           </div>
         </section>
+
+        <SiteFooter />
       </div>
     </main>
   );

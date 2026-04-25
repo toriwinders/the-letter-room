@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --color-background: #fffdf6;
+  --color-background: #fdf9f7;
   --color-brand: #145da0;
   --color-ink: #171514;
   --color-muted: #5d5752;
@@ -35,15 +35,6 @@ body {
 
 ::selection {
   background: rgba(20, 93, 160, 0.14);
-}
-
-.page-glow {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 50% 0%, rgba(20, 93, 160, 0.018), transparent 32%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 18%);
 }
 
 .font-brand {
@@ -136,6 +127,116 @@ body {
   text-underline-offset: 0.22em;
 }
 
+.eyebrow {
+  color: var(--color-brand);
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.footer-link {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: var(--color-ink);
+}
+
+.letter-scene {
+  position: relative;
+  width: min(100%, 24rem);
+  aspect-ratio: 4 / 5;
+}
+
+.letter-sheet,
+.envelope-back,
+.envelope-front {
+  position: absolute;
+  border: 1px solid rgba(23, 21, 20, 0.09);
+  border-radius: 0.35rem;
+  box-shadow: 0 28px 60px rgba(23, 21, 20, 0.08);
+}
+
+.envelope-back {
+  inset: auto 1.25rem 1.35rem 1.8rem;
+  height: 52%;
+  background:
+    linear-gradient(180deg, rgba(20, 93, 160, 0.04), rgba(20, 93, 160, 0)),
+    #f7f0e8;
+  transform: rotate(-8deg);
+}
+
+.envelope-front {
+  right: 0.5rem;
+  bottom: 0;
+  left: 1rem;
+  height: 54%;
+  background:
+    linear-gradient(140deg, rgba(20, 93, 160, 0.05), transparent 48%),
+    linear-gradient(215deg, rgba(23, 21, 20, 0.04), transparent 34%),
+    #fbf5ed;
+  transform: rotate(4deg);
+}
+
+.letter-sheet {
+  inset: 0 2rem 4.25rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.72rem;
+  padding: 1.35rem 1.25rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)),
+    #fffefb;
+  transform: rotate(-2deg);
+}
+
+.letter-kicker {
+  color: var(--color-brand);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+}
+
+.letter-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(23, 21, 20, 0.13);
+}
+
+.letter-line--mid {
+  width: 72%;
+}
+
+.letter-line--short {
+  width: 46%;
+}
+
+.letter-prompt {
+  margin-top: auto;
+  max-width: 15ch;
+  color: var(--color-ink);
+  font-family: var(--font-brand);
+  font-size: 1.18rem;
+  line-height: 1.02;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-plus {
+  color: var(--color-brand);
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.faq-item[open] .faq-plus {
+  transform: rotate(45deg);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -149,5 +250,9 @@ body {
   .button-primary:hover {
     transform: none;
     box-shadow: none;
+  }
+
+  .faq-plus {
+    transition: none;
   }
 }
