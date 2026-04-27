@@ -12,10 +12,13 @@ export function ProductPreview() {
       <p className="eyebrow">What arrives each month</p>
       <h2
         id="product-preview-heading"
-        className="copy-rhythm mx-auto mt-3 max-w-[38rem] text-[0.98rem] leading-[1.08] sm:max-w-[43.75rem] sm:text-[1.12rem] md:text-[1.5rem] md:leading-[1.06] lg:text-[1.72rem] lg:leading-[1.04]"
+        className="copy-rhythm mx-auto mt-3 max-w-[44rem] text-[0.98rem] leading-[1.08] sm:max-w-[44rem] sm:text-[1.12rem] md:text-[1.5rem] md:leading-[1.06] lg:text-[1.72rem] lg:leading-[1.04]"
       >
-        A letter you&apos;ll actually want to read. A card you&apos;ll actually want
-        to use.
+        <span>
+          A letter you&apos;ll actually want to read.
+          <br />
+          A card you&apos;ll actually want to use.
+        </span>
       </h2>
 
       <div className="copy-rhythm mx-auto mt-4 max-w-[38rem] text-[0.96rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">

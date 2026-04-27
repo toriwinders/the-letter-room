@@ -61,13 +61,17 @@ export function FaqList() {
       aria-labelledby="faq-heading"
       className="mx-auto mt-16 w-full max-w-[52rem] text-left"
     >
-      <div className="max-w-[32rem]">
+      <div className="max-w-[36rem]">
         <p className="eyebrow">Questions, answered</p>
         <h2
           id="faq-heading"
           className="copy-rhythm mt-3 text-[1.45rem] leading-[1.05] sm:text-[1.72rem] md:text-[1.95rem]"
         >
-          Everything you want to know before your first letter shows up.
+          <span>
+            Everything you want to know
+            <br className="md:hidden" />
+            {" "}before your first letter shows up.
+          </span>
         </h2>
       </div>
 

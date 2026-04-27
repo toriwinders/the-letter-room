@@ -96,9 +96,13 @@ export function WaitlistFlow() {
         <p className="eyebrow">Founding member offer</p>
         <h2
           id="founding-member-heading"
-          className="copy-rhythm mx-auto mt-3 max-w-[38rem] text-[0.98rem] leading-[1.08] sm:max-w-[43.75rem] sm:text-[1.12rem] md:text-[1.5rem] md:leading-[1.06] lg:text-[1.72rem] lg:leading-[1.04]"
+          className="copy-rhythm mx-auto mt-3 max-w-[44rem] text-[0.98rem] leading-[1.08] sm:max-w-[44rem] sm:text-[1.12rem] md:text-[1.5rem] md:leading-[1.06] lg:text-[1.72rem] lg:leading-[1.04]"
         >
-          $8/month. Your first letter is on us if you subscribe before June 1.
+          <span>
+            $8/month.
+            <br />
+            Your first letter is on us if you subscribe before June 1.
+          </span>
         </h2>
       </section>
 
