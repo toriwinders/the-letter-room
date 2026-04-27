@@ -82,7 +82,7 @@ export function ProductPreview() {
             </h2>
           </div>
 
-          <div className="why-grid mt-20 sm:mt-24 lg:mt-28">
+          <div className="why-grid why-grid-spacing" style={{ marginTop: "3rem" }}>
             <article className="why-card">
               <div className="icon-badge">
                 <EnvelopeIcon />
