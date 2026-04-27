@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | The Letter Room",
+  description:
+    "Read the terms for The Letter Room monthly mailed subscription, including renewals, cancellation timing, and fulfillment details.",
+  alternates: {
+    canonical: "https://www.jointheletterroom.com/terms",
+  },
+};
 
 export default function TermsPage() {
   return (

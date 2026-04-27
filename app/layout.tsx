@@ -1,13 +1,42 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteTitle = "The Letter Room";
+const siteDescription =
+  "A monthly mailed letter subscription for people craving more depth, reflection, and conversation in a chronically online world.";
+
 export const metadata: Metadata = {
-  title: "The Letter Room",
-  description:
-    "A mailed letter for people craving more depth and conversation in a chronically online world.",
+  title: siteTitle,
+  description: siteDescription,
   metadataBase: new URL("https://www.jointheletterroom.com"),
+  applicationName: siteTitle,
   alternates: {
     canonical: "https://www.jointheletterroom.com",
+  },
+  keywords: [
+    "The Letter Room",
+    "mailed letter subscription",
+    "monthly letter subscription",
+    "conversation cards",
+    "analog subscription",
+    "mail subscription",
+    "thoughtful gifts",
+    "depth and conversation",
+  ],
+  authors: [{ name: "Tori Winders", url: "https://www.jointheletterroom.com" }],
+  creator: "Tori Winders",
+  publisher: siteTitle,
+  category: "Lifestyle",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   icons: {
     icon: "/icon.png",
@@ -15,11 +44,11 @@ export const metadata: Metadata = {
     apple: "/icon.png",
   },
   openGraph: {
-    title: "The Letter Room",
-    description:
-      "A mailed letter for people craving more depth and conversation in a chronically online world.",
-    siteName: "The Letter Room",
+    title: siteTitle,
+    description: siteDescription,
+    siteName: siteTitle,
     type: "website",
+    locale: "en_US",
     url: "https://www.jointheletterroom.com",
     images: [
       {
@@ -33,9 +62,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Letter Room",
-    description:
-      "A mailed letter for people craving more depth and conversation in a chronically online world.",
+    title: siteTitle,
+    description: siteDescription,
     images: [
       {
         url: "/twitter-image.png",

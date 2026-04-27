@@ -88,7 +88,7 @@ export function ProductPreview() {
                 <EnvelopeIcon />
               </div>
               <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-ink)] sm:text-[1.32rem]">
-                This is a letter. Mailed.
+                Go analog.
               </h3>
               <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
                 Each month, an envelope will arrive at your door, made to feel like it
@@ -101,7 +101,7 @@ export function ProductPreview() {
                 <LetterIcon />
               </div>
               <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-ink)] sm:text-[1.32rem]">
-                A letter you&apos;ll actually want to read.
+                Get your letter.
               </h3>
               <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
                 A short reflection on modern life, written like it&apos;s coming from
@@ -115,12 +115,12 @@ export function ProductPreview() {
                 <SpeechBubbleIcon />
               </div>
               <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-ink)] sm:text-[1.32rem]">
-                A card you&apos;ll actually want to use.
+                A conversation card to take with you.
               </h3>
               <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
-                A conversation card with a theme and prompts sparked by the month&apos;s
-                letter. Bring it to dinner, on a walk, or to a night in with the
-                friends you don&apos;t see enough.
+                A theme and prompts sparked by the month&apos;s letter. Bring it to
+                dinner, on a walk, or to a night in with the friends you don&apos;t
+                see enough.
               </p>
             </article>
           </div>

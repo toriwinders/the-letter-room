@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | The Letter Room",
+  description:
+    "Read the privacy policy for The Letter Room, including how subscription, mailing, and payment information is used.",
+  alternates: {
+    canonical: "https://www.jointheletterroom.com/privacy",
+  },
+};
 
 export default function PrivacyPage() {
   return (
