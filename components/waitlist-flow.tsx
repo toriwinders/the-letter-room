@@ -79,8 +79,8 @@ export function WaitlistFlow() {
             we get to the stuff that actually matters.
           </p>
           <p className="mt-4">
-            The Letter Room is changing that. Think of it like a book club, but
-            for the stuff that&apos;s actually on your mind.
+            I started The Letter Room to fix that. Think of it like a book club,
+            but for the stuff that&apos;s actually on your mind.
           </p>
           <p className="mt-4">
             I started this because I got tired of the catch-up. I wanted the
@@ -116,6 +116,15 @@ export function WaitlistFlow() {
       </div>
 
       <FaqList />
+
+      <div className="mx-auto mt-10 max-w-[28rem] sm:mt-12">
+        <Link
+          className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
+          href="https://buy.stripe.com/dRmfZgckpge52St2t84gg00"
+        >
+          Get your first letter
+        </Link>
+      </div>
     </div>
   );
 }

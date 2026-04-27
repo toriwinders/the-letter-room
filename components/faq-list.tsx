@@ -28,8 +28,7 @@ const faqItems = [
   },
   {
     question: "When will I receive my letter?",
-    answer:
-      "If you're subscribed by the 1st of the month, that month's letter is already on its way to you.",
+    answer: "Letters ship in the first week of each month.",
   },
   {
     question: "Can I cancel anytime?",

@@ -23,7 +23,7 @@ export function ProductPreview() {
         </p>
         <p className="mt-4">
           This is a letter. Mailed. On paper. Each month, an envelope will arrive
-          at your door, made to feel like something the moment you hold it. Inside
+          at your door, made to feel like it matters the moment you hold it. Inside
           is a short reflection on modern life, written like it&apos;s coming from
           the smartest, most observant friend you know. The kind that makes you
           stop and think, I&apos;ve felt that too.
@@ -32,7 +32,7 @@ export function ProductPreview() {
           Tucked alongside it is a conversation card with a theme and a few
           prompts designed to travel with you. Whether that&apos;s on a walk, a
           girls&apos; night, or a dinner where you want to talk about something
-          that actually matters.
+          that matters.
         </p>
       </div>
     </section>
