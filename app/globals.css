@@ -177,7 +177,7 @@ body {
 }
 
 .product-card {
-  max-width: 44rem;
+  max-width: 48rem;
   margin: 0 auto;
   background: #ffffff;
 }
@@ -212,7 +212,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  max-width: 28rem;
+  max-width: 30rem;
   margin: 0 auto;
 }
 
@@ -323,9 +323,9 @@ body {
   }
 
   .why-grid {
-    max-width: 52rem;
+    max-width: 58rem;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 1.75rem;
   }
 
   .feature-icon {
@@ -335,7 +335,16 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .product-card {
+    max-width: 72rem;
+  }
+
   .why-grid {
-    gap: 2.25rem;
+    max-width: 68rem;
+    gap: 2.5rem;
+  }
+
+  .why-card p {
+    max-width: 22rem;
   }
 }

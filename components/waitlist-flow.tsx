@@ -97,7 +97,7 @@ export function WaitlistFlow() {
 
       <section
         aria-labelledby="founding-member-heading"
-        className="section-band section-band-offer section-gap mt-10 text-center sm:mt-16"
+        className="section-band section-band-offer section-gap text-center"
       >
         <div className="section-inner">
           <div className="offer-card">

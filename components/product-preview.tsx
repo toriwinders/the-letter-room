@@ -68,19 +68,19 @@ export function ProductPreview() {
         <div className="product-card">
           <p className="eyebrow">What Arrives Each Month</p>
 
-          <div className="copy-rhythm mx-auto mt-3 max-w-[38rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
-            <p>
+          <div className="mx-auto mt-3 max-w-[38rem]">
+            <h2 className="copy-rhythm text-[0.98rem] leading-[1.08] text-[var(--color-ink)] sm:text-[1.12rem] md:text-[1.5rem] md:leading-[1.06] lg:text-[1.72rem] lg:leading-[1.04]">
               You have 147 unread newsletters in your inbox. You don&apos;t need another
               one.
-            </p>
+            </h2>
           </div>
 
-          <div className="why-grid mt-10 sm:mt-14">
+          <div className="why-grid mt-14 sm:mt-18 lg:mt-20">
             <article className="why-card">
               <div className="icon-badge">
                 <EnvelopeIcon />
               </div>
-              <h3 className="copy-rhythm mt-5 text-[1.18rem] leading-[1.25] text-[var(--color-ink)] sm:text-[1.28rem]">
+              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-ink)] sm:text-[1.32rem]">
                 This is a letter. Mailed.
               </h3>
               <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
@@ -93,7 +93,7 @@ export function ProductPreview() {
               <div className="icon-badge">
                 <LetterIcon />
               </div>
-              <h3 className="copy-rhythm mt-5 text-[1.18rem] leading-[1.25] text-[var(--color-ink)] sm:text-[1.28rem]">
+              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-ink)] sm:text-[1.32rem]">
                 A letter you&apos;ll actually want to read.
               </h3>
               <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
@@ -107,8 +107,8 @@ export function ProductPreview() {
               <div className="icon-badge">
                 <SpeechBubbleIcon />
               </div>
-              <h3 className="copy-rhythm mt-5 text-[1.18rem] leading-[1.25] text-[var(--color-ink)] sm:text-[1.28rem]">
-                A card you&apos;ll actually want to use
+              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-ink)] sm:text-[1.32rem]">
+                A card you&apos;ll actually want to use.
               </h3>
               <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
                 A conversation card with a theme and prompts sparked by the month&apos;s
