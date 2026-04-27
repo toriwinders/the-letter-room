@@ -1,8 +1,3 @@
-const details = [
-  "A reflection on something we're all feeling but not saying.",
-  "A conversation card to bring somewhere that month.",
-] as const;
-
 export function ProductPreview() {
   return (
     <section
@@ -40,17 +35,6 @@ export function ProductPreview() {
           that actually matters.
         </p>
       </div>
-
-      <ul className="mx-auto mt-6 grid max-w-[38rem] gap-3 text-left text-[0.94rem] leading-relaxed text-[var(--color-muted)] sm:grid-cols-2 sm:gap-4 sm:text-[0.96rem]">
-        {details.map((detail) => (
-          <li
-            key={detail}
-            className="border-t border-[var(--color-line)] pt-3 sm:border-l sm:border-t-0 sm:pl-4 sm:pt-0 first:sm:border-l-0 first:sm:pl-0"
-          >
-            {detail}
-          </li>
-        ))}
-      </ul>
     </section>
   );
 }
