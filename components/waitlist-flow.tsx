@@ -41,10 +41,19 @@ export function WaitlistFlow() {
     <div className="mx-auto w-full max-w-[64rem] text-center">
       <h1
         id="waitlist-heading"
-        className="copy-rhythm mx-auto max-w-[23ch] text-balance text-[0.98rem] leading-[1.08] sm:max-w-[28ch] sm:text-[1.12rem] md:max-w-[38rem] md:text-[1.5rem] md:leading-[1.06] lg:max-w-[43.75rem] lg:text-[1.72rem] lg:leading-[1.04]"
+        className="copy-rhythm mx-auto max-w-[23ch] text-balance text-[1.5rem] leading-[1.02] sm:max-w-[28ch] sm:text-[1.85rem] md:max-w-[38rem] md:text-[2.1rem] md:leading-[1.03] lg:max-w-[43.75rem]"
       >
         {headline}
       </h1>
+
+      <div className="mx-auto mt-10 max-w-[28rem] sm:mt-12">
+        <Link
+          className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
+          href="https://buy.stripe.com/dRmfZgckpge52St2t84gg00"
+        >
+          Get your first letter
+        </Link>
+      </div>
 
       <ProductPreview />
 
@@ -55,7 +64,7 @@ export function WaitlistFlow() {
         <p className="eyebrow">Why this exists</p>
         <h2
           id="why-this-exists-heading"
-          className="copy-rhythm mx-auto mt-3 max-w-[24rem] text-[1.55rem] leading-[1.03] sm:text-[1.85rem] md:text-[2.1rem]"
+          className="copy-rhythm mx-auto mt-3 max-w-[38rem] text-[0.98rem] leading-[1.08] sm:max-w-[43.75rem] sm:text-[1.12rem] md:text-[1.5rem] md:leading-[1.06] lg:text-[1.72rem] lg:leading-[1.04]"
         >
           There&apos;s so much more to talk about.
         </h2>
@@ -82,21 +91,15 @@ export function WaitlistFlow() {
 
       <section
         aria-labelledby="founding-member-heading"
-        className="mx-auto mt-14 w-full max-w-[44rem] text-center sm:mt-16"
+        className="mx-auto mt-14 w-full max-w-[44rem] border-t border-[var(--color-line)] pt-10 text-center sm:mt-16 md:pt-14"
       >
         <p className="eyebrow">Founding member offer</p>
         <h2
           id="founding-member-heading"
-          className="copy-rhythm mx-auto mt-3 max-w-[20ch] text-[1.55rem] leading-[1.03] sm:text-[1.85rem] md:text-[2.1rem]"
+          className="copy-rhythm mx-auto mt-3 max-w-[38rem] text-[0.98rem] leading-[1.08] sm:max-w-[43.75rem] sm:text-[1.12rem] md:text-[1.5rem] md:leading-[1.06] lg:text-[1.72rem] lg:leading-[1.04]"
         >
           $8/month. Your first letter is on us if you subscribe before June 1.
         </h2>
-
-        <p className="copy-rhythm mx-auto mt-4 max-w-[30rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
-          If you&apos;re subscribed by the 1st of the month, you&apos;ll receive
-          that month&apos;s letter. Cancel before the end of the month if
-          you&apos;d like to pause.
-        </p>
       </section>
 
       <div className="mx-auto mt-10 max-w-[28rem] sm:mt-12">
@@ -106,12 +109,6 @@ export function WaitlistFlow() {
         >
           Get your first letter
         </Link>
-
-        <p className="copy-rhythm mx-auto mt-4 max-w-[24rem] text-sm leading-relaxed text-[var(--color-muted)] sm:max-w-[28rem] sm:text-[0.94rem]">
-          Subscribe before June 1 to join as a founding member.
-          <br />
-          $8/month after your first letter.
-        </p>
       </div>
 
       <FaqList />

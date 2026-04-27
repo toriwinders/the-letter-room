@@ -12,7 +12,7 @@ export function ProductPreview() {
       <p className="eyebrow">What arrives each month</p>
       <h2
         id="product-preview-heading"
-        className="copy-rhythm mx-auto mt-3 max-w-[24rem] text-[1.5rem] leading-[1.02] sm:text-[1.85rem] md:text-[2.1rem]"
+        className="copy-rhythm mx-auto mt-3 max-w-[38rem] text-[0.98rem] leading-[1.08] sm:max-w-[43.75rem] sm:text-[1.12rem] md:text-[1.5rem] md:leading-[1.06] lg:text-[1.72rem] lg:leading-[1.04]"
       >
         A letter you&apos;ll actually want to read. A card you&apos;ll actually want
         to use.
