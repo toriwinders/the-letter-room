@@ -24,7 +24,8 @@ const faqItems = [
   },
   {
     question: "How much is it?",
-    answer: "$8/month. Your first letter is on us if you subscribe before June 1.",
+    answer:
+      "Founding members get their first month for $1 if they subscribe before June 1. After that, the subscription renews at $5/month until canceled.",
   },
   {
     question: "When will I receive my letter?",
@@ -58,39 +59,51 @@ export function FaqList() {
   return (
     <section
       aria-labelledby="faq-heading"
-      className="mx-auto mt-16 w-full max-w-[52rem] text-left"
+      className="section-band section-band-faq section-gap mt-10 text-left sm:mt-16"
     >
-      <div className="max-w-[36rem]">
-        <p className="eyebrow">Questions, answered</p>
-        <h2
-          id="faq-heading"
-          className="copy-rhythm mt-3 text-[1.45rem] leading-[1.05] sm:text-[1.72rem] md:text-[1.95rem]"
-        >
-          <span>
-            Everything you want to know
-            <br className="md:hidden" />
-            {" "}before your first letter shows up.
-          </span>
-        </h2>
-      </div>
-
-      <div className="mt-8 border-t border-[var(--color-line)]">
-        {faqItems.map((item) => (
-          <details
-            key={item.question}
-            className="faq-item border-b border-[var(--color-line)] py-4"
-          >
-            <summary className="copy-rhythm flex list-none items-center justify-between gap-6 text-[0.98rem] leading-snug text-[var(--color-ink)] sm:text-[1.02rem]">
-              <span>{item.question}</span>
-              <span className="faq-plus" aria-hidden="true">
-                +
+      <div className="section-inner">
+        <div className="mx-auto max-w-[52rem]">
+          <div className="max-w-[36rem]">
+            <p className="eyebrow">Questions, answered</p>
+            <h2
+              id="faq-heading"
+              className="copy-rhythm mt-3 text-[1.45rem] leading-[1.05] sm:text-[1.72rem] md:text-[1.95rem]"
+            >
+              <span>
+                Everything you want to know
+                <br className="md:hidden" /> before your first letter shows up.
               </span>
-            </summary>
-            <p className="copy-rhythm mt-3 max-w-[36rem] pr-10 text-[0.92rem] leading-[1.6] text-[var(--color-muted)] sm:text-[0.96rem]">
-              {item.answer}
-            </p>
-          </details>
-        ))}
+            </h2>
+          </div>
+
+          <div className="mt-8 border-t border-[var(--color-line)]">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="faq-item border-b border-[var(--color-line)] py-2"
+              >
+                <summary className="copy-rhythm flex min-h-12 list-none items-center justify-between gap-6 py-2 text-[0.98rem] leading-snug text-[var(--color-ink)] sm:text-[1.02rem]">
+                  <span>{item.question}</span>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    className="faq-chevron h-4 w-4 shrink-0 text-[var(--color-brand)]"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </summary>
+                <p className="copy-rhythm mt-2 max-w-[36rem] pr-10 pb-3 text-[0.92rem] leading-[1.6] text-[var(--color-muted)] sm:text-[0.96rem]">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

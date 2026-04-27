@@ -19,8 +19,8 @@ export default function TermsPage() {
           </p>
           <p>
             Founding member subscriptions placed before June 1, 2026 include a
-            first letter on us. After that, subscriptions renew at
-            $8/month until canceled.
+            first month for $1. After that, subscriptions renew at $5/month
+            until canceled.
           </p>
           <p>
             You can cancel before the end of any month if you’d like to pause
