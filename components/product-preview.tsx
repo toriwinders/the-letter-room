@@ -68,7 +68,7 @@ export function ProductPreview() {
         <div className="product-card">
           <p className="eyebrow">What Arrives Each Month</p>
 
-          <div className="mx-auto mt-3 max-w-[38rem]">
+          <div className="mx-auto mt-8 max-w-[28rem] sm:max-w-[38rem]">
             <h2 className="section-title copy-rhythm">
               <span className="sm:hidden">
                 You have 147 unread newsletters in your inbox.
@@ -82,7 +82,7 @@ export function ProductPreview() {
             </h2>
           </div>
 
-          <div className="why-grid mt-18 sm:mt-22 lg:mt-24">
+          <div className="why-grid mt-20 sm:mt-24 lg:mt-28">
             <article className="why-card">
               <div className="icon-badge">
                 <EnvelopeIcon />
