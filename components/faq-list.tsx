@@ -67,7 +67,7 @@ export function FaqList() {
             <p className="eyebrow">Questions, answered</p>
             <h2
               id="faq-heading"
-              className="copy-rhythm mt-3 text-[1.45rem] leading-[1.05] sm:text-[1.72rem] md:text-[1.95rem]"
+              className="section-title copy-rhythm mt-3"
             >
               <span>
                 Everything you want to know

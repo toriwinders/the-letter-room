@@ -69,13 +69,13 @@ export function ProductPreview() {
           <p className="eyebrow">What Arrives Each Month</p>
 
           <div className="mx-auto mt-3 max-w-[38rem]">
-            <h2 className="copy-rhythm text-[0.98rem] leading-[1.08] text-[var(--color-ink)] sm:text-[1.12rem] md:text-[1.5rem] md:leading-[1.06] lg:text-[1.72rem] lg:leading-[1.04]">
+            <h2 className="section-title copy-rhythm">
               You have 147 unread newsletters in your inbox. You don&apos;t need another
               one.
             </h2>
           </div>
 
-          <div className="why-grid mt-14 sm:mt-18 lg:mt-20">
+          <div className="why-grid mt-16 sm:mt-20 lg:mt-24">
             <article className="why-card">
               <div className="icon-badge">
                 <EnvelopeIcon />

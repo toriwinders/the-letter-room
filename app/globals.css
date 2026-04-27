@@ -5,6 +5,7 @@
   --color-brand: #145da0;
   --color-ink: #171514;
   --color-muted: #5d5752;
+  --color-card-surface: #f8f4f0;
   --color-product-bg: #f0f4f8;
   --color-why-bg: #f7f3ee;
   --color-offer-bg: #e8eff7;
@@ -137,6 +138,12 @@ body {
   text-transform: uppercase;
 }
 
+.section-title {
+  color: var(--color-ink);
+  font-size: 1.45rem;
+  line-height: 1.05;
+}
+
 .section-band {
   width: 100vw;
   margin-inline: calc(50% - 50vw);
@@ -217,7 +224,7 @@ body {
 }
 
 .why-card {
-  background: #ffffff;
+  background: var(--color-card-surface);
   border: 1px solid var(--color-line);
   text-align: center;
   transition:
@@ -300,6 +307,10 @@ body {
 }
 
 @media (min-width: 640px) {
+  .section-title {
+    font-size: 1.72rem;
+  }
+
   .section-inner {
     padding-inline: 2rem;
   }
@@ -335,6 +346,10 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .section-title {
+    font-size: 1.95rem;
+  }
+
   .product-card {
     max-width: 72rem;
   }

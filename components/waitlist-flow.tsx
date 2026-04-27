@@ -68,7 +68,7 @@ export function WaitlistFlow() {
             <p className="eyebrow">Why this exists</p>
             <h2
               id="why-this-exists-heading"
-              className="copy-rhythm mx-auto mt-3 max-w-[38rem] text-[0.98rem] leading-[1.08] sm:max-w-[43.75rem] sm:text-[1.12rem] md:text-[1.5rem] md:leading-[1.06] lg:text-[1.72rem] lg:leading-[1.04]"
+              className="section-title copy-rhythm mx-auto mt-3 max-w-[38rem] sm:max-w-[43.75rem]"
             >
               There&apos;s so much more to talk about.
             </h2>
@@ -104,7 +104,7 @@ export function WaitlistFlow() {
             <p className="eyebrow">Founding member offer</p>
             <h2
               id="founding-member-heading"
-              className="copy-rhythm mx-auto mt-3 max-w-[44rem] text-[0.98rem] leading-[1.08] sm:max-w-[44rem] sm:text-[1.12rem] md:text-[1.5rem] md:leading-[1.06] lg:text-[1.72rem] lg:leading-[1.04]"
+              className="section-title copy-rhythm mx-auto mt-3 max-w-[44rem] sm:max-w-[44rem]"
             >
               <span>
                 Get your first letter for $1.
