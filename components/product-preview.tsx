@@ -66,22 +66,24 @@ export function ProductPreview() {
     >
       <div className="section-inner">
         <div className="product-card">
-          <div className="copy-rhythm mx-auto max-w-[38rem] text-[0.96rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
+          <p className="eyebrow">What Arrives Each Month</p>
+
+          <div className="copy-rhythm mx-auto mt-3 max-w-[38rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
             <p>
               You have 147 unread newsletters in your inbox. You don&apos;t need another
               one.
             </p>
           </div>
 
-          <div className="why-grid mt-8 sm:mt-10">
+          <div className="why-grid mt-10 sm:mt-14">
             <article className="why-card">
               <div className="icon-badge">
                 <EnvelopeIcon />
               </div>
-              <h3 className="copy-rhythm mt-5 font-brand text-[1.1rem] leading-[1.08] text-[var(--color-ink)]">
+              <h3 className="copy-rhythm mt-5 text-[1.18rem] leading-[1.25] text-[var(--color-ink)] sm:text-[1.28rem]">
                 This is a letter. Mailed.
               </h3>
-              <p className="mx-auto mt-3 max-w-[19rem] text-[0.92rem] leading-[1.65] text-[var(--color-muted)]">
+              <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
                 Each month, an envelope will arrive at your door, made to feel like it
                 matters the moment you hold it.
               </p>
@@ -91,10 +93,10 @@ export function ProductPreview() {
               <div className="icon-badge">
                 <LetterIcon />
               </div>
-              <h3 className="copy-rhythm mt-5 font-brand text-[1.1rem] leading-[1.08] text-[var(--color-ink)]">
+              <h3 className="copy-rhythm mt-5 text-[1.18rem] leading-[1.25] text-[var(--color-ink)] sm:text-[1.28rem]">
                 A letter you&apos;ll actually want to read.
               </h3>
-              <p className="mx-auto mt-3 max-w-[19rem] text-[0.92rem] leading-[1.65] text-[var(--color-muted)]">
+              <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
                 A short reflection on modern life, written like it&apos;s coming from
                 your smartest, most observant friend. The kind that makes you stop and
                 think, &quot;I&apos;ve felt that too.&quot;
@@ -105,10 +107,10 @@ export function ProductPreview() {
               <div className="icon-badge">
                 <SpeechBubbleIcon />
               </div>
-              <h3 className="copy-rhythm mt-5 font-brand text-[1.1rem] leading-[1.08] text-[var(--color-ink)]">
+              <h3 className="copy-rhythm mt-5 text-[1.18rem] leading-[1.25] text-[var(--color-ink)] sm:text-[1.28rem]">
                 A card you&apos;ll actually want to use
               </h3>
-              <p className="mx-auto mt-3 max-w-[19rem] text-[0.92rem] leading-[1.65] text-[var(--color-muted)]">
+              <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
                 A conversation card with a theme and prompts sparked by the month&apos;s
                 letter. Bring it to dinner, on a walk, or to a night in with the
                 friends you don&apos;t see enough.

@@ -61,7 +61,7 @@ export function WaitlistFlow() {
 
       <section
         aria-labelledby="why-this-exists-heading"
-        className="section-band section-band-why section-gap mt-10 text-center sm:mt-16"
+        className="section-band section-band-why section-gap text-center"
       >
         <div className="section-inner">
           <div className="mx-auto max-w-[44rem]">

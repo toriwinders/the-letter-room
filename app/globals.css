@@ -261,6 +261,10 @@ body {
   display: none;
 }
 
+.faq-item summary {
+  cursor: pointer;
+}
+
 .faq-chevron {
   transition: transform 0.2s ease;
 }
@@ -327,5 +331,11 @@ body {
   .feature-icon {
     width: 48px;
     height: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .why-grid {
+    gap: 2.25rem;
   }
 }
