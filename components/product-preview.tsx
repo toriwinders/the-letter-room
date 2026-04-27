@@ -70,12 +70,19 @@ export function ProductPreview() {
 
           <div className="mx-auto mt-3 max-w-[38rem]">
             <h2 className="section-title copy-rhythm">
-              You have 147 unread newsletters in your inbox. You don&apos;t need another
-              one.
+              <span className="sm:hidden">
+                You have 147 unread newsletters in your inbox.
+                <br />
+                You don&apos;t need another one.
+              </span>
+              <span className="hidden sm:inline">
+                You have 147 unread newsletters in your inbox. You don&apos;t need
+                another one.
+              </span>
             </h2>
           </div>
 
-          <div className="why-grid mt-16 sm:mt-20 lg:mt-24">
+          <div className="why-grid mt-18 sm:mt-22 lg:mt-24">
             <article className="why-card">
               <div className="icon-badge">
                 <EnvelopeIcon />
