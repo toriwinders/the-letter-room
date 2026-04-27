@@ -7,7 +7,7 @@
   --color-muted: #7a756e;
   --color-card-surface: #f3efe8;
   --color-product-bg: #eee9e0;
-  --color-why-bg: #f0ebe2;
+  --color-why-bg: #e4e8dc;
   --color-offer-bg: #e8e3d8;
   --color-border: #5c6b5226;
   --color-border-strong: #3d3a3538;
@@ -177,10 +177,19 @@ body {
 }
 
 .product-card,
+.hero-card,
 .offer-card,
 .why-card {
   border-radius: 20px;
   padding: 1.5rem 1.25rem;
+}
+
+.hero-card {
+  max-width: 44rem;
+  margin: 0 auto;
+  border: 1px solid var(--color-border);
+  background: var(--color-panel-strong);
+  box-shadow: 0 20px 44px #3d3a350f;
 }
 
 .product-card {
@@ -328,9 +337,14 @@ body {
   }
 
   .product-card,
+  .hero-card,
   .offer-card,
   .why-card {
     padding: 2rem 1.5rem;
+  }
+
+  .hero-card {
+    padding: 2.5rem 2rem;
   }
 
   .product-card {

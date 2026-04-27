@@ -40,20 +40,22 @@ export function WaitlistFlow() {
   return (
     <div className="mx-auto w-full max-w-[64rem] text-center">
       <div className="mx-auto max-w-[44rem]">
-        <h1
-          id="waitlist-heading"
-          className="copy-rhythm mx-auto max-w-[23ch] text-balance text-[1.5rem] leading-[1.02] sm:max-w-[28ch] sm:text-[1.85rem] md:max-w-[38rem] md:text-[2.1rem] md:leading-[1.03] lg:max-w-[43.75rem]"
-        >
-          {headline}
-        </h1>
-
-        <div className="mx-auto mt-10 max-w-[28rem] sm:mt-12">
-          <Link
-            className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
-            href="https://buy.stripe.com/dRmfZgckpge52St2t84gg00"
+        <div className="hero-card">
+          <h1
+            id="waitlist-heading"
+            className="copy-rhythm mx-auto max-w-[23ch] text-balance text-[1.5rem] leading-[1.02] sm:max-w-[28ch] sm:text-[1.85rem] md:max-w-[38rem] md:text-[2.1rem] md:leading-[1.03] lg:max-w-[43.75rem]"
           >
-            Get your first letter for $1
-          </Link>
+            {headline}
+          </h1>
+
+          <div className="mx-auto mt-8 max-w-[28rem] sm:mt-10">
+            <Link
+              className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
+              href="https://buy.stripe.com/dRmfZgckpge52St2t84gg00"
+            >
+              Get your first letter for $1
+            </Link>
+          </div>
         </div>
       </div>
 

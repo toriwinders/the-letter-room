@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/opengraph-image.png",
-        width: 3500,
-        height: 1500,
+        width: 1200,
+        height: 630,
         type: "image/png",
         alt: "The Letter Room. Something worth talking about.",
       },
