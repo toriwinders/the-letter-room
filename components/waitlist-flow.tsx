@@ -36,21 +36,6 @@ const headline: ReactNode = (
   </>
 );
 
-const ritualColumns = [
-  {
-    title: "Subscribe by the 1st",
-    body: "If you join by the 1st, that month’s letter is already on its way to you.",
-  },
-  {
-    title: "A letter arrives",
-    body: "Each issue pairs a reflection on modern life with a question worth staying with.",
-  },
-  {
-    title: "Bring it into real life",
-    body: "Carry it into dinner, walks, and nights with friends when the conversation deserves more depth.",
-  },
-] as const;
-
 export function WaitlistFlow() {
   return (
     <div className="mx-auto w-full max-w-[64rem] text-center">
@@ -61,35 +46,39 @@ export function WaitlistFlow() {
         {headline}
       </h1>
 
+      <ProductPreview />
+
       <section
-        aria-labelledby="how-it-works-heading"
-        className="mx-auto mt-7 w-full max-w-[60rem] sm:mt-8"
+        aria-labelledby="why-this-exists-heading"
+        className="mx-auto mt-14 w-full max-w-[44rem] text-center sm:mt-16"
       >
+        <p className="eyebrow">Why this exists</p>
         <h2
-          id="how-it-works-heading"
-          className="copy-rhythm mx-auto mb-5 text-[0.96rem] leading-tight text-[var(--color-muted)] sm:mb-6 sm:text-[1.06rem] md:text-[1.22rem]"
+          id="why-this-exists-heading"
+          className="copy-rhythm mx-auto mt-3 max-w-[24rem] text-[1.55rem] leading-[1.03] sm:text-[1.85rem] md:text-[2.1rem]"
         >
-          Month by month
+          There&apos;s so much more to talk about.
         </h2>
 
-        <div className="flex flex-col divide-y divide-[var(--color-line)] md:flex-row md:divide-x md:divide-y-0">
-          {ritualColumns.map((column) => (
-            <div
-              key={column.title}
-              className="flex-1 px-0 py-5 first:pt-0 last:pb-0 md:px-6 md:py-0"
-            >
-              <h3 className="copy-rhythm text-[0.98rem] leading-tight text-[var(--color-ink)] sm:text-[1rem]">
-                {column.title}
-              </h3>
-              <p className="copy-rhythm mx-auto mt-2 max-w-[16rem] text-[0.88rem] leading-[1.42] text-[var(--color-muted)] sm:max-w-[18rem] sm:text-[0.92rem] md:max-w-[15rem] lg:max-w-[17rem]">
-                {column.body}
-              </p>
-            </div>
-          ))}
+        <div className="copy-rhythm mx-auto mt-4 max-w-[44rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
+          <p>
+            Technology has made it easier to stay in touch, but harder to
+            actually connect. We text instead of call. React instead of respond.
+            We know what our friends ate for dinner but not what&apos;s keeping
+            them up at night. And when we do get together, we default to the
+            catch-up, the job, the house, the baby, and run out of time before
+            we get to the stuff that actually matters.
+          </p>
+          <p className="mt-4">
+            The Letter Room is changing that. Think of it like a book club, but
+            for the stuff that&apos;s actually on your mind.
+          </p>
+          <p className="mt-4">
+            I started this because I got tired of the catch-up. I wanted the
+            real thing.
+          </p>
         </div>
       </section>
-
-      <ProductPreview />
 
       <section
         aria-labelledby="founding-member-heading"
