@@ -143,6 +143,19 @@ body {
   text-transform: uppercase;
 }
 
+.top-nav-link {
+  color: var(--color-brand);
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.top-nav-link:hover,
+.top-nav-link:focus-visible {
+  color: var(--color-ink);
+}
+
 .section-title {
   color: var(--color-ink);
   font-size: 1.45rem;
@@ -213,7 +226,6 @@ body {
 .product-card {
   max-width: 48rem;
   margin: 0 auto;
-  border: 1px solid #e0358012;
   background: var(--color-background);
 }
 
@@ -260,7 +272,6 @@ body {
 }
 
 .why-card {
-  border: 1px solid #e035801a;
   background: var(--color-card-surface);
   text-align: center;
   transition:
@@ -284,13 +295,6 @@ body {
   border-radius: 9999px;
   background: #feeaf3;
   color: var(--color-brand);
-}
-
-.final-cta-card {
-  border: 1px solid var(--color-border);
-  border-radius: 20px;
-  background: var(--color-product-bg);
-  padding: 1rem;
 }
 
 .feature-icon {

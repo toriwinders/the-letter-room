@@ -51,7 +51,7 @@ export function WaitlistFlow() {
           <div className="mx-auto mt-8 max-w-[28rem] sm:mt-10">
             <Link
               className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
-              href="https://buy.stripe.com/dRmfZgckpge52St2t84gg00"
+              href="https://buy.stripe.com/4gMfZg3NT2nf64FffU4gg02"
             >
               Get your first letter for $1
             </Link>
@@ -118,7 +118,7 @@ export function WaitlistFlow() {
             <div className="mx-auto mt-8 max-w-[28rem]">
               <Link
                 className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
-                href="https://buy.stripe.com/dRmfZgckpge52St2t84gg00"
+                href="https://buy.stripe.com/4gMfZg3NT2nf64FffU4gg02"
               >
                 Get your first letter for $1
               </Link>
@@ -129,10 +129,10 @@ export function WaitlistFlow() {
 
       <FaqList />
 
-      <div className="final-cta-card mx-auto mt-10 max-w-[28rem] sm:mt-12">
+      <div className="mx-auto mt-10 max-w-[28rem] sm:mt-12">
         <Link
           className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
-          href="https://buy.stripe.com/dRmfZgckpge52St2t84gg00"
+          href="https://buy.stripe.com/4gMfZg3NT2nf64FffU4gg02"
         >
           Get your first letter for $1
         </Link>

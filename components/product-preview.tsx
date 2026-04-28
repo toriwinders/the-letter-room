@@ -61,6 +61,7 @@ function SpeechBubbleIcon() {
 export function ProductPreview() {
   return (
     <section
+      id="how-it-works"
       aria-label="What arrives each month"
       className="section-band section-band-product section-gap mt-10 text-center sm:mt-16"
     >
