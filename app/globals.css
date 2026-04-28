@@ -205,7 +205,7 @@ body {
 .hero-card {
   max-width: 44rem;
   margin: 0 auto;
-  background: var(--color-card-surface);
+  background: #f5b731;
   box-shadow: 0 20px 44px #1e1e1e1f;
 }
 
