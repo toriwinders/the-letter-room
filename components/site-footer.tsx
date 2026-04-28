@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export function SiteFooter() {
   return (
-    <footer className="mx-auto mt-20 w-full max-w-[64rem] border-t border-[var(--color-line)] pt-6 pb-2 text-[0.9rem] text-[var(--color-muted)] sm:mt-24">
+    <footer className="mx-auto mt-20 w-full max-w-[64rem] border-t border-[var(--color-line)] pt-6 pb-2 text-[0.9rem] text-[var(--color-background)] sm:mt-24">
       <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
         <div className="max-w-[22rem]">
-          <p className="copy-rhythm text-[var(--color-ink)]">The Letter Room</p>
+          <p className="brand-name copy-rhythm">The Letter Room</p>
           <p className="copy-rhythm mt-2 leading-relaxed">
             A monthly letter for people craving more depth and conversation in a
             chronically online world.

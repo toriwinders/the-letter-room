@@ -87,7 +87,7 @@ export function ProductPreview() {
               <div className="icon-badge">
                 <EnvelopeIcon />
               </div>
-              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-ink)] sm:text-[1.32rem]">
+              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-brand)] sm:text-[1.32rem]">
                 Go analog.
               </h3>
               <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
@@ -100,7 +100,7 @@ export function ProductPreview() {
               <div className="icon-badge">
                 <LetterIcon />
               </div>
-              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-ink)] sm:text-[1.32rem]">
+              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-brand)] sm:text-[1.32rem]">
                 Get your letter.
               </h3>
               <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
@@ -114,7 +114,7 @@ export function ProductPreview() {
               <div className="icon-badge">
                 <SpeechBubbleIcon />
               </div>
-              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-ink)] sm:text-[1.32rem]">
+              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-brand)] sm:text-[1.32rem]">
                 A conversation card to take with you.
               </h3>
               <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">

@@ -31,7 +31,7 @@ export default function HomePage() {
   };
 
   return (
-    <main className="min-h-screen bg-[var(--color-background)] text-[var(--color-ink)]">
+    <main className="min-h-screen bg-[var(--color-brand)] text-[var(--color-background)]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

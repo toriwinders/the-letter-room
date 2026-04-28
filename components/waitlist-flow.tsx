@@ -70,7 +70,7 @@ export function WaitlistFlow() {
             <p className="eyebrow">Why this exists</p>
             <h2
               id="why-this-exists-heading"
-              className="section-title copy-rhythm mx-auto mt-3 max-w-[38rem] sm:max-w-[43.75rem]"
+              className="section-title copy-rhythm mx-auto mt-3 max-w-[38rem] text-[var(--color-brand)] sm:max-w-[43.75rem]"
             >
               There&apos;s so much more to talk about.
             </h2>

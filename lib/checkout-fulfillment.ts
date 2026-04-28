@@ -50,30 +50,30 @@ function getBestAddress(session: Stripe.Checkout.Session) {
 
 function buildConfirmationEmailHtml() {
   return `
-    <div style="background:#ffffff;padding:40px 24px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3d3a35;text-align:left;">
+    <div style="background:#ffffff;padding:40px 24px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1E1E1E;text-align:left;">
       <div style="margin:0 auto;max-width:560px;text-align:left;">
-        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#3d3a35;text-align:left;">
+        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#1E1E1E;text-align:left;">
           Hey!
         </p>
-        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#3d3a35;text-align:left;">
+        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#1E1E1E;text-align:left;">
           You&apos;re in. Welcome to The Letter Room.
         </p>
-        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#3d3a35;text-align:left;">
+        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#1E1E1E;text-align:left;">
           Human connection and real life experiences are going to be more important than ever.
         </p>
-        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#3d3a35;text-align:left;">
+        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#1E1E1E;text-align:left;">
           We text instead of call. We react instead of respond. We watch each other&apos;s lives from a distance and call it staying close. The Letter Room is changing that by sending something that shows up at your door and asks you to do something with it. Because what&apos;s better than getting a real letter that someone actually put time and care into.
         </p>
-        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#3d3a35;text-align:left;">
+        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#1E1E1E;text-align:left;">
           Inside, you&apos;ll receive a short reflection on modern life. This should feel like it&apos;s coming from the smartest, most observant friend you know. And that&apos;s paired with a conversation card related to the letter. It has a theme and a few prompts that are designed for you to carry on the conversation.
         </p>
-        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#3d3a35;text-align:left;">
+        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#1E1E1E;text-align:left;">
           The letter is for you. The card is for you and your people.
         </p>
-        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#3d3a35;text-align:left;">
+        <p style="margin:0 0 20px;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#1E1E1E;text-align:left;">
           Thank you for being a founding member, and taking a bet on this. Your first letter will be shipped out the first week of July. When it lands, I want to hear about it. Write me back - the return address is on the envelope. Post the card on your story. Send this to the friend you&apos;d actually want to have that conversation with. You&apos;re one of the first people in, and this thing grows because people like you tell people like them.
         </p>
-        <p style="margin:0;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#3d3a35;text-align:left;">
+        <p style="margin:0;font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#1E1E1E;text-align:left;">
           -tori
         </p>
       </div>
