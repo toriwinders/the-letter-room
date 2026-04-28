@@ -89,7 +89,7 @@ export function ProductPreview() {
                 <EnvelopeIcon />
               </div>
               <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-brand)] sm:text-[1.32rem]">
-                Go analog.
+                Subscribe.
               </h3>
               <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
                 Each month, an envelope will arrive at your door, made to feel like it
@@ -116,7 +116,7 @@ export function ProductPreview() {
                 <SpeechBubbleIcon />
               </div>
               <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-brand)] sm:text-[1.32rem]">
-                A conversation card to take with you.
+                Conversation card.
               </h3>
               <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
                 A theme and prompts sparked by the month&apos;s letter. Bring it to
