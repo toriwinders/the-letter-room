@@ -129,7 +129,7 @@ export function WaitlistFlow() {
 
       <FaqList />
 
-      <div className="mx-auto mt-10 max-w-[28rem] sm:mt-12">
+      <div className="final-cta-card mx-auto mt-10 max-w-[28rem] sm:mt-12">
         <Link
           className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
           href="https://buy.stripe.com/dRmfZgckpge52St2t84gg00"
