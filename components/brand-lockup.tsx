@@ -6,10 +6,8 @@ export function BrandLockup() {
       <div className="relative mx-auto w-full max-w-[21.5rem] sm:max-w-[32rem] md:max-w-[45rem] lg:max-w-[58rem]">
         <div className="relative aspect-[7/3]">
           <Image
-            src="/the-letter-room-lockup.png"
-            alt="The Letter Room. Something worth talking about."
-            width={3500}
-            height={1500}
+            src="/conversation-club-lockup.png"
+            alt="Conversation Club. Something worth talking about."
             priority
             className="object-contain"
             fill

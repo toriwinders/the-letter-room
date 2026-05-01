@@ -1,23 +1,3 @@
-function EnvelopeIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="feature-icon"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M3.75 7.25A2.25 2.25 0 0 1 6 5h12a2.25 2.25 0 0 1 2.25 2.25v9.5A2.25 2.25 0 0 1 18 19H6a2.25 2.25 0 0 1-2.25-2.25z" />
-      <path d="m4.5 7.75 6.74 5.13a1.25 1.25 0 0 0 1.52 0l6.74-5.13" />
-      <path d="m11.15 8.1.85-.6.85.6" />
-      <path d="M11.15 8.1c.17-.52.53-.85.85-.85s.68.33.85.85" />
-    </svg>
-  );
-}
-
 function LetterIcon() {
   return (
     <svg
@@ -61,53 +41,36 @@ function SpeechBubbleIcon() {
 export function ProductPreview() {
   return (
     <section
-      id="how-it-works"
-      aria-label="What arrives each month"
+      id="whats-inside"
+      aria-label="What shows up"
       className="section-band section-band-product section-gap mt-10 text-center sm:mt-16"
     >
       <div className="section-inner">
         <div className="product-card">
-          <p className="eyebrow">What Arrives Each Month</p>
+          <p className="eyebrow">What shows up</p>
 
           <div className="mx-auto mt-8 max-w-[28rem] sm:max-w-[38rem]">
             <h2 className="section-title copy-rhythm">
-              <span className="sm:hidden">
-                You have 147 unread newsletters in your inbox.
-                <br />
-                You don&apos;t need another one.
-              </span>
-              <span className="hidden sm:inline">
-                You have 147 unread newsletters in your inbox. You don&apos;t need
-                another one.
-              </span>
+              An essay. A question. And a reason to plan something.
             </h2>
+            <p className="copy-rhythm mx-auto mt-3 max-w-[30rem] text-[0.92rem] leading-[1.55] text-[var(--color-muted)] sm:text-[0.96rem]">
+              Everything arrives in an envelope designed to feel like it matters.
+            </p>
           </div>
 
           <div className="why-grid why-grid-spacing" style={{ marginTop: "3rem" }}>
             <article className="why-card">
               <div className="icon-badge">
-                <EnvelopeIcon />
-              </div>
-              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-brand)] sm:text-[1.32rem]">
-                Subscribe.
-              </h3>
-              <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
-                Each month, an envelope will arrive at your door, made to feel like it
-                matters the moment you hold it.
-              </p>
-            </article>
-
-            <article className="why-card">
-              <div className="icon-badge">
                 <LetterIcon />
               </div>
-              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-brand)] sm:text-[1.32rem]">
-                Get your letter.
+              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] sm:text-[1.32rem]">
+                The Letter
               </h3>
               <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
-                A short reflection on modern life, written like it&apos;s coming from
-                your smartest, most observant friend. The kind that makes you stop and
-                think, &quot;I&apos;ve felt that too.&quot;
+                A personal essay from me on whatever I&apos;ve been thinking about
+                that month — the same kind of writing I do on Substack, except
+                this one arrives at your door. Something about friendship,
+                getting older, what we actually want our lives to feel like.
               </p>
             </article>
 
@@ -115,13 +78,15 @@ export function ProductPreview() {
               <div className="icon-badge">
                 <SpeechBubbleIcon />
               </div>
-              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] text-[var(--color-brand)] sm:text-[1.32rem]">
-                Conversation card.
+              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] sm:text-[1.32rem]">
+                The Conversation Card
               </h3>
               <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
-                A theme and prompts sparked by the month&apos;s letter. Bring it to
-                dinner, on a walk, or to a night in with the friends you don&apos;t
-                see enough.
+                A 4x6 card with one theme and a few prompts. They are the kind
+                of questions you&apos;d never think to bring up, but once
+                somebody does, the conversation changes. Bring it to dinner.
+                Hand it to your partner on a Sunday. Text the prompt to the
+                friend you keep saying you need to see.
               </p>
             </article>
           </div>

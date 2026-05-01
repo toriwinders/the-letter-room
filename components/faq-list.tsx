@@ -3,53 +3,42 @@ import { ReactNode } from "react";
 
 const faqItems = [
   {
-    question: "What is the letter, exactly?",
+    question: "Is this a newsletter?",
     answer:
-      "Not a newsletter. Not a subscription box. A mailed letter with two things inside: a short reflection on modern life, the kind that makes you think \"I've felt that too but never had words for it\", and a conversation card with a theme and a few prompts. The letter is for you. The card is for you and your people.",
+      "No. A newsletter lives in your inbox and competes with 40 other things. This shows up at your door, on paper, and it’s designed to be held.",
   },
   {
     question: "Who writes it?",
     answer:
-      "I do. I'm Tori, new mom, constant overthinker, and the person who won't stop talking about how we need better conversations. Every letter is written by me.",
+      "Me. I’m Tori — new mom, lifelong overthinker, person who’s been writing personal essays for years and finally decided to mail them. Every letter is mine.",
   },
   {
-    question: "How is this different from a newsletter?",
+    question: "What if I don’t have anyone to do the question with?",
     answer:
-      "You can't leave a newsletter on the kitchen counter. You can't tuck it in your bag and pull it out at dinner. This is paper. It's designed to be held, passed around, and brought somewhere, with a conversation card that gives you a reason to actually go deeper with friends instead of just consuming content alone on your couch.",
+      "Use it anyway. Text it to a friend. Answer it in your notes at 11pm. But honestly — it’s a pretty good excuse to finally plan that dinner.",
   },
   {
-    question: "What's the conversation card?",
+    question: "How much?",
     answer:
-      "A 4x6 card with a theme and a few prompts sparked by that month's letter. Bring it to dinner. Bring it on a walk. Bring it to a night in with wine and the friends you don't see enough. It's the discussion guide for a book club, except the \"book\" is something you're already living.",
+      "Three dollars a month for the first 500 members, locked in forever. Five after that. No tiers, no add-ons.",
   },
   {
-    question: "How much is it?",
-    answer:
-      "Founding members get their first month for $1 if they subscribe before June 1. After that, the subscription renews at $5/month until canceled.",
-  },
-  {
-    question: "When will I receive my letter?",
-    answer: "Letters ship in the first week of each month.",
-  },
-  {
-    question: "Can I cancel anytime?",
-    answer:
-      "Yes. Cancel before the end of the month and you won't receive the next one.",
+    question: "Can I cancel?",
+    answer: "Yes. I’d rather you stay because you want to.",
   },
   {
     question: "Where do you ship?",
-    answer: "The US, Canada, Mexico, and the UK.",
+    answer: "US, Canada, Mexico, UK. More coming.",
   },
   {
-    question: "Can I gift a subscription?",
+    question: "Can I gift it?",
     answer: (
       <>
-        Yes, gifting is coming soon. If you want to send The Letter Room to
-        someone, reach out to{" "}
-        <Link className="text-link" href="mailto:hello@jointheletterroom.com">
-          hello@jointheletterroom.com
+        Soon. Email me at{" "}
+        <Link className="text-link" href="mailto:hello@conversationclub.co">
+          hello@conversationclub.co
         </Link>{" "}
-        and we&apos;ll make it happen.
+        and I&apos;ll set it up by hand.
       </>
     ),
   },
@@ -64,15 +53,12 @@ export function FaqList() {
       <div className="section-inner">
         <div className="mx-auto max-w-[52rem]">
           <div className="max-w-[36rem]">
-            <p className="eyebrow">Questions, answered</p>
+            <p className="eyebrow">Things people ask</p>
             <h2
               id="faq-heading"
               className="section-title copy-rhythm mt-3"
             >
-              <span>
-                Everything you want to know
-                <br className="md:hidden" /> before your first letter shows up.
-              </span>
+              Questions
             </h2>
           </div>
 

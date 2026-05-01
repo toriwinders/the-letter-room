@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.jointheletterroom.com/sitemap.xml",
-    host: "https://www.jointheletterroom.com",
+    sitemap: "https://conversationclub.co/sitemap.xml",
+    host: "https://conversationclub.co",
   };
 }

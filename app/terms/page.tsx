@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | The Letter Room",
+  title: "Terms of Service | The Conversation Club",
   description:
-    "Read the terms for The Letter Room monthly mailed subscription, including renewals, cancellation timing, and fulfillment details.",
+    "Read the terms for The Conversation Club monthly mailed subscription, including renewals, cancellation timing, and fulfillment details.",
   alternates: {
-    canonical: "https://www.jointheletterroom.com/terms",
+    canonical: "https://conversationclub.co/terms",
   },
 };
 
@@ -24,24 +24,23 @@ export default function TermsPage() {
 
         <div className="copy-rhythm mt-8 space-y-6 text-[0.98rem] leading-[1.7] text-[var(--color-muted)]">
           <p>
-            The Letter Room is a monthly mailed subscription. Letters ship in
-            the first week of each month.
+            The Conversation Club is a monthly mailed subscription. Letters and
+            conversation cards ship in the first week of each month.
           </p>
           <p>
-            Founding member subscriptions placed before June 1, 2026 include a
-            first month for $1. After that, subscriptions renew at $5/month
-            until canceled.
+            Founding member subscriptions are $3/month for the first 500
+            members, locked in for as long as you stay. After the founding
+            period, subscriptions renew at $5/month until canceled.
           </p>
           <p>
-            You can cancel before the end of any month if you’d like to pause
-            before the next letter is sent. Because each issue is prepared for
-            mailing, we cannot guarantee refunds for letters already processed
-            for fulfillment.
+            You can cancel before the end of any month if you&apos;d like to
+            stop before the next letter is sent. Because each issue is prepared
+            for mailing, we cannot guarantee refunds for letters already
+            processed for fulfillment.
           </p>
           <p>
-            Questions about your subscription can be sent to
-            {" "}
-            hello@jointheletterroom.com.
+            Questions about your subscription can be sent to{" "}
+            hello@conversationclub.co.
           </p>
         </div>
       </div>

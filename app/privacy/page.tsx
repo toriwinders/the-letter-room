@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | The Letter Room",
+  title: "Privacy Policy | The Conversation Club",
   description:
-    "Read the privacy policy for The Letter Room, including how subscription, mailing, and payment information is used.",
+    "Read the privacy policy for The Conversation Club, including how subscription, mailing, and payment information is used.",
   alternates: {
-    canonical: "https://www.jointheletterroom.com/privacy",
+    canonical: "https://conversationclub.co/privacy",
   },
 };
 
@@ -24,13 +24,14 @@ export default function PrivacyPage() {
 
         <div className="copy-rhythm mt-8 space-y-6 text-[0.98rem] leading-[1.7] text-[var(--color-muted)]">
           <p>
-            The Letter Room collects the information needed to process your
-            subscription and mail your monthly letter, including your name,
-            email address, payment details, and shipping address.
+            The Conversation Club collects the information needed to process
+            your subscription and mail your monthly letter and conversation
+            card, including your name, email address, payment details, and
+            shipping address.
           </p>
           <p>
-            Payments are processed securely by Stripe. We do not store your full
-            card details on this site.
+            Payments are processed securely by Stripe. We do not store your
+            full card details on this site.
           </p>
           <p>
             We use your information to manage subscriptions, send order and
@@ -44,7 +45,7 @@ export default function PrivacyPage() {
           </p>
           <p>
             If you have questions about your information or want your details
-            removed after canceling, email hello@jointheletterroom.com.
+            removed after canceling, email hello@conversationclub.co.
           </p>
         </div>
       </div>

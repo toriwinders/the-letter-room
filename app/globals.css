@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --color-background: #fffbf5;
-  --color-brand: #e03580;
-  --color-ink: #1e1e1e;
-  --color-muted: #6b6b6b;
-  --color-card-surface: #fff7f0;
-  --color-product-bg: #feeaf3;
-  --color-why-bg: #fff5e0;
-  --color-offer-bg: #e03580;
-  --color-border: #e0358026;
-  --color-border-strong: #1e1e1e38;
+  --color-background: #F2E8D0;
+  --color-brand: #D8612D;
+  --color-ink: #3E1B2C;
+  --color-muted: #6B5148;
+  --color-card-surface: #FAF3E6;
+  --color-product-bg: #E8D9C2;
+  --color-idea-bg: #F7F0E2;
+  --color-offer-bg: #3E1B2C;
+  --color-border: #D8612D26;
+  --color-border-strong: #3E1B2C38;
   --color-panel: rgba(255, 255, 255, 0.62);
   --color-panel-strong: rgba(255, 255, 255, 0.8);
-  --color-ring: #e0358047;
-  --color-line: #1e1e1e1a;
+  --color-ring: #D8612D47;
+  --color-line: #3E1B2C1a;
   --font-brand: "Canela", "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
     Palatino, Georgia, serif;
   --font-copy: "Neue Montreal", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -38,7 +38,7 @@ body {
 }
 
 ::selection {
-  background: #e0358024;
+  background: #D8612D24;
 }
 
 .font-brand {
@@ -67,8 +67,8 @@ body {
 }
 
 .field-shell:focus-within {
-  border-bottom-color: #e0358080;
-  box-shadow: inset 0 -1px 0 #e0358080;
+  border-bottom-color: #D8612D80;
+  box-shadow: inset 0 -1px 0 #D8612D80;
 }
 
 .field-input {
@@ -82,7 +82,7 @@ body {
 }
 
 .field-input::placeholder {
-  color: #1e1e1e7a;
+  color: #3E1B2C7a;
 }
 
 .button-primary {
@@ -99,8 +99,8 @@ body {
 
 .button-primary:hover {
   transform: translateY(-1px);
-  background: #c82d6f;
-  box-shadow: 0 10px 24px #1e1e1e1f;
+  background: #B84F22;
+  box-shadow: 0 10px 24px #3E1B2C1f;
 }
 
 .button-primary:focus-visible,
@@ -120,7 +120,7 @@ body {
 }
 
 .button-secondary:hover {
-  background: #1e1e1e0a;
+  background: #3E1B2C0a;
 }
 
 .text-link {
@@ -128,7 +128,7 @@ body {
   cursor: pointer;
   letter-spacing: -0.04em;
   text-decoration: underline;
-  text-decoration-color: #e0358052;
+  text-decoration-color: #D8612D52;
   text-underline-offset: 0.22em;
 }
 
@@ -182,8 +182,12 @@ body {
   background: var(--color-product-bg);
 }
 
-.section-band-why {
-  background: var(--color-why-bg);
+.section-band-idea {
+  background: var(--color-idea-bg);
+}
+
+.section-band-who {
+  background: var(--color-product-bg);
 }
 
 .section-band-offer {
@@ -205,17 +209,29 @@ body {
 .hero-card {
   max-width: 44rem;
   margin: 0 auto;
-  background: #f5b731;
-  box-shadow: 0 20px 44px #1e1e1e1f;
+  background: var(--color-brand);
+  box-shadow: 0 20px 44px #3E1B2C1f;
 }
 
 .hero-card h1 {
-  color: var(--color-brand);
+  color: var(--color-background);
+}
+
+.hero-card .eyebrow {
+  color: #F2E8D0cc;
+}
+
+.hero-card p {
+  color: #F2E8D0dd;
 }
 
 .hero-card .button-primary {
-  background: var(--color-brand);
+  background: var(--color-ink);
   color: var(--color-background);
+}
+
+.hero-card .button-primary:hover {
+  background: #2A1019;
 }
 
 .product-card {
@@ -224,34 +240,41 @@ body {
   background: var(--color-background);
 }
 
-.section-band-product .section-title,
-.section-band-product .why-card h3 {
+.section-band-product .section-title {
+  color: var(--color-ink);
+}
+
+.section-band-product .eyebrow {
   color: var(--color-brand);
 }
 
 .offer-card {
   max-width: 36rem;
   margin: 0 auto;
-  background: #f5b731;
-  color: #1e1e1e;
+  background: var(--color-brand);
+  color: var(--color-background);
   text-align: center;
 }
 
 .offer-card .eyebrow {
-  color: #5c3f00;
+  color: #F2E8D0cc;
 }
 
 .offer-card h2 {
-  color: #1e1e1e;
+  color: var(--color-background);
+}
+
+.offer-card p {
+  color: #F2E8D0dd;
 }
 
 .offer-card .button-primary {
-  background: #e03580;
-  color: #fffbf5;
+  background: var(--color-ink);
+  color: var(--color-background);
 }
 
 .offer-card .button-primary:hover {
-  background: #c82d6f;
+  background: #2A1019;
 }
 
 .why-grid {
@@ -272,12 +295,16 @@ body {
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
-  box-shadow: 0 1px 0 #1e1e1e08;
+  box-shadow: 0 1px 0 #3E1B2C08;
 }
 
 .why-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px #1e1e1e0f;
+  box-shadow: 0 8px 24px #3E1B2C0f;
+}
+
+.why-card h3 {
+  color: var(--color-ink);
 }
 
 .icon-badge {
@@ -288,7 +315,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  background: #feeaf3;
+  background: #D8612D18;
   color: var(--color-brand);
 }
 
@@ -304,23 +331,7 @@ body {
 
 .footer-link:hover,
 .footer-link:focus-visible {
-  color: #f5b731;
-}
-
-footer {
-  position: relative;
-  color: var(--color-background);
-}
-
-footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  left: 50%;
-  z-index: -1;
-  width: 100vw;
-  transform: translateX(-50%);
-  background: var(--color-ink);
+  color: var(--color-brand);
 }
 
 footer p,
@@ -332,7 +343,7 @@ footer a {
 }
 
 footer .brand-name {
-  color: #f5b731;
+  color: var(--color-brand);
   font-family: var(--font-copy);
   font-weight: 600;
 }
@@ -347,7 +358,7 @@ footer .brand-name {
 }
 
 .faq-item summary:hover {
-  background: #feeaf3;
+  background: #D8612D0d;
 }
 
 .faq-chevron {
@@ -426,7 +437,7 @@ footer .brand-name {
 
   .why-grid {
     max-width: 58rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 

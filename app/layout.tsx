@@ -1,29 +1,30 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteTitle = "The Letter Room";
+const siteTitle = "The Conversation Club";
 const siteDescription =
-  "A monthly mailed letter subscription for people craving more depth, reflection, and conversation in a chronically online world.";
+  "A monthly mailed letter and conversation card for people who want more depth, connection, and in-person conversation.";
 
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
-  metadataBase: new URL("https://www.jointheletterroom.com"),
+  metadataBase: new URL("https://conversationclub.co"),
   applicationName: siteTitle,
   alternates: {
-    canonical: "https://www.jointheletterroom.com",
+    canonical: "https://conversationclub.co",
   },
   keywords: [
-    "The Letter Room",
-    "mailed letter subscription",
-    "monthly letter subscription",
+    "The Conversation Club",
+    "conversation club",
     "conversation cards",
+    "mailed letter subscription",
+    "monthly letter",
     "analog subscription",
     "mail subscription",
-    "thoughtful gifts",
-    "depth and conversation",
+    "deeper conversations",
+    "offline connection",
   ],
-  authors: [{ name: "Tori Winders", url: "https://www.jointheletterroom.com" }],
+  authors: [{ name: "Tori Winders", url: "https://conversationclub.co" }],
   creator: "Tori Winders",
   publisher: siteTitle,
   category: "Lifestyle",
@@ -49,14 +50,14 @@ export const metadata: Metadata = {
     siteName: siteTitle,
     type: "website",
     locale: "en_US",
-    url: "https://www.jointheletterroom.com",
+    url: "https://conversationclub.co",
     images: [
       {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
         type: "image/png",
-        alt: "The Letter Room. Something worth talking about.",
+        alt: "The Conversation Club. Something worth talking about.",
       },
     ],
   },
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/twitter-image.png",
-        alt: "The Letter Room. Something worth talking about.",
+        alt: "The Conversation Club. Something worth talking about.",
       },
     ],
   },

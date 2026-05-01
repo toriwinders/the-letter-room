@@ -9,24 +9,23 @@ export default function HomePage() {
     "@graph": [
       {
         "@type": "Organization",
-        name: "The Letter Room",
-        url: "https://www.jointheletterroom.com",
-        logo: "https://www.jointheletterroom.com/the-letter-room-logo.png",
-        sameAs: ["https://www.instagram.com/jointheletterroom/"],
+        name: "The Conversation Club",
+        url: "https://conversationclub.co",
+        sameAs: ["https://www.instagram.com/theconversationclub/"],
         contactPoint: [
           {
             "@type": "ContactPoint",
-            email: "hello@jointheletterroom.com",
+            email: "hello@conversationclub.co",
             contactType: "customer support",
           },
         ],
       },
       {
         "@type": "WebSite",
-        name: "The Letter Room",
-        url: "https://www.jointheletterroom.com",
+        name: "The Conversation Club",
+        url: "https://conversationclub.co",
         description:
-          "A monthly mailed letter subscription for people craving more depth, reflection, and conversation in a chronically online world.",
+          "A monthly mailed letter and conversation card for people who want more depth, connection, and in-person conversation.",
       },
     ],
   };
@@ -43,11 +42,11 @@ export default function HomePage() {
             aria-label="Primary"
             className="mx-auto mb-6 flex w-full max-w-[56rem] flex-wrap items-center justify-center gap-x-5 gap-y-2 text-center sm:mb-8"
           >
-            <Link className="top-nav-link" href="#how-it-works">
-              How It Works
+            <Link className="top-nav-link" href="#the-idea-heading">
+              The Idea
             </Link>
-            <Link className="top-nav-link" href="#why-this-exists-heading">
-              Why This Exists
+            <Link className="top-nav-link" href="#whats-inside">
+              What&apos;s Inside
             </Link>
             <Link className="top-nav-link" href="#faq-heading">
               Questions
@@ -56,13 +55,13 @@ export default function HomePage() {
               className="top-nav-link"
               href="https://billing.stripe.com/p/login/dRmfZgckpge52St2t84gg00"
             >
-              My Account
+              Account
             </Link>
             <Link
               className="top-nav-link"
               href="https://buy.stripe.com/4gMfZg3NT2nf64FffU4gg02"
             >
-              Subscribe
+              Join
             </Link>
           </nav>
           <BrandLockup />
