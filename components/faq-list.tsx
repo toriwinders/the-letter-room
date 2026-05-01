@@ -28,7 +28,22 @@ const faqItems = [
   },
   {
     question: "Where do you ship?",
-    answer: "US, Canada, Mexico, UK. More coming.",
+    answer: "Within the U.S. for now. More coming.",
+  },
+  {
+    question: "How do I manage my account?",
+    answer: (
+      <>
+        You can update your address, payment, or cancel anytime from your{" "}
+        <Link
+          className="text-link"
+          href="https://billing.stripe.com/p/login/dRmfZgckpge52St2t84gg00"
+        >
+          account page
+        </Link>
+        .
+      </>
+    ),
   },
   {
     question: "Can I gift it?",

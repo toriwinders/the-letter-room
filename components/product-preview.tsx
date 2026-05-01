@@ -43,7 +43,7 @@ export function ProductPreview() {
     <section
       id="whats-inside"
       aria-label="What shows up"
-      className="section-band section-band-product section-gap mt-10 text-center sm:mt-16"
+      className="section-band section-band-product section-gap text-center"
     >
       <div className="section-inner">
         <div className="product-card">
@@ -51,7 +51,9 @@ export function ProductPreview() {
 
           <div className="mx-auto mt-8 max-w-[28rem] sm:max-w-[38rem]">
             <h2 className="section-title copy-rhythm">
-              An essay. A question. And a reason to plan something.
+              An essay. A question.
+              <br />
+              And a reason to plan something.
             </h2>
             <p className="copy-rhythm mx-auto mt-3 max-w-[30rem] text-[0.92rem] leading-[1.55] text-[var(--color-muted)] sm:text-[0.96rem]">
               Everything arrives in an envelope designed to feel like it matters.

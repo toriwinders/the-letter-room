@@ -156,6 +156,66 @@ body {
   color: var(--color-ink);
 }
 
+.nav-join-button {
+  background: var(--color-brand);
+  color: var(--color-background);
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  transition: background-color 180ms ease;
+}
+
+.nav-join-button:hover {
+  background: #B84F22;
+}
+
+.author-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: var(--color-card-surface);
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.author-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px #3E1B2C12;
+}
+
+.author-avatar {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--color-brand);
+  color: var(--color-background);
+  font-family: var(--font-brand);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem 1rem;
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+  background: var(--color-background);
+  border-top: 1px solid var(--color-border-strong);
+  box-shadow: 0 -4px 16px #3E1B2C12;
+  z-index: 50;
+}
+
 .section-title {
   color: var(--color-ink);
   font-size: 1.45rem;
@@ -187,7 +247,7 @@ body {
 }
 
 .section-band-who {
-  background: var(--color-product-bg);
+  background: var(--color-background);
 }
 
 .section-band-offer {
@@ -217,11 +277,8 @@ body {
   color: var(--color-background);
 }
 
-.hero-card .eyebrow {
-  color: #F2E8D0cc;
-}
-
-.hero-card p {
+.hero-card p,
+.hero-card div {
   color: #F2E8D0dd;
 }
 

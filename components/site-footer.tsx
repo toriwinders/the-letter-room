@@ -24,6 +24,12 @@ export function SiteFooter() {
             >
               @theconversationclub
             </Link>
+            <Link
+              className="footer-link"
+              href="https://billing.stripe.com/p/login/dRmfZgckpge52St2t84gg00"
+            >
+              Manage Account
+            </Link>
             <div className="flex flex-wrap gap-x-4 gap-y-2">
               <Link className="footer-link" href="/terms">
                 Terms

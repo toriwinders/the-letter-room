@@ -31,7 +31,7 @@ export default function HomePage() {
   };
 
   return (
-    <main className="min-h-screen bg-[var(--color-background)] text-[var(--color-ink)]">
+    <main className="min-h-screen bg-[var(--color-background)] pb-14 text-[var(--color-ink)] sm:pb-0">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -52,13 +52,7 @@ export default function HomePage() {
               Questions
             </Link>
             <Link
-              className="top-nav-link"
-              href="https://billing.stripe.com/p/login/dRmfZgckpge52St2t84gg00"
-            >
-              Account
-            </Link>
-            <Link
-              className="top-nav-link"
+              className="nav-join-button"
               href="https://buy.stripe.com/4gMfZg3NT2nf64FffU4gg02"
             >
               Join
@@ -69,7 +63,7 @@ export default function HomePage() {
 
         <section
           aria-labelledby="waitlist-heading"
-          className="relative mt-8 flex flex-1 items-start justify-center sm:mt-10 lg:mt-12"
+          className="relative mt-8 sm:mt-10 lg:mt-12"
         >
           <div className="w-full max-w-[56rem]">
             <WaitlistFlow />
