@@ -62,9 +62,13 @@ export function WaitlistFlow() {
 
             <div className="copy-rhythm mx-auto mt-4 max-w-[44rem] text-[1.05rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1.1rem]">
               <p>
-                Where you stayed at the table way too long and didn&apos;t mind
-                at all. I started The Conversation Club because I want more of
-                that — and I think a lot of us do.
+                When you drove home still thinking about what somebody said
+                after staying at the table way too long.
+              </p>
+              <p className="mt-4">
+                I started The Conversation Club because I want more of that. And
+                in a world where so much life has moved onto a screen, I think a
+                lot of us do.
               </p>
               <p className="mt-4">
                 A monthly reason to create more of those moments.
