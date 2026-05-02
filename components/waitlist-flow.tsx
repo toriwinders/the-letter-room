@@ -185,7 +185,7 @@ export function WaitlistFlow() {
 
             <div className="copy-rhythm mx-auto mt-4 max-w-[34rem] text-[0.95rem] leading-[1.55] sm:text-[1rem]">
               <p>
-                $3/month forever for first 500 members.
+                $3/month forever for first 100 members.
               </p>
               <p className="mt-4">
                 After that, it moves to $5.

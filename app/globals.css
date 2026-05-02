@@ -513,8 +513,18 @@ footer .brand-name {
     font-size: 1.95rem;
   }
 
+  .hero-card {
+    max-width: 48rem;
+    padding: 3rem 2.5rem;
+  }
+
   .product-card {
     max-width: 72rem;
+  }
+
+  .offer-card {
+    max-width: 42rem;
+    padding: 3rem 2.5rem;
   }
 
   .why-grid {
@@ -524,5 +534,9 @@ footer .brand-name {
 
   .why-card p {
     max-width: 22rem;
+  }
+
+  .section-inner {
+    padding-inline: 3rem;
   }
 }

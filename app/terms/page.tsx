@@ -28,7 +28,7 @@ export default function TermsPage() {
             conversation cards ship in the first week of each month.
           </p>
           <p>
-            Founding member subscriptions are $3/month for the first 500
+            Founding member subscriptions are $3/month for the first 100
             members, locked in for as long as you stay. After the founding
             period, subscriptions renew at $5/month until canceled.
           </p>

@@ -20,7 +20,7 @@ const faqItems = [
   {
     question: "How much?",
     answer:
-      "Three dollars a month for the first 500 members, locked in forever. Five after that. No tiers, no add-ons.",
+      "Three dollars a month for the first 100 members, locked in forever. Five after that. No tiers, no add-ons.",
   },
   {
     question: "Can I cancel?",
