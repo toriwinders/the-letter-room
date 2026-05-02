@@ -19,21 +19,14 @@ export function WaitlistFlow() {
             The good kind of mail.
           </h1>
 
-          <div className="copy-rhythm mx-auto mt-5 max-w-[34rem] text-[0.95rem] leading-[1.55] sm:text-[1rem]">
+          <div className="copy-rhythm mx-auto mt-5 max-w-[34rem] text-[1.05rem] leading-[1.55] sm:text-[1.1rem]">
             <p>
-              Every month, something beautiful shows up at your doorstep.
+              A personal essay and a conversation card, mailed to your door
+              every month.
             </p>
             <p className="mt-4">
-              A personal essay and a conversation card that turns a good dinner
-              into a great one.
-            </p>
-            <p className="mt-4">
-              Read the letter on Sunday with your morning coffee.
-            </p>
-            <p className="mt-4">
-              Bring the card to your next dinner. Or a long walk. Or a night on
-              the couch with someone you haven&apos;t really talked to in a
-              while.
+              Read the letter with your morning coffee. Bring the card to your
+              next dinner.
             </p>
             <p className="mt-4">
               It&apos;s the kind of thing you&apos;ll want to organize something
@@ -67,19 +60,11 @@ export function WaitlistFlow() {
               You know that feeling after a really good conversation?
             </h2>
 
-            <div className="copy-rhythm mx-auto mt-4 max-w-[44rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
+            <div className="copy-rhythm mx-auto mt-4 max-w-[44rem] text-[1.05rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1.1rem]">
               <p>
-                Where you drive home still thinking about what somebody said.
                 Where you stayed at the table way too long and didn&apos;t mind
-                at all. Where something shifted, even slightly, in how you see
-                something.
-              </p>
-              <p className="mt-4">
-                I started The Conversation Club because I want more of that. I
-                think a lot of us do&hellip; especially right now, when so much
-                of life has moved onto a screen and the really good stuff, the
-                slow, face-to-face, laughing-until-late stuff, takes more
-                intention to actually make happen.
+                at all. I started The Conversation Club because I want more of
+                that — and I think a lot of us do.
               </p>
               <p className="mt-4">
                 A monthly reason to create more of those moments.
@@ -139,25 +124,16 @@ export function WaitlistFlow() {
               For women who love beautiful things and even better conversations.
             </h2>
 
-            <div className="copy-rhythm mx-auto mt-6 max-w-[44rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
+            <div className="copy-rhythm mx-auto mt-6 max-w-[44rem] text-[1.05rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1.1rem]">
               <p>
-                If you still get genuinely excited about something arriving in
-                the mail.
+                If you still get excited about something arriving in the mail.
+                If you&apos;re the one who brings the question nobody else would
+                have thought to ask. If you&apos;ve ever driven home from a
+                dinner feeling like your cup was completely full.
               </p>
-              <p className="mt-3">
-                If you&apos;re the person who brings a question to the group
-                hang that nobody else would have thought to ask.
-              </p>
-              <p className="mt-3">
-                If you&apos;ve ever driven home from a girls&apos; night feeling
-                like your cup was completely full — and found yourself thinking,
-                we need to do that more.
-              </p>
-              <p className="mt-5">
-                We&apos;re all spending more of our lives on screens than we
-                planned to. And many of us feel it. The Conversation Club is a
-                small, beautiful, offline way for people who already know they
-                want more of the real stuff.
+              <p className="mt-4">
+                This is a small, beautiful, offline thing for people who already
+                know they want more of the real stuff.
               </p>
             </div>
 
@@ -188,7 +164,7 @@ export function WaitlistFlow() {
               $3/month for as long as you stay.
             </h2>
 
-            <div className="copy-rhythm mx-auto mt-4 max-w-[34rem] text-[0.95rem] leading-[1.55] sm:text-[1rem]">
+            <div className="copy-rhythm mx-auto mt-4 max-w-[34rem] text-[1.05rem] leading-[1.55] sm:text-[1.1rem]">
               <p>
                 $3/month forever for first 100 members.
               </p>

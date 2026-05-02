@@ -55,7 +55,7 @@ export function ProductPreview() {
               <br />
               And a reason to plan something.
             </h2>
-            <p className="copy-rhythm mx-auto mt-3 max-w-[30rem] text-[0.92rem] leading-[1.55] text-[var(--color-muted)] sm:text-[0.96rem]">
+            <p className="copy-rhythm mx-auto mt-3 max-w-[30rem] text-[1rem] leading-[1.55] text-[var(--color-muted)] sm:text-[1.05rem]">
               Everything arrives in an envelope designed to feel like it matters.
             </p>
           </div>
@@ -68,11 +68,10 @@ export function ProductPreview() {
               <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] sm:text-[1.32rem]">
                 The Letter
               </h3>
-              <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
-                A personal essay from me on whatever I&apos;ve been thinking about
-                that month — the same kind of writing I do on Substack, except
-                this one arrives at your door. Something about friendship,
-                getting older, what we actually want our lives to feel like.
+              <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[1rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1.05rem]">
+                A personal essay on whatever I&apos;ve been thinking about that
+                month. Friendship, getting older, what we actually want our
+                lives to feel like.
               </p>
             </article>
 
@@ -83,12 +82,9 @@ export function ProductPreview() {
               <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] sm:text-[1.32rem]">
                 The Conversation Card
               </h3>
-              <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[0.95rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1rem]">
-                A 4x6 card with one theme and a few prompts. They are the kind
-                of questions you&apos;d never think to bring up, but once
-                somebody does, the conversation changes. Bring it to dinner.
-                Hand it to your partner on a Sunday. Text the prompt to the
-                friend you keep saying you need to see.
+              <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[1rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1.05rem]">
+                A card with one theme and a few prompts — the kind of questions
+                that change the conversation once somebody asks them.
               </p>
             </article>
           </div>
