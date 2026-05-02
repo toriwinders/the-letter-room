@@ -9,8 +9,21 @@ const faqItems = [
   },
   {
     question: "Who writes it?",
-    answer:
-      "Me. I’m Tori — new mom, lifelong overthinker, person who’s been writing personal essays for years and finally decided to mail them. Every letter is mine.",
+    answer: (
+      <>
+        Me. I&apos;m Tori — writer, optimizer, and someone who thinks way too
+        much about conversation. Every letter is mine. You can learn more at{" "}
+        <Link
+          className="text-link"
+          href="https://toriwinders.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          toriwinders.com
+        </Link>
+        .
+      </>
+    ),
   },
   {
     question: "What if I don’t have anyone to do the question with?",
@@ -20,7 +33,7 @@ const faqItems = [
   {
     question: "How much?",
     answer:
-      "Three dollars a month for the first 100 members, locked in forever. Five after that. No tiers, no add-ons.",
+      "$3 a month for the first 100 members, locked in forever. $5 after that. No tiers, no add-ons.",
   },
   {
     question: "Can I cancel?",

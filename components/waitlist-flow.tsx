@@ -25,10 +25,15 @@ export function WaitlistFlow() {
             </p>
             <p className="mt-4">
               A personal essay and a conversation card that turns a good dinner
-              into a great one. Read the letter on a Sunday with your morning
-              coffee. Bring the card to your next dinner. Or a long walk. Or a
-              night on the couch with someone you haven&apos;t really talked to
-              in a while.
+              into a great one.
+            </p>
+            <p className="mt-4">
+              Read the letter on Sunday with your morning coffee.
+            </p>
+            <p className="mt-4">
+              Bring the card to your next dinner. Or a long walk. Or a night on
+              the couch with someone you haven&apos;t really talked to in a
+              while.
             </p>
             <p className="mt-4">
               It&apos;s the kind of thing you&apos;ll want to organize something
@@ -41,7 +46,7 @@ export function WaitlistFlow() {
               className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
               href={STRIPE_CHECKOUT}
             >
-              Get your first convo card
+              Get your first convo card — $3/month
             </Link>
           </div>
         </div>
@@ -94,8 +99,8 @@ export function WaitlistFlow() {
                     Written by Tori Winders
                   </p>
                   <p className="copy-rhythm mt-0.5 text-[0.85rem] text-[var(--color-muted)]">
-                    New mom, writer, person who stayed at the table too long and
-                    didn&apos;t mind at all.
+                    Writer, optimizer, and someone who thinks way too much about
+                    conversation.
                   </p>
                 </div>
                 <svg
