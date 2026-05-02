@@ -55,12 +55,18 @@ function buildConfirmationEmailHtml() {
   return `
     <div style="background:#F2E8D0;padding:40px 24px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
       <div style="margin:0 auto;max-width:560px;text-align:left;">
-        ${p("Hey!")}
-        ${p("You're in. Welcome to The Conversation Club.")}
-        ${p("Every month, you'll get something in the mail — a personal essay from me and a conversation card designed to turn a good dinner into a great one.")}
-        ${p("The letter is for you. The card is for you and your people.")}
-        ${p("Your first letter ships the first week of next month. When it lands, I want to hear about it. Post the card on your story. Bring it to dinner. Send this to the friend you'd actually want to have that conversation with.")}
-        ${p("You're one of the first people in, and this thing grows because people like you tell people like them.")}
+        ${p("You're in.")}
+        ${p("Welcome to The Conversation Club — so glad you're here.")}
+
+        <div style="margin:0 0 24px;padding:24px;background:#ffffff;border-radius:12px;">
+          <p style="margin:0 0 8px;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#D8612D;">What you'll get every month</p>
+          <p style="margin:0 0 12px;font-size:17px;line-height:1.55;letter-spacing:-0.03em;color:#3E1B2C;"><strong>The Letter</strong> — a personal essay from me on whatever I've been thinking about. Friendship, getting older, what we actually want our lives to feel like.</p>
+          <p style="margin:0;font-size:17px;line-height:1.55;letter-spacing:-0.03em;color:#3E1B2C;"><strong>The Conversation Card</strong> — one theme, a few prompts, and the kind of questions that change a dinner once somebody asks them.</p>
+        </div>
+
+        ${p("Everything arrives in an envelope designed to feel like it matters. The letter is for you. The card is for you and your people.")}
+        ${p("Your first letter ships the first week of next month. When it lands, bring the card to dinner. Or a long walk. Or a night on the couch with someone you haven't really talked to in a while.")}
+        ${p('You\'re one of the first people in, and that means a lot. If you know someone who\'d love this, send them to <a href="https://conversationclub.co" style="color:#D8612D;text-decoration:underline;">conversationclub.co</a>.')}
         ${p("-tori", true)}
       </div>
     </div>
@@ -76,17 +82,21 @@ async function sendConfirmationEmail(to: string) {
     subject: "You're in. Welcome to The Conversation Club.",
     html: buildConfirmationEmailHtml(),
     text: [
-      "Hey!",
+      "You're in.",
       "",
-      "You're in. Welcome to The Conversation Club.",
+      "Welcome to The Conversation Club — so glad you're here.",
       "",
-      "Every month, you'll get something in the mail — a personal essay from me and a conversation card designed to turn a good dinner into a great one.",
+      "WHAT YOU'LL GET EVERY MONTH",
       "",
-      "The letter is for you. The card is for you and your people.",
+      "The Letter — a personal essay from me on whatever I've been thinking about. Friendship, getting older, what we actually want our lives to feel like.",
       "",
-      "Your first letter ships the first week of next month. When it lands, I want to hear about it. Post the card on your story. Bring it to dinner. Send this to the friend you'd actually want to have that conversation with.",
+      "The Conversation Card — one theme, a few prompts, and the kind of questions that change a dinner once somebody asks them.",
       "",
-      "You're one of the first people in, and this thing grows because people like you tell people like them.",
+      "Everything arrives in an envelope designed to feel like it matters. The letter is for you. The card is for you and your people.",
+      "",
+      "Your first letter ships the first week of next month. When it lands, bring the card to dinner. Or a long walk. Or a night on the couch with someone you haven't really talked to in a while.",
+      "",
+      "You're one of the first people in, and that means a lot. If you know someone who'd love this, send them to conversationclub.co.",
       "",
       "-tori",
     ].join("\n"),
