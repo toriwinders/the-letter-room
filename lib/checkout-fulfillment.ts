@@ -56,17 +56,21 @@ function buildConfirmationEmailHtml() {
     <div style="background:#F2E8D0;padding:40px 24px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
       <div style="margin:0 auto;max-width:560px;text-align:left;">
         ${p("You're in.")}
-        ${p("Welcome to The Conversation Club — so glad you're here.")}
+        ${p("I have a theory that most of us are one good question away from the conversation we actually want to be having. The problem isn't that we don't have the people. It's that we sit down and default to the same four topics.")}
+        ${p("That's what this is for.")}
+
+        ${p("Every month, you'll get an envelope in the mail with two things:")}
 
         <div style="margin:0 0 24px;padding:24px;background:#ffffff;border-radius:12px;">
-          <p style="margin:0 0 8px;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#D8612D;">What you'll get every month</p>
-          <p style="margin:0 0 12px;font-size:17px;line-height:1.55;letter-spacing:-0.03em;color:#3E1B2C;"><strong>The Letter</strong> — a personal essay from me on whatever I've been thinking about. Friendship, getting older, what we actually want our lives to feel like.</p>
-          <p style="margin:0;font-size:17px;line-height:1.55;letter-spacing:-0.03em;color:#3E1B2C;"><strong>The Conversation Card</strong> — one theme, a few prompts, and the kind of questions that change a dinner once somebody asks them.</p>
+          <p style="margin:0 0 16px;font-size:17px;line-height:1.55;letter-spacing:-0.03em;color:#3E1B2C;"><strong>The Letter</strong> — a personal essay from me on something I can't stop thinking about. Not advice. Not a how-to. Just the kind of thing you'd talk about if dinner went an hour longer than planned.</p>
+          <p style="margin:0;font-size:17px;line-height:1.55;letter-spacing:-0.03em;color:#3E1B2C;"><strong>The Conversation Card</strong> — one theme and a few prompts that are better than "so what's new." The kind of questions that make somebody set their phone down.</p>
         </div>
 
-        ${p("Everything arrives in an envelope designed to feel like it matters. The letter is for you. The card is for you and your people.")}
-        ${p("Your first letter ships the first week of next month. When it lands, bring the card to dinner. Or a long walk. Or a night on the couch with someone you haven't really talked to in a while.")}
-        ${p('You\'re one of the first people in, and that means a lot. If you know someone who\'d love this, send them to <a href="https://conversationclub.co" style="color:#D8612D;text-decoration:underline;">conversationclub.co</a>.')}
+        ${p("Your first envelope ships the first week of next month. When it shows up, don't save it for later. Open it. Bring the card somewhere.")}
+        ${p("A dinner. A long drive. A Tuesday night on the couch with someone you used to talk to for hours.")}
+        ${p("See what happens.")}
+
+        ${p('You\'re one of the first people in this, and I don\'t take that lightly. If you have a friend who came to mind while reading this — you know the one — send them to <a href="https://conversationclub.co" style="color:#D8612D;text-decoration:underline;">conversationclub.co</a>.')}
         ${p("-tori", true)}
       </div>
     </div>
@@ -84,19 +88,23 @@ async function sendConfirmationEmail(to: string) {
     text: [
       "You're in.",
       "",
-      "Welcome to The Conversation Club — so glad you're here.",
+      "I have a theory that most of us are one good question away from the conversation we actually want to be having. The problem isn't that we don't have the people. It's that we sit down and default to the same four topics.",
       "",
-      "WHAT YOU'LL GET EVERY MONTH",
+      "That's what this is for.",
       "",
-      "The Letter — a personal essay from me on whatever I've been thinking about. Friendship, getting older, what we actually want our lives to feel like.",
+      "Every month, you'll get an envelope in the mail with two things:",
       "",
-      "The Conversation Card — one theme, a few prompts, and the kind of questions that change a dinner once somebody asks them.",
+      "The Letter — a personal essay from me on something I can't stop thinking about. Not advice. Not a how-to. Just the kind of thing you'd talk about if dinner went an hour longer than planned.",
       "",
-      "Everything arrives in an envelope designed to feel like it matters. The letter is for you. The card is for you and your people.",
+      "The Conversation Card — one theme and a few prompts that are better than \"so what's new.\" The kind of questions that make somebody set their phone down.",
       "",
-      "Your first letter ships the first week of next month. When it lands, bring the card to dinner. Or a long walk. Or a night on the couch with someone you haven't really talked to in a while.",
+      "Your first envelope ships the first week of next month. When it shows up, don't save it for later. Open it. Bring the card somewhere.",
       "",
-      "You're one of the first people in, and that means a lot. If you know someone who'd love this, send them to conversationclub.co.",
+      "A dinner. A long drive. A Tuesday night on the couch with someone you used to talk to for hours.",
+      "",
+      "See what happens.",
+      "",
+      "You're one of the first people in this, and I don't take that lightly. If you have a friend who came to mind while reading this — you know the one — send them to conversationclub.co.",
       "",
       "-tori",
     ].join("\n"),
