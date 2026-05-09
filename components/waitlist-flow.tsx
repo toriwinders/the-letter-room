@@ -65,7 +65,7 @@ export function WaitlistFlow() {
                 I think a lot of us do.
               </p>
               <p className="mt-4">
-                A monthly reason to create more of those moments.
+                So this is a reason to create more of those moments.
               </p>
             </div>
 
