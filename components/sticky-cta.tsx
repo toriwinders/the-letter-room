@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import { EmailCapture } from "@/components/email-capture";
 
-export function StickyCta({ href }: { href: string }) {
+export function StickyCta() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -23,12 +23,7 @@ export function StickyCta({ href }: { href: string }) {
         transition: "transform 250ms ease",
       }}
     >
-      <Link
-        className="button-primary inline-flex min-h-11 w-full items-center justify-center px-6 py-2.5 text-[0.9rem]"
-        href={href}
-      >
-        Get your first convo card — $3/month
-      </Link>
+      <EmailCapture buttonText="I want in" successMessage="You're in. Check your inbox." />
     </div>
   );
 }

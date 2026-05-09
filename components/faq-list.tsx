@@ -31,32 +31,22 @@ const faqItems = [
       "Use it anyway. Text it to a friend. Answer it in your notes at 11pm. But honestly — it’s a pretty good excuse to finally plan that dinner.",
   },
   {
-    question: "How much?",
+    question: "What does joining the waitlist get me?",
     answer:
-      "$3 a month for the first 100 members, locked in forever. $5 after that. No tiers, no add-ons.",
+      "First access when we launch, a locked-in founding member price, and a say in what this thing becomes. The first 100 people in are the ones who shape it.",
   },
   {
-    question: "Can I cancel?",
-    answer: "Yes. I’d rather you stay because you want to.",
+    question: "When does it launch?",
+    answer: "Soon. Waitlist members will be the first to know.",
   },
   {
     question: "Where do you ship?",
     answer: "Within the U.S. for now. More coming.",
   },
   {
-    question: "How do I manage my account?",
-    answer: (
-      <>
-        You can update your address, payment, or cancel anytime from your{" "}
-        <Link
-          className="text-link"
-          href="https://billing.stripe.com/p/login/dRmfZgckpge52St2t84gg00"
-        >
-          account page
-        </Link>
-        .
-      </>
-    ),
+    question: "How much will it cost?",
+    answer:
+      "Founding members get a locked-in price that never goes up. Details coming at launch.",
   },
   {
     question: "Can I gift it?",

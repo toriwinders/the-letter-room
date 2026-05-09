@@ -1,11 +1,7 @@
-import Link from "next/link";
 import { FaqList } from "@/components/faq-list";
 import { ProductPreview } from "@/components/product-preview";
 import { EmailCapture } from "@/components/email-capture";
 import { StickyCta } from "@/components/sticky-cta";
-
-const STRIPE_CHECKOUT =
-  "https://buy.stripe.com/4gMfZg3NT2nf64FffU4gg02";
 
 export function WaitlistFlow() {
   return (
@@ -19,28 +15,26 @@ export function WaitlistFlow() {
             The good kind of mail.
           </h1>
 
-          <div className="copy-rhythm mx-auto mt-5 max-w-[34rem] text-[1.05rem] leading-[1.55] sm:text-[1.1rem]">
+          <div className="copy-rhythm mx-auto mt-5 max-w-[38rem] text-[1.05rem] leading-[1.55] sm:text-[1.1rem]">
             <p>
-              A personal essay and a conversation card, mailed to your door
-              every month.
+              A personal essay and a conversation card, mailed to your
+              door every month.
             </p>
             <p className="mt-4">
-              Read the letter with your morning coffee. Bring the card to your
-              next dinner.
+              Read the letter with your morning coffee. Bring the card
+              to your next dinner.
             </p>
             <p className="mt-4">
-              It&apos;s the kind of thing you&apos;ll want to organize something
-              around.
+              It&apos;s the kind of thing you&apos;ll want to organize
+              something around.
             </p>
           </div>
 
           <div className="mx-auto mt-8 max-w-[28rem] sm:mt-10">
-            <Link
-              className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
-              href={STRIPE_CHECKOUT}
-            >
-              Get your first convo card — $3/month
-            </Link>
+            <EmailCapture
+              buttonText="I want in"
+              successMessage="You're on the list. Keep an eye on your inbox."
+            />
           </div>
         </div>
       </div>
@@ -51,7 +45,7 @@ export function WaitlistFlow() {
         className="section-band section-band-idea section-gap mt-10 text-center sm:mt-14"
       >
         <div className="section-inner">
-          <div className="mx-auto max-w-[44rem]">
+          <div className="mx-auto max-w-[48rem]">
             <p className="eyebrow">Why I started this</p>
             <h2
               id="the-idea-heading"
@@ -60,15 +54,15 @@ export function WaitlistFlow() {
               You know that feeling after a really good conversation?
             </h2>
 
-            <div className="copy-rhythm mx-auto mt-4 max-w-[44rem] text-[1.05rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1.1rem]">
+            <div className="copy-rhythm mx-auto mt-4 max-w-[48rem] text-[1.05rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1.1rem]">
               <p>
-                When you drove home still thinking about what somebody said
-                after staying at the table way too long.
+                When you drove home still thinking about what somebody said after
+                staying at the table way too long.
               </p>
               <p className="mt-4">
-                I started The Conversation Club because I want more of that. And
-                in a world where so much life has moved onto a screen, I think a
-                lot of us do.
+                I started The Conversation Club because I want more of that.
+                And in a world where so much life has moved onto a screen,
+                I think a lot of us do.
               </p>
               <p className="mt-4">
                 A monthly reason to create more of those moments.
@@ -77,7 +71,7 @@ export function WaitlistFlow() {
 
             {/* Author card */}
             <div className="mx-auto mt-8 max-w-[34rem]">
-              <Link
+              <a
                 href="https://toriwinders.com"
                 target="_blank"
                 rel="noreferrer"
@@ -105,7 +99,7 @@ export function WaitlistFlow() {
                   <path d="M7 17L17 7" />
                   <path d="M7 7h10v10" />
                 </svg>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -128,12 +122,12 @@ export function WaitlistFlow() {
               For women who love beautiful things and even better conversations.
             </h2>
 
-            <div className="copy-rhythm mx-auto mt-6 max-w-[44rem] text-[1.05rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1.1rem]">
+            <div className="copy-rhythm mx-auto mt-6 max-w-[48rem] text-[1.05rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1.1rem]">
               <p>
                 If you still get excited about something arriving in the mail.
                 If you&apos;re the one who brings the question nobody else would
-                have thought to ask. If you&apos;ve ever driven home from a
-                dinner feeling like your cup was completely full.
+                have thought to ask. If you&apos;ve ever driven home from a dinner
+                feeling like your cup was completely full.
               </p>
               <p className="mt-4">
                 This is a small, beautiful, offline thing for people who already
@@ -142,54 +136,47 @@ export function WaitlistFlow() {
             </div>
 
             <div className="mx-auto mt-8 max-w-[28rem]">
-              <Link
-                className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
-                href={STRIPE_CHECKOUT}
-              >
-                Get your first convo card
-              </Link>
+              <EmailCapture
+                buttonText="Save my spot"
+                successMessage="You're on the list. Keep an eye on your inbox."
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Join */}
+      {/* Waitlist */}
       <section
         aria-labelledby="founding-member-heading"
         className="section-band section-band-offer section-gap text-center"
       >
         <div className="section-inner">
           <div className="offer-card">
-            <p className="eyebrow">Founding members</p>
+            <p className="eyebrow">Limited to 100 founding members</p>
             <h2
               id="founding-member-heading"
               className="section-title copy-rhythm mx-auto mt-3 max-w-[44rem] sm:max-w-[44rem]"
             >
-              $3/month for as long as you stay.
+              This isn&apos;t launching to everyone.
             </h2>
 
-            <div className="copy-rhythm mx-auto mt-4 max-w-[34rem] text-[1.05rem] leading-[1.55] sm:text-[1.1rem]">
+            <div className="copy-rhythm mx-auto mt-4 max-w-[36rem] text-[1.05rem] leading-[1.55] sm:text-[1.1rem]">
               <p>
-                $3/month forever for first 100 members.
+                The first 100 people on the waitlist become founding members.
+                You&apos;ll get first access, a locked-in price, and a say in
+                what this thing becomes.
               </p>
               <p className="mt-4">
-                After that, it moves to $5.
-              </p>
-              <p className="mt-4">
-                Letters go out first week of every month.
-              </p>
-              <p className="mt-4">
-                Ships within U.S.
+                If you&apos;re reading this, the door is still open.
               </p>
             </div>
 
             <div className="mx-auto mt-8 max-w-[28rem]">
-              <Link
-                className="button-primary inline-flex min-h-12 w-full items-center justify-center px-6 py-3 text-base"
-                href={STRIPE_CHECKOUT}
-              >
-                Join the club — $3/month
-              </Link>
+              <EmailCapture
+                buttonText="Get me on the list"
+                successMessage="You're on the list. Keep an eye on your inbox."
+                variant="dark"
+              />
             </div>
           </div>
         </div>
@@ -206,13 +193,16 @@ export function WaitlistFlow() {
               Get the first conversation prompt free.
             </h2>
             <div className="mx-auto mt-6 max-w-[28rem]">
-              <EmailCapture />
+              <EmailCapture
+                endpoint="/api/free-prompt"
+                successMessage="Check your inbox — your first prompt is on the way."
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <StickyCta href={STRIPE_CHECKOUT} />
+      <StickyCta />
     </div>
   );
 }

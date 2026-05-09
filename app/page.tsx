@@ -53,7 +53,7 @@ export default function HomePage() {
             </Link>
             <Link
               className="nav-join-button"
-              href="https://buy.stripe.com/4gMfZg3NT2nf64FffU4gg02"
+              href="#founding-member-heading"
             >
               Join
             </Link>
