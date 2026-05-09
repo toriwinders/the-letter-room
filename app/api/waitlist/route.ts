@@ -79,8 +79,7 @@ export async function POST(request: Request) {
       throw error;
     }
 
-    // Send confirmation email (don't block response on failure)
-    sendWaitlistConfirmation(email).catch(() => {});
+    await sendWaitlistConfirmation(email);
 
     return NextResponse.json({ ok: true });
   } catch (error) {
