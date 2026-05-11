@@ -49,31 +49,20 @@ function getBestAddress(session: Stripe.Checkout.Session) {
 }
 
 function buildConfirmationEmailHtml() {
-  const p = (text: string, last = false) =>
-    `<p style="margin:0 0 ${last ? "0" : "20px"};font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#3E1B2C;text-align:left;">${text}</p>`;
-
   return `
-    <div style="background:#F2E8D0;padding:40px 24px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-      <div style="margin:0 auto;max-width:560px;text-align:left;">
-        ${p("You're in.")}
-        ${p("I have a theory that most of us are one good question away from the conversation we actually want to be having. The problem isn't that we don't have the people. It's that we sit down and default to the same four topics.")}
-        ${p("That's what this is for.")}
-
-        ${p("Every month, you'll get an envelope in the mail with two things:")}
-
-        <div style="margin:0 0 24px;padding:24px;background:#ffffff;border-radius:12px;">
-          <p style="margin:0 0 16px;font-size:17px;line-height:1.55;letter-spacing:-0.03em;color:#3E1B2C;"><strong>The Letter</strong> — a personal essay from me on something I can't stop thinking about. Not advice. Not a how-to. Just the kind of thing you'd talk about if dinner went an hour longer than planned.</p>
-          <p style="margin:0;font-size:17px;line-height:1.55;letter-spacing:-0.03em;color:#3E1B2C;"><strong>The Conversation Card</strong> — one theme and a few prompts that are better than "so what's new." The kind of questions that make somebody set their phone down.</p>
-        </div>
-
-        ${p("Your first envelope ships the first week of next month. When it shows up, don't save it for later. Open it. Bring the card somewhere.")}
-        ${p("A dinner. A long drive. A Tuesday night on the couch with someone you used to talk to for hours.")}
-        ${p("See what happens.")}
-
-        ${p('You\'re one of the first people in this, and I don\'t take that lightly. If you have a friend who came to mind while reading this — you know the one — send them to <a href="https://conversationclub.co" style="color:#D8612D;text-decoration:underline;">conversationclub.co</a>.')}
-        ${p("-tori", true)}
-      </div>
-    </div>
+<div style="font-family:sans-serif;font-size:16px;line-height:1.6;color:#222;">
+  <p>You're in.</p>
+  <p>I have a theory that most of us are one good question away from the conversation we actually want to be having. The problem isn't that we don't have the people. It's that we sit down and default to the same four topics.</p>
+  <p>That's what this is for.</p>
+  <p>Every month, you'll get an envelope in the mail with two things:</p>
+  <p><strong>The Letter</strong> — a personal essay from me on something I can't stop thinking about. Not advice. Not a how-to. Just the kind of thing you'd talk about if dinner went an hour longer than planned.</p>
+  <p><strong>The Conversation Card</strong> — one theme and a few prompts that are better than "so what's new." The kind of questions that make somebody set their phone down.</p>
+  <p>Your first envelope ships the first week of next month. When it shows up, don't save it for later. Open it. Bring the card somewhere.</p>
+  <p>A dinner. A long drive. A Tuesday night on the couch with someone you used to talk to for hours.</p>
+  <p>See what happens.</p>
+  <p>You're one of the first people in this, and I don't take that lightly. If you have a friend who came to mind while reading this — you know the one — send them to <a href="https://conversationclub.co">conversationclub.co</a>.</p>
+  <p>-tori</p>
+</div>
   `;
 }
 

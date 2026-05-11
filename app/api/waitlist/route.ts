@@ -7,20 +7,15 @@ import { normalizeEmail } from "@/lib/waitlist";
 export const runtime = "nodejs";
 
 function buildWaitlistEmailHtml() {
-  const p = (text: string, last = false) =>
-    `<p style="margin:0 0 ${last ? "0" : "20px"};font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#3E1B2C;text-align:left;">${text}</p>`;
-
   return `
-    <div style="background:#F2E8D0;padding:40px 24px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-      <div style="margin:0 auto;max-width:560px;text-align:left;">
-        ${p("You're on the list.")}
-        ${p("I'm building something for people who want more of the real stuff — real conversations, real connection, something you can hold in your hands.")}
-        ${p("The Conversation Club is a monthly letter and conversation card, mailed to your door. The letter is a personal essay from me. The card is designed to turn a good dinner into a great one.")}
-        ${p("I'm only opening this to the first 100 people, and you're one of them. When it's ready to launch, you'll hear from me first.")}
-        ${p("In the meantime — think about who you'd bring the card to. That person already came to mind, didn't they?")}
-        ${p("-tori", true)}
-      </div>
-    </div>
+<div style="font-family:sans-serif;font-size:16px;line-height:1.6;color:#222;">
+  <p>You're on the list.</p>
+  <p>I'm building something for people who want more of the real stuff — real conversations, real connection, something you can hold in your hands.</p>
+  <p>The Conversation Club is a monthly letter and conversation card, mailed to your door. The letter is a personal essay from me. The card is designed to turn a good dinner into a great one.</p>
+  <p>I'm only opening this to the first 100 people, and you're one of them. When it's ready to launch, you'll hear from me first.</p>
+  <p>In the meantime — think about who you'd bring the card to. That person already came to mind, didn't they?</p>
+  <p>-tori</p>
+</div>
   `;
 }
 

@@ -5,22 +5,15 @@ import { createResendClient, getResendFromEmail } from "@/lib/resend";
 export const runtime = "nodejs";
 
 function buildFreePromptHtml() {
-  const p = (text: string, last = false) =>
-    `<p style="margin:0 0 ${last ? "0" : "20px"};font-size:18px;line-height:1.65;letter-spacing:-0.04em;color:#3E1B2C;text-align:left;">${text}</p>`;
-
   return `
-    <div style="background:#F2E8D0;padding:40px 24px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-      <div style="margin:0 auto;max-width:560px;text-align:left;">
-        ${p("Here's your first conversation prompt from The Conversation Club.")}
-        <div style="margin:0 0 24px;padding:24px;background:#ffffff;border-radius:12px;">
-          <p style="margin:0 0 8px;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#D8612D;">This month's question</p>
-          <p style="margin:0;font-size:22px;line-height:1.35;letter-spacing:-0.04em;color:#3E1B2C;font-weight:600;">What's a conversation you had recently that you're still thinking about? What made it stick?</p>
-        </div>
-        ${p("Bring this to your next dinner. Or a long walk. Or a night on the couch with someone you haven't really talked to in a while.")}
-        ${p('If you want more of this every month — a personal essay and a conversation card mailed to your door — <a href="https://conversationclub.co" style="color:#D8612D;">join the club</a>.')}
-        ${p("-tori", true)}
-      </div>
-    </div>
+<div style="font-family:sans-serif;font-size:16px;line-height:1.6;color:#222;">
+  <p>Here's your first conversation prompt from The Conversation Club.</p>
+  <p><strong>This month's question:</strong></p>
+  <p>What's a conversation you had recently that you're still thinking about? What made it stick?</p>
+  <p>Bring this to your next dinner. Or a long walk. Or a night on the couch with someone you haven't really talked to in a while.</p>
+  <p>If you want more of this every month — a personal essay and a conversation card mailed to your door — <a href="https://conversationclub.co">join the club</a>.</p>
+  <p>-tori</p>
+</div>
   `;
 }
 
