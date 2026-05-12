@@ -11,7 +11,7 @@ export default function HomePage() {
         "@type": "Organization",
         name: "The Conversation Club",
         url: "https://conversationclub.co",
-        sameAs: ["https://www.instagram.com/theconversationclub/"],
+        sameAs: ["https://www.instagram.com/conversation__club/"],
         contactPoint: [
           {
             "@type": "ContactPoint",

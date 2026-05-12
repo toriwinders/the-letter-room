@@ -184,23 +184,6 @@ export function WaitlistFlow() {
 
       <FaqList />
 
-      {/* Email capture */}
-      <section className="section-band section-gap text-center" style={{ background: "var(--color-idea-bg)" }}>
-        <div className="section-inner">
-          <div className="mx-auto max-w-[34rem]">
-            <p className="eyebrow">Not ready yet?</p>
-            <h2 className="section-title copy-rhythm mx-auto mt-3 max-w-[38rem]">
-              Get the first conversation prompt free.
-            </h2>
-            <div className="mx-auto mt-6 max-w-[28rem]">
-              <EmailCapture
-                endpoint="/api/free-prompt"
-                successMessage="Check your inbox — your first prompt is on the way."
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       <StickyCta />
     </div>
