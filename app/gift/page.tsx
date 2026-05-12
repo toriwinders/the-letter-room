@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 
 const STRIPE_CHECKOUT_URL =
@@ -66,10 +67,6 @@ export default function GiftPage() {
               every month. Read the letter with your morning coffee. Bring the
               card to your next dinner.
             </p>
-            <p className="mt-4">
-              It&apos;s the kind of thing you&apos;ll want to organize
-              something around.
-            </p>
           </div>
         </section>
 
@@ -81,9 +78,16 @@ export default function GiftPage() {
           >
             Get your first month free
           </a>
+          <p className="mt-6">
+            <Link href="/" className="text-link text-[0.95rem]">
+              Learn more about The Conversation Club
+            </Link>
+          </p>
         </section>
 
-        <SiteFooter />
+        <div className="mt-auto">
+          <SiteFooter />
+        </div>
       </div>
     </main>
   );
