@@ -60,7 +60,7 @@ export function EmailCapture({
   const isDark = variant === "dark";
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2 sm:flex-row">
       <input
         type="email"
         required
