@@ -6,7 +6,32 @@ import { StickyCta } from "@/components/sticky-cta";
 export function WaitlistFlow() {
   return (
     <div className="mx-auto w-full max-w-[64rem] text-center">
-      <div className="mx-auto max-w-[44rem]">
+      {/* Product images */}
+      <div className="mx-auto flex max-w-[40rem] items-center justify-center gap-6 sm:gap-8">
+        <div className="product-image-rotate w-full max-w-[11rem]" style={{ animationDelay: "0s" }}>
+          <img
+            src="/images/conversation-cards.png"
+            alt="Conversation Cards"
+            className="w-full"
+          />
+        </div>
+        <div className="product-image-rotate w-full max-w-[11rem]" style={{ animationDelay: "0.15s" }}>
+          <img
+            src="/images/letter.png"
+            alt="The Letter"
+            className="w-full"
+          />
+        </div>
+        <div className="product-image-rotate w-full max-w-[11rem]" style={{ animationDelay: "0.3s" }}>
+          <img
+            src="/images/business-cards.png"
+            alt="Business cards"
+            className="w-full"
+          />
+        </div>
+      </div>
+
+      <div className="mx-auto mt-8 max-w-[44rem] sm:mt-10">
         <div className="hero-card">
           <h1
             id="waitlist-heading"

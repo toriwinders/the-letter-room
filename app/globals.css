@@ -428,12 +428,12 @@ footer .brand-name {
 }
 
 @keyframes subtle-rotate {
-  0%, 100% { transform: rotate(-1.5deg); }
-  50% { transform: rotate(1.5deg); }
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
 }
 
 .product-image-rotate {
-  animation: subtle-rotate 3s ease-in-out infinite;
+  animation: subtle-rotate 0.8s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
