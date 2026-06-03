@@ -9,17 +9,17 @@ export function ProductPreview() {
         <div className="mx-auto max-w-[48rem]">
           <p className="eyebrow">What shows up</p>
 
-          <h2 className="section-title mx-auto mt-4 max-w-[42rem]">
+          <h2 className="section-title mx-auto mt-4 max-w-[48rem]">
             An essay. A question.
             <br />
             And a reason to plan something.
           </h2>
-          <p className="mx-auto mt-4 max-w-[42rem] text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
+          <p className="mx-auto mt-4 max-w-[48rem] text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
             Everything arrives in an envelope designed to feel like it matters.
           </p>
 
           {/* Product images */}
-          <div className="mx-auto mt-12 flex max-w-[48rem] items-start justify-center gap-6 sm:gap-10">
+          <div className="mx-auto mt-12 flex max-w-[48rem] flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-center">
             <div className="product-image-rotate w-full max-w-[14rem]" style={{ animationDelay: "0s" }}>
               <img
                 src="/images/conversation-cards.png"

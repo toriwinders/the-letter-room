@@ -12,18 +12,15 @@ export function WaitlistFlow() {
           The good kind of mail.
         </h1>
 
-        <div className="mx-auto mt-6 max-w-[42rem] text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
+        <div className="mx-auto mt-6 max-w-[48rem] text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
           <p>
-            A personal essay and a conversation card, mailed to your
-            door every month.
+            A personal essay and a conversation card, mailed to your door every month.
           </p>
-          <p className="brand-line">
-            Read the letter with your morning coffee. Bring the card
-            to your next dinner.
+          <p className="mt-4">
+            Read the letter with your morning coffee. Bring the card to your next dinner.
           </p>
-          <p>
-            It&apos;s the kind of thing you&apos;ll want to organize
-            something around.
+          <p className="mt-4">
+            It&apos;s the kind of thing you&apos;ll want to organize something around.
           </p>
         </div>
 
@@ -41,24 +38,21 @@ export function WaitlistFlow() {
         className="section-band section-band-idea section-gap mt-0 text-center"
       >
         <div className="section-inner">
-          <div className="mx-auto max-w-[48rem]">
+          <div className="mx-auto max-w-[56rem]">
             <p className="eyebrow">Why I started this</p>
             <h2
               id="the-idea-heading"
-              className="section-title mx-auto mt-4 max-w-[42rem]"
+              className="section-title mx-auto mt-4 max-w-[48rem]"
             >
               You know that feeling after a really good conversation?
             </h2>
 
-            <div className="mx-auto mt-6 max-w-[42rem] text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
+            <div className="mx-auto mt-6 max-w-[48rem] text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
               <p>
-                When you drove home still thinking about what somebody said after
-                staying at the table way too long.
+                When you drove home still thinking about what somebody said after staying at the table way too long.
               </p>
               <p className="mt-5">
-                I started The Conversation Club because I want more of that.
-                And in a world where so much life has moved onto a screen,
-                I think a lot of us do.
+                I started The Conversation Club because I want more of that. And in a world where so much life has moved onto a screen, I think a lot of us do.
               </p>
               <p className="mt-5">
                 So this is a reason to create more of those moments.
@@ -78,8 +72,7 @@ export function WaitlistFlow() {
                     Written by Tori Winders
                   </p>
                   <p className="mt-0.5 text-[0.85rem] text-[var(--color-espresso)]">
-                    Writer, optimizer, and someone who thinks way too much about
-                    conversation.
+                    Writer, optimizer, and someone who thinks way too much about conversation.
                   </p>
                 </div>
                 <svg
@@ -109,25 +102,21 @@ export function WaitlistFlow() {
         className="section-band section-band-who section-gap text-center"
       >
         <div className="section-inner">
-          <div className="mx-auto max-w-[48rem]">
+          <div className="mx-auto max-w-[56rem]">
             <p className="eyebrow">Is this you?</p>
             <h2
               id="who-heading"
-              className="section-title mx-auto mt-4 max-w-[42rem]"
+              className="section-title mx-auto mt-4 max-w-[48rem]"
             >
               For women who love beautiful things and even better conversations.
             </h2>
 
-            <div className="mx-auto mt-6 max-w-[42rem] text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
+            <div className="mx-auto mt-6 max-w-[48rem] text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
               <p>
-                If you still get excited about something arriving in the mail.
-                If you&apos;re the one who brings the question nobody else would
-                have thought to ask. If you&apos;ve ever driven home from a dinner
-                feeling like your cup was completely full.
+                If you still get excited about something arriving in the mail. If you&apos;re the one who brings the question nobody else would have thought to ask. If you&apos;ve ever driven home from a dinner feeling like your cup was completely full.
               </p>
               <p className="mt-5">
-                This is a small, beautiful, offline thing for people who already
-                know they want more of the real stuff.
+                This is a small, beautiful, offline thing for people who already know they want more of the real stuff.
               </p>
             </div>
 
@@ -151,16 +140,14 @@ export function WaitlistFlow() {
             <p className="eyebrow">Limited to 100 founding members</p>
             <h2
               id="founding-member-heading"
-              className="section-title mx-auto mt-4 max-w-[44rem]"
+              className="section-title mx-auto mt-4 max-w-[48rem]"
             >
               This isn&apos;t launching to everyone.
             </h2>
 
-            <div className="mx-auto mt-6 max-w-[42rem] text-[1.0625rem] leading-[1.65]">
+            <div className="mx-auto mt-6 max-w-[48rem] text-[1.0625rem] leading-[1.65]">
               <p>
-                The first 100 people on the waitlist become founding members.
-                You&apos;ll get first access, a locked-in price, and a say in
-                what this thing becomes.
+                The first 100 people on the waitlist become founding members. You&apos;ll get first access, a locked-in price, and a say in what this thing becomes.
               </p>
               <p className="mt-5">
                 If you&apos;re reading this, the door is still open.
