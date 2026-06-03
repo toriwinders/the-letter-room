@@ -47,7 +47,7 @@ export function WaitlistFlow() {
               You know that feeling after a really good conversation?
             </h2>
 
-            <div className="mx-auto mt-6 max-w-[48rem] text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
+            <div className="mx-auto mt-6 max-w-[48rem] text-[1.0625rem] leading-[1.65] text-[var(--color-ivory)]" style={{ opacity: 0.88 }}>
               <p>
                 When you drove home still thinking about what somebody said after staying at the table way too long.
               </p>
@@ -68,17 +68,18 @@ export function WaitlistFlow() {
                 className="author-card"
               >
                 <div className="flex-1 text-left">
-                  <p className="text-[0.95rem] text-[var(--color-plum)]" style={{ fontFamily: "var(--font-brand)" }}>
+                  <p className="text-[0.95rem] text-[var(--color-ivory)]" style={{ fontFamily: "var(--font-brand)" }}>
                     Written by Tori Winders
                   </p>
-                  <p className="mt-0.5 text-[0.85rem] text-[var(--color-espresso)]">
+                  <p className="mt-0.5 text-[0.85rem] text-[var(--color-ivory)]" style={{ opacity: 0.7 }}>
                     Writer, optimizer, and someone who thinks way too much about conversation.
                   </p>
                 </div>
                 <svg
                   aria-hidden="true"
                   viewBox="0 0 24 24"
-                  className="h-5 w-5 shrink-0 text-[var(--color-stone)]"
+                  className="h-5 w-5 shrink-0 text-[var(--color-ivory)]"
+                  style={{ opacity: 0.5 }}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.5"

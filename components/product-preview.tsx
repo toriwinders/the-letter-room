@@ -6,8 +6,8 @@ export function ProductPreview() {
       className="section-band section-band-product section-gap text-center"
     >
       <div className="section-inner">
-        <div className="mx-auto max-w-[48rem]">
-          <p className="eyebrow">What shows up</p>
+        <div className="mx-auto max-w-[56rem]">
+          <p className="eyebrow" style={{ color: "var(--color-plum)" }}>What shows up</p>
 
           <h2 className="section-title mx-auto mt-4 max-w-[48rem]">
             An essay. A question.
@@ -18,38 +18,42 @@ export function ProductPreview() {
             Everything arrives in an envelope designed to feel like it matters.
           </p>
 
-          {/* Product images */}
-          <div className="mx-auto mt-12 flex max-w-[48rem] flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-center">
-            <div className="product-image-rotate w-full max-w-[14rem]" style={{ animationDelay: "0s" }}>
-              <img
-                src="/images/conversation-cards.png"
-                alt="Conversation Cards"
-                className="w-full"
-              />
-              <p className="mt-3 text-[0.9375rem] text-[var(--color-plum)]" style={{ fontFamily: "var(--font-brand)" }}>
-                The Conversation Card
-              </p>
-            </div>
-
-            <div className="product-image-rotate w-full max-w-[14rem]" style={{ animationDelay: "0.15s" }}>
-              <img
-                src="/images/letter.png"
-                alt="The Letter"
-                className="w-full"
-              />
+          {/* Product images — letter left, conversation card front+back right */}
+          <div className="mx-auto mt-12 flex max-w-[48rem] flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-center sm:gap-12">
+            {/* The Letter */}
+            <div className="w-full max-w-[16rem]">
+              <div className="product-image-rotate" style={{ animationDelay: "0s" }}>
+                <img
+                  src="/images/letter.png"
+                  alt="The Letter"
+                  className="w-full"
+                />
+              </div>
               <p className="mt-3 text-[0.9375rem] text-[var(--color-plum)]" style={{ fontFamily: "var(--font-brand)" }}>
                 The Letter
               </p>
             </div>
 
-            <div className="product-image-rotate w-full max-w-[14rem]" style={{ animationDelay: "0.3s" }}>
-              <img
-                src="/images/conversation-cards-2.png"
-                alt="Conversation Card prompts"
-                className="w-full"
-              />
+            {/* The Conversation Card — front and back */}
+            <div className="w-full max-w-[20rem] sm:max-w-[24rem]">
+              <div className="flex gap-4 sm:gap-6">
+                <div className="product-image-rotate flex-1" style={{ animationDelay: "0.2s" }}>
+                  <img
+                    src="/images/conversation-cards.png"
+                    alt="Conversation Card front"
+                    className="w-full"
+                  />
+                </div>
+                <div className="product-image-rotate flex-1" style={{ animationDelay: "0.4s" }}>
+                  <img
+                    src="/images/conversation-cards-2.png"
+                    alt="Conversation Card back"
+                    className="w-full"
+                  />
+                </div>
+              </div>
               <p className="mt-3 text-[0.9375rem] text-[var(--color-plum)]" style={{ fontFamily: "var(--font-brand)" }}>
-                The Prompts
+                The Conversation Card
               </p>
             </div>
           </div>

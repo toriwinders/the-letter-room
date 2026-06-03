@@ -275,7 +275,25 @@ body {
 }
 
 .section-band-idea {
-  background: var(--color-ivory);
+  background: var(--color-plum);
+  color: var(--color-ivory);
+}
+
+.section-band-idea .eyebrow {
+  color: var(--color-gold);
+}
+
+.section-band-idea .section-title {
+  color: var(--color-ivory);
+}
+
+.section-band-idea .author-card {
+  background: transparent;
+  border-color: #F5F0E830;
+}
+
+.section-band-idea .author-card:hover {
+  border-color: var(--color-gold);
 }
 
 .section-band-who {
@@ -461,12 +479,12 @@ footer .brand-name {
 /* ── Animations ── */
 
 @keyframes subtle-rotate {
-  0%, 100% { transform: rotate(-2deg); }
-  50% { transform: rotate(2deg); }
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1.5deg); }
 }
 
 .product-image-rotate {
-  animation: subtle-rotate 0.8s ease-in-out infinite;
+  animation: subtle-rotate 2.5s ease-in-out infinite;
 }
 
 /* ── Reduced motion ── */
