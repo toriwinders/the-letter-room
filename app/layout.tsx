@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteTitle = "The Conversation Club";
+const siteTitle = "Conversation Club — A personal essay and a conversation card, mailed monthly";
 const siteDescription =
-  "A monthly mailed letter and conversation card for people who want more depth, connection, and in-person conversation.";
+  "A personal essay and a conversation card, mailed to your door every month. For women who love beautiful things and even better conversations. $7/mo for founding members.";
 
 export const metadata: Metadata = {
   title: siteTitle,
@@ -14,15 +14,18 @@ export const metadata: Metadata = {
     canonical: "https://conversationclub.co",
   },
   keywords: [
-    "The Conversation Club",
-    "conversation club",
+    "Conversation Club",
     "conversation cards",
-    "mailed letter subscription",
-    "monthly letter",
-    "analog subscription",
-    "mail subscription",
-    "deeper conversations",
+    "monthly letter subscription",
+    "mailed letter",
+    "personal essay subscription",
+    "analog subscription box",
+    "conversation starters",
+    "dinner party questions",
     "offline connection",
+    "snail mail subscription",
+    "women subscription box",
+    "Tori Winders",
   ],
   authors: [{ name: "Tori Winders", url: "https://conversationclub.co" }],
   creator: "Tori Winders",
@@ -45,9 +48,9 @@ export const metadata: Metadata = {
     apple: "/icon.png",
   },
   openGraph: {
-    title: siteTitle,
-    description: siteDescription,
-    siteName: siteTitle,
+    title: "Conversation Club — The good kind of mail.",
+    description: "A personal essay and a conversation card, mailed to your door every month. Join the founding 100.",
+    siteName: "Conversation Club",
     type: "website",
     locale: "en_US",
     url: "https://conversationclub.co",
@@ -57,18 +60,18 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         type: "image/png",
-        alt: "The Conversation Club. Something worth talking about.",
+        alt: "Conversation Club — The good kind of mail.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: siteTitle,
-    description: siteDescription,
+    title: "Conversation Club — The good kind of mail.",
+    description: "A personal essay and a conversation card, mailed to your door every month. Join the founding 100.",
     images: [
       {
         url: "/twitter-image.png",
-        alt: "The Conversation Club. Something worth talking about.",
+        alt: "Conversation Club — The good kind of mail.",
       },
     ],
   },
