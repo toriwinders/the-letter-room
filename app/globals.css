@@ -2,18 +2,19 @@
 
 :root {
   --color-background: #F2E8D0;
-  --color-brand: #8B6B5B;
+  --color-brand: #B8863A;
+  --color-brand-deep: #9A7230;
   --color-ink: #3E1B2C;
   --color-muted: #6B5148;
   --color-card-surface: #FAF3E6;
   --color-product-bg: #E8D9C2;
   --color-idea-bg: #F7F0E2;
   --color-offer-bg: #3E1B2C;
-  --color-border: #8B6B5B26;
+  --color-border: #B8863A26;
   --color-border-strong: #3E1B2C38;
   --color-panel: rgba(255, 255, 255, 0.62);
   --color-panel-strong: rgba(255, 255, 255, 0.8);
-  --color-ring: #8B6B5B47;
+  --color-ring: #B8863A47;
   --color-line: #3E1B2C1a;
   --font-brand: "Canela", "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
     Palatino, Georgia, serif;
@@ -38,7 +39,7 @@ body {
 }
 
 ::selection {
-  background: #8B6B5B24;
+  background: #B8863A24;
 }
 
 .font-brand {
@@ -67,8 +68,8 @@ body {
 }
 
 .field-shell:focus-within {
-  border-bottom-color: #8B6B5B80;
-  box-shadow: inset 0 -1px 0 #8B6B5B80;
+  border-bottom-color: #B8863A80;
+  box-shadow: inset 0 -1px 0 #B8863A80;
 }
 
 .field-input {
@@ -99,7 +100,7 @@ body {
 
 .button-primary:hover {
   transform: translateY(-1px);
-  background: #745649;
+  background: #9A7030;
   box-shadow: 0 10px 24px #3E1B2C1f;
 }
 
@@ -128,7 +129,7 @@ body {
   cursor: pointer;
   letter-spacing: -0.04em;
   text-decoration: underline;
-  text-decoration-color: #8B6B5B52;
+  text-decoration-color: #B8863A52;
   text-underline-offset: 0.22em;
 }
 
@@ -169,7 +170,7 @@ body {
 }
 
 .nav-join-button:hover {
-  background: #745649;
+  background: #9A7030;
 }
 
 .author-card {
@@ -269,7 +270,7 @@ body {
 .hero-card {
   max-width: 44rem;
   margin: 0 auto;
-  background: var(--color-brand);
+  background: var(--color-brand-deep);
   box-shadow: 0 20px 44px #3E1B2C1f;
 }
 
@@ -308,7 +309,7 @@ body {
 .offer-card {
   max-width: 36rem;
   margin: 0 auto;
-  background: var(--color-brand);
+  background: var(--color-brand-deep);
   color: var(--color-background);
   text-align: center;
 }
@@ -372,7 +373,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  background: #8B6B5B18;
+  background: #B8863A18;
   color: var(--color-brand);
 }
 
@@ -415,7 +416,7 @@ footer .brand-name {
 }
 
 .faq-item summary:hover {
-  background: #8B6B5B0d;
+  background: #B8863A0d;
 }
 
 .faq-chevron {

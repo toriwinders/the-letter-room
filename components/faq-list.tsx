@@ -37,26 +37,41 @@ const faqItems = [
   },
   {
     question: "When does it launch?",
-    answer: "Soon. Waitlist members will be the first to know.",
+    answer: "June 22. Everyone on the waitlist gets first access.",
   },
   {
     question: "Where do you ship?",
-    answer: "Within the U.S. for now. More coming.",
+    answer:
+      "Within the U.S. for now. Letters ship monthly — subscribe by the 5th to get that month’s letter. Subscribe after the 5th and your first letter ships the following month.",
   },
   {
     question: "How much will it cost?",
     answer:
-      "Founding members get a locked-in price that never goes up. Details coming at launch.",
+      "$7/month for founding members — a price that never goes up, no matter what happens after launch. Cancel anytime.",
   },
   {
     question: "Can I gift it?",
     answer: (
       <>
-        Soon. Email me at{" "}
-        <Link className="text-link" href="mailto:hello@conversationclub.co">
-          hello@conversationclub.co
-        </Link>{" "}
-        and I&apos;ll set it up by hand.
+        Yes. You can gift 3 months ($21) or 6 months ($42). Pick one below:
+        <span className="mt-3 flex flex-col gap-2 sm:flex-row sm:gap-4">
+          <Link
+            className="text-link"
+            href="https://buy.stripe.com/8x24gyfwB2nf78JebQ4gg04"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Gift 3 months &mdash; $21
+          </Link>
+          <Link
+            className="text-link"
+            href="https://buy.stripe.com/eVq00iachfa150BgjY4gg05"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Gift 6 months &mdash; $42
+          </Link>
+        </span>
       </>
     ),
   },
