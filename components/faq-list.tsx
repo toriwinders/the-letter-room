@@ -81,24 +81,22 @@ export function FaqList() {
   return (
     <section
       aria-labelledby="faq-heading"
-      className="section-band section-band-faq section-gap text-left"
+      className="section-band section-band-faq section-gap"
     >
       <div className="section-inner">
-        <div className="mx-auto max-w-[52rem]">
-          <div className="max-w-[36rem]">
-            <p className="eyebrow">Things people ask</p>
-            <h2
-              id="faq-heading"
-              className="section-title mt-4"
-            >
-              Questions
-            </h2>
-          </div>
+        <div className="mx-auto max-w-[52rem] text-center">
+          <p className="eyebrow">Things people ask</p>
+          <h2
+            id="faq-heading"
+            className="section-title mt-4"
+          >
+            Questions
+          </h2>
 
           {/* Divider between header and questions */}
           <div className="mt-8 border-t border-[var(--color-stone)]" />
 
-          <div>
+          <div className="text-left">
             {faqItems.map((item) => (
               <details
                 key={item.question}

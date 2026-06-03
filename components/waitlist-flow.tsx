@@ -5,14 +5,14 @@ import { StickyCta } from "@/components/sticky-cta";
 
 export function WaitlistFlow() {
   return (
-    <div className="mx-auto w-full max-w-[64rem]">
-      {/* Hero — no card, editorial layout */}
-      <div className="hero-section text-center">
+    <div className="mx-auto w-full max-w-[64rem] text-center">
+      {/* Hero */}
+      <div className="hero-section">
         <h1 id="waitlist-heading">
           The good kind of mail.
         </h1>
 
-        <div className="mx-auto mt-6 max-w-[34rem] text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
+        <div className="mx-auto mt-6 max-w-[42rem] text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
           <p>
             A personal essay and a conversation card, mailed to your
             door every month.
@@ -27,7 +27,7 @@ export function WaitlistFlow() {
           </p>
         </div>
 
-        <div className="mx-auto mt-10 max-w-[26rem]">
+        <div className="mx-auto mt-10 max-w-[28rem]">
           <EmailCapture
             buttonText="Get me on the list"
             successMessage="You're on the list. Keep an eye on your inbox."
@@ -38,19 +38,19 @@ export function WaitlistFlow() {
       {/* The Idea */}
       <section
         aria-labelledby="the-idea-heading"
-        className="section-band section-band-idea section-gap mt-0"
+        className="section-band section-band-idea section-gap mt-0 text-center"
       >
         <div className="section-inner">
           <div className="mx-auto max-w-[48rem]">
             <p className="eyebrow">Why I started this</p>
             <h2
               id="the-idea-heading"
-              className="section-title mx-auto mt-4 max-w-[38rem]"
+              className="section-title mx-auto mt-4 max-w-[42rem]"
             >
               You know that feeling after a really good conversation?
             </h2>
 
-            <div className="mx-auto mt-6 max-w-[37.5rem] text-left text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
+            <div className="mx-auto mt-6 max-w-[42rem] text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
               <p>
                 When you drove home still thinking about what somebody said after
                 staying at the table way too long.
@@ -66,15 +66,15 @@ export function WaitlistFlow() {
             </div>
 
             {/* Author card */}
-            <div className="mx-auto mt-10 max-w-[37.5rem] text-left">
+            <div className="mx-auto mt-10 max-w-[34rem]">
               <a
                 href="https://toriwinders.com"
                 target="_blank"
                 rel="noreferrer"
                 className="author-card"
               >
-                <div className="flex-1">
-                  <p className="text-[0.95rem] font-normal text-[var(--color-plum)]" style={{ fontFamily: "var(--font-brand)" }}>
+                <div className="flex-1 text-left">
+                  <p className="text-[0.95rem] text-[var(--color-plum)]" style={{ fontFamily: "var(--font-brand)" }}>
                     Written by Tori Winders
                   </p>
                   <p className="mt-0.5 text-[0.85rem] text-[var(--color-espresso)]">
@@ -113,12 +113,12 @@ export function WaitlistFlow() {
             <p className="eyebrow">Is this you?</p>
             <h2
               id="who-heading"
-              className="section-title mx-auto mt-4 max-w-[38rem]"
+              className="section-title mx-auto mt-4 max-w-[42rem]"
             >
               For women who love beautiful things and even better conversations.
             </h2>
 
-            <div className="mx-auto mt-6 max-w-[37.5rem] text-left text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
+            <div className="mx-auto mt-6 max-w-[42rem] text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
               <p>
                 If you still get excited about something arriving in the mail.
                 If you&apos;re the one who brings the question nobody else would
@@ -131,7 +131,7 @@ export function WaitlistFlow() {
               </p>
             </div>
 
-            <div className="mx-auto mt-10 max-w-[26rem]">
+            <div className="mx-auto mt-10 max-w-[28rem]">
               <EmailCapture
                 buttonText="Get me on the list"
                 successMessage="You're on the list. Keep an eye on your inbox."
@@ -141,7 +141,7 @@ export function WaitlistFlow() {
         </div>
       </section>
 
-      {/* Founding Members — no inner card, direct on plum */}
+      {/* Founding Members */}
       <section
         aria-labelledby="founding-member-heading"
         className="section-band section-band-offer section-gap text-center"
@@ -156,7 +156,7 @@ export function WaitlistFlow() {
               This isn&apos;t launching to everyone.
             </h2>
 
-            <div className="mx-auto mt-6 max-w-[34rem] text-[1.0625rem] leading-[1.65]">
+            <div className="mx-auto mt-6 max-w-[42rem] text-[1.0625rem] leading-[1.65]">
               <p>
                 The first 100 people on the waitlist become founding members.
                 You&apos;ll get first access, a locked-in price, and a say in
@@ -170,7 +170,7 @@ export function WaitlistFlow() {
               </p>
             </div>
 
-            <div className="mx-auto mt-10 max-w-[26rem]">
+            <div className="mx-auto mt-10 max-w-[28rem]">
               <EmailCapture
                 buttonText="Get me on the list"
                 successMessage="You're on the list. Keep an eye on your inbox."
