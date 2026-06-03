@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteTitle = "Conversation Club — A personal essay and a conversation card, mailed monthly";
+const siteTitle = "Conversation Club — The good kind of mail.";
 const siteDescription =
-  "A personal essay and a conversation card, mailed to your door every month. For women who love beautiful things and even better conversations. $7/mo for founding members.";
+  "A personal essay and a conversation card, mailed to your door every month. For women who love beautiful things and even better conversations.";
 
 export const metadata: Metadata = {
   title: siteTitle,
