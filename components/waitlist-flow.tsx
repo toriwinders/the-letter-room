@@ -137,7 +137,7 @@ export function WaitlistFlow() {
 
             <div className="mx-auto mt-8 max-w-[28rem]">
               <EmailCapture
-                buttonText="Save my spot"
+                buttonText="Get me on the list"
                 successMessage="You're on the list. Keep an eye on your inbox."
               />
             </div>

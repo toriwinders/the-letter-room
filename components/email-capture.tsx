@@ -70,7 +70,7 @@ export function EmailCapture({
         className={`flex-1 rounded-lg border px-4 py-3 text-[0.95rem] outline-none ${
           isDark
             ? "border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:border-white/40"
-            : "border-[var(--color-border-strong)] bg-[var(--color-card-surface)] text-[var(--color-ink)] placeholder:text-[#3E1B2C7a] focus:border-[#D8612D80]"
+            : "border-[var(--color-border-strong)] bg-[var(--color-card-surface)] text-[var(--color-ink)] placeholder:text-[#3E1B2C7a] focus:border-[#8B6B5B80]"
         }`}
       />
       <button

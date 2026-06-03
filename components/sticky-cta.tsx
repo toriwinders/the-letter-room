@@ -23,7 +23,7 @@ export function StickyCta() {
         transition: "transform 250ms ease",
       }}
     >
-      <EmailCapture buttonText="I want in" successMessage="You're in. Check your inbox." />
+      <EmailCapture buttonText="Get me on the list" successMessage="You're in. Check your inbox." />
     </div>
   );
 }
