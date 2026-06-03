@@ -18,10 +18,10 @@ export function ProductPreview() {
             Everything arrives in an envelope designed to feel like it matters.
           </p>
 
-          {/* Product images — letter left, conversation cards stacked right */}
-          <div className="mx-auto mt-12 flex max-w-[48rem] flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-center sm:gap-12">
+          {/* Product images — always side by side: letter left, cards right */}
+          <div className="mx-auto mt-12 flex max-w-[48rem] items-start justify-center gap-6 sm:gap-12">
             {/* The Letter */}
-            <div className="w-full max-w-[18rem]">
+            <div className="w-full max-w-[10rem] sm:max-w-[18rem]">
               <div className="product-image-rotate" style={{ animationDelay: "0s" }}>
                 <img
                   src="/images/letter.png"
@@ -29,14 +29,14 @@ export function ProductPreview() {
                   className="w-full"
                 />
               </div>
-              <p className="mt-3 text-[0.9375rem] text-[var(--color-plum)]" style={{ fontFamily: "var(--font-brand)" }}>
+              <p className="mt-3 text-[0.8125rem] sm:text-[0.9375rem] text-[var(--color-plum)]" style={{ fontFamily: "var(--font-brand)" }}>
                 The Letter
               </p>
             </div>
 
             {/* The Conversation Card — front and back stacked */}
-            <div className="w-full max-w-[18rem]">
-              <div className="flex flex-col gap-4">
+            <div className="w-full max-w-[10rem] sm:max-w-[18rem]">
+              <div className="flex flex-col gap-3 sm:gap-4">
                 <div className="product-image-rotate" style={{ animationDelay: "0.2s" }}>
                   <img
                     src="/images/conversation-cards.png"
@@ -52,7 +52,7 @@ export function ProductPreview() {
                   />
                 </div>
               </div>
-              <p className="mt-3 text-[0.9375rem] text-[var(--color-plum)]" style={{ fontFamily: "var(--font-brand)" }}>
+              <p className="mt-3 text-[0.8125rem] sm:text-[0.9375rem] text-[var(--color-plum)]" style={{ fontFamily: "var(--font-brand)" }}>
                 The Conversation Card
               </p>
             </div>
