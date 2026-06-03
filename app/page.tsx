@@ -63,7 +63,7 @@ export default function HomePage() {
 
         <section
           aria-labelledby="waitlist-heading"
-          className="relative mt-8 sm:mt-10 lg:mt-12"
+          className="relative mt-6 sm:mt-8"
         >
           <div className="mx-auto w-full">
             <WaitlistFlow />

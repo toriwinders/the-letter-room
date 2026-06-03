@@ -10,8 +10,8 @@ type EmailCaptureProps = {
 };
 
 export function EmailCapture({
-  buttonText = "Send it",
-  successMessage = "Check your inbox — your first prompt is on the way.",
+  buttonText = "Get me on the list",
+  successMessage = "You're on the list. Keep an eye on your inbox.",
   variant = "light",
   endpoint = "/api/waitlist",
 }: EmailCaptureProps) {
@@ -46,10 +46,10 @@ export function EmailCapture({
   if (status === "sent") {
     return (
       <p
-        className={`copy-rhythm text-[0.95rem] ${
+        className={`text-[0.95rem] ${
           variant === "dark"
-            ? "text-white/90"
-            : "text-[var(--color-ink)]"
+            ? "text-[var(--color-ivory)]"
+            : "text-[var(--color-espresso)]"
         }`}
       >
         {successMessage}
@@ -67,20 +67,21 @@ export function EmailCapture({
         placeholder="Your email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className={`flex-1 rounded-lg border px-4 py-3 text-[0.95rem] outline-none ${
+        className={`flex-1 rounded-[4px] border px-4 py-3 text-[0.9375rem] outline-none ${
           isDark
-            ? "border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:border-white/40"
-            : "border-[var(--color-border-strong)] bg-[var(--color-card-surface)] text-[var(--color-ink)] placeholder:text-[#3E1B2C7a] focus:border-[#B8863A80]"
+            ? "border-[#F5F0E830] bg-[#F5F0E810] text-[var(--color-ivory)] placeholder:text-[var(--color-stone)] focus:border-[var(--color-gold)]"
+            : "border-[var(--color-stone)] bg-[var(--color-ivory)] text-[var(--color-espresso)] placeholder:text-[var(--color-stone)] focus:border-[var(--color-gold)]"
         }`}
       />
       <button
         type="submit"
         disabled={status === "sending"}
-        className={`shrink-0 rounded-lg px-5 py-3 text-[0.9rem] font-medium disabled:opacity-60 ${
+        className={`shrink-0 rounded-[4px] px-5 py-3 text-[0.9375rem] font-medium disabled:opacity-60 ${
           isDark
-            ? "bg-white text-[var(--color-offer-bg)] hover:bg-white/90"
+            ? "bg-[var(--color-ivory)] text-[var(--color-plum)] hover:bg-[var(--color-gold)]"
             : "button-primary"
         }`}
+        style={{ letterSpacing: "0.03em" }}
       >
         {status === "sending" ? "..." : buttonText}
       </button>
