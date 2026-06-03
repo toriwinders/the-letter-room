@@ -169,7 +169,7 @@ export function WaitlistFlow() {
               <p className="mt-4">
                 If you&apos;re reading this, the door is still open.
               </p>
-              <p className="mt-4 text-[1.15rem] font-semibold text-white">
+              <p className="mt-4 text-[1.15rem] font-semibold text-[var(--color-ink)]">
                 $7/month. Locked in forever.
               </p>
             </div>

@@ -60,33 +60,39 @@ export function ProductPreview() {
             </p>
           </div>
 
-          <div className="why-grid why-grid-spacing" style={{ marginTop: "3rem" }}>
-            <article className="why-card">
-              <div className="icon-badge">
-                <LetterIcon />
-              </div>
-              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] sm:text-[1.32rem]">
+          <div className="mx-auto mt-10 flex flex-col items-center gap-8 sm:flex-row sm:justify-center sm:gap-10">
+            <div className="product-image-rotate w-full max-w-[16rem]" style={{ animationDelay: "0s" }}>
+              <img
+                src="/images/letter.png"
+                alt="The Letter — a personal essay mailed monthly"
+                className="w-full rounded-lg"
+              />
+              <h3 className="copy-rhythm mt-4 text-[1.2rem] leading-[1.18]">
                 The Letter
               </h3>
-              <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[1rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1.05rem]">
-                A personal essay on whatever I&apos;ve been thinking about that
-                month. Friendship, getting older, what we actually want our
-                lives to feel like.
-              </p>
-            </article>
+            </div>
 
-            <article className="why-card">
-              <div className="icon-badge">
-                <SpeechBubbleIcon />
-              </div>
-              <h3 className="copy-rhythm mt-5 text-[1.34rem] leading-[1.18] sm:text-[1.32rem]">
+            <div className="product-image-rotate w-full max-w-[16rem]" style={{ animationDelay: "0.4s" }}>
+              <img
+                src="/images/conversation-cards.png"
+                alt="Conversation Cards — prompts to bring to your next dinner"
+                className="w-full rounded-lg"
+              />
+              <h3 className="copy-rhythm mt-4 text-[1.2rem] leading-[1.18]">
                 The Conversation Card
               </h3>
-              <p className="copy-rhythm mx-auto mt-3 max-w-[19rem] text-[1rem] leading-[1.6] text-[var(--color-muted)] sm:text-[1.05rem]">
-                A card with one theme and a few prompts — the kind of questions
-                that change the conversation once somebody asks them.
-              </p>
-            </article>
+            </div>
+
+            <div className="product-image-rotate w-full max-w-[16rem]" style={{ animationDelay: "0.8s" }}>
+              <img
+                src="/images/business-cards.png"
+                alt="Conversation Club business cards"
+                className="w-full rounded-lg"
+              />
+              <h3 className="copy-rhythm mt-4 text-[1.2rem] leading-[1.18]">
+                The Details
+              </h3>
+            </div>
           </div>
         </div>
       </div>

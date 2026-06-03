@@ -3,7 +3,7 @@
 :root {
   --color-background: #F2E8D0;
   --color-brand: #B8863A;
-  --color-brand-deep: #9A7230;
+  --color-brand-deep: #eeaa00;
   --color-ink: #3E1B2C;
   --color-muted: #6B5148;
   --color-card-surface: #FAF3E6;
@@ -275,12 +275,12 @@ body {
 }
 
 .hero-card h1 {
-  color: var(--color-background);
+  color: var(--color-ink);
 }
 
 .hero-card p,
 .hero-card div {
-  color: #ffffffdd;
+  color: #3E1B2Cdd;
 }
 
 .hero-card .button-primary {
@@ -310,20 +310,20 @@ body {
   max-width: 36rem;
   margin: 0 auto;
   background: var(--color-brand-deep);
-  color: var(--color-background);
+  color: var(--color-ink);
   text-align: center;
 }
 
 .offer-card .eyebrow {
-  color: #ffffffcc;
+  color: #3E1B2Caa;
 }
 
 .offer-card h2 {
-  color: var(--color-background);
+  color: var(--color-ink);
 }
 
 .offer-card p {
-  color: #ffffffdd;
+  color: #3E1B2Cdd;
 }
 
 .offer-card .button-primary {
@@ -427,6 +427,15 @@ footer .brand-name {
   transform: rotate(180deg);
 }
 
+@keyframes subtle-rotate {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+.product-image-rotate {
+  animation: subtle-rotate 3s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -454,6 +463,10 @@ footer .brand-name {
 
   .faq-item summary {
     transition: none;
+  }
+
+  .product-image-rotate {
+    animation: none;
   }
 }
 
