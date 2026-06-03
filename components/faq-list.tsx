@@ -102,7 +102,7 @@ export function FaqList() {
                 key={item.question}
                 className="faq-item border-b border-[var(--color-stone)] py-2"
               >
-                <summary className="flex min-h-12 list-none items-center justify-between gap-6 py-3 text-[1.0625rem] font-medium leading-snug text-[var(--color-espresso)]">
+                <summary className="flex min-h-12 list-none items-center justify-between gap-6 py-3 text-[1.125rem] font-medium leading-snug text-[var(--color-espresso)]">
                   <span>{item.question}</span>
                   <svg
                     aria-hidden="true"

@@ -14,14 +14,14 @@ export function ProductPreview() {
             <br />
             And a reason to plan something.
           </h2>
-          <p className="mx-auto mt-4 max-w-[48rem] text-[1.0625rem] leading-[1.65] text-[var(--color-espresso)]">
+          <p className="mx-auto mt-4 max-w-[48rem] text-[1.125rem] leading-[1.65] text-[var(--color-espresso)]">
             Everything arrives in an envelope designed to feel like it matters.
           </p>
 
-          {/* Product images — letter left, conversation card front+back right */}
+          {/* Product images — letter left, conversation cards stacked right */}
           <div className="mx-auto mt-12 flex max-w-[48rem] flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-center sm:gap-12">
             {/* The Letter */}
-            <div className="w-full max-w-[16rem]">
+            <div className="w-full max-w-[18rem]">
               <div className="product-image-rotate" style={{ animationDelay: "0s" }}>
                 <img
                   src="/images/letter.png"
@@ -34,17 +34,17 @@ export function ProductPreview() {
               </p>
             </div>
 
-            {/* The Conversation Card — front and back */}
-            <div className="w-full max-w-[20rem] sm:max-w-[24rem]">
-              <div className="flex gap-4 sm:gap-6">
-                <div className="product-image-rotate flex-1" style={{ animationDelay: "0.2s" }}>
+            {/* The Conversation Card — front and back stacked */}
+            <div className="w-full max-w-[18rem]">
+              <div className="flex flex-col gap-4">
+                <div className="product-image-rotate" style={{ animationDelay: "0.2s" }}>
                   <img
                     src="/images/conversation-cards.png"
                     alt="Conversation Card front"
                     className="w-full"
                   />
                 </div>
-                <div className="product-image-rotate flex-1" style={{ animationDelay: "0.4s" }}>
+                <div className="product-image-rotate" style={{ animationDelay: "0.4s" }}>
                   <img
                     src="/images/conversation-cards-2.png"
                     alt="Conversation Card back"
