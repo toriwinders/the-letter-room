@@ -31,47 +31,27 @@ const faqItems = [
       "Use it anyway. Text it to a friend. Answer it in your notes at 11pm. But honestly — it's a pretty good excuse to finally plan that dinner.",
   },
   {
-    question: "What does joining the waitlist get me?",
-    answer:
-      "First access when we launch, a locked-in founding member price, and a say in what this thing becomes. The first 100 people in are the ones who shape it.",
-  },
-  {
-    question: "When does it launch?",
-    answer: "June 22. Everyone on the waitlist gets first access.",
-  },
-  {
     question: "Where do you ship?",
     answer:
-      "Within the U.S. for now. Letters ship monthly — subscribe by the 5th to get that month's letter. Subscribe after the 5th and your first letter ships the following month.",
+      "Within the U.S. for now. Letters ship the first week of every month. Subscribe by the last day of the month to get the next month's letter.",
   },
   {
-    question: "How much will it cost?",
+    question: "How much does it cost?",
     answer:
-      "$7/month for founding members — a price that never goes up, no matter what happens after launch. Cancel anytime.",
+      "$7/month for founding members. That price is locked in forever. Cancel anytime.",
   },
   {
     question: "Can I gift it?",
     answer: (
       <>
-        Yes. You can gift 3 months ($21) or 6 months ($42). Pick one below:
-        <span className="mt-3 flex flex-col gap-2 sm:flex-row sm:gap-4">
-          <Link
-            className="text-link"
-            href="https://buy.stripe.com/8x24gyfwB2nf78JebQ4gg04"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Gift 3 months &mdash; $21
-          </Link>
-          <Link
-            className="text-link"
-            href="https://buy.stripe.com/eVq00iachfa150BgjY4gg05"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Gift 6 months &mdash; $42
-          </Link>
-        </span>
+        Yes. You can gift 3 months, 6 months, or a full year.{" "}
+        <Link
+          className="text-link"
+          href="/gifting"
+        >
+          See gift options
+        </Link>
+        .
       </>
     ),
   },

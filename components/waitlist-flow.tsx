@@ -1,6 +1,6 @@
 import { FaqList } from "@/components/faq-list";
 import { ProductPreview } from "@/components/product-preview";
-import { EmailCapture } from "@/components/email-capture";
+import { JoinButton } from "@/components/join-button";
 import { StickyCta } from "@/components/sticky-cta";
 
 export function WaitlistFlow() {
@@ -24,11 +24,8 @@ export function WaitlistFlow() {
           </p>
         </div>
 
-        <div className="mx-auto mt-10 max-w-[28rem]">
-          <EmailCapture
-            buttonText="Get me on the list"
-            successMessage="You're on the list. Keep an eye on your inbox."
-          />
+        <div className="mx-auto mt-10">
+          <JoinButton />
         </div>
       </div>
 
@@ -121,11 +118,8 @@ export function WaitlistFlow() {
               </p>
             </div>
 
-            <div className="mx-auto mt-10 max-w-[28rem]">
-              <EmailCapture
-                buttonText="Get me on the list"
-                successMessage="You're on the list. Keep an eye on your inbox."
-              />
+            <div className="mx-auto mt-10">
+              <JoinButton />
             </div>
           </div>
         </div>
@@ -148,7 +142,7 @@ export function WaitlistFlow() {
 
             <div className="mx-auto mt-6 max-w-[48rem] text-[1.125rem] leading-[1.65]">
               <p>
-                The first 100 people on the waitlist become founding members. You&apos;ll get first access, a locked-in price, and a say in what this thing becomes.
+                The first 100 members get a locked-in price and a say in what this thing becomes.
               </p>
               <p className="mt-5">
                 If you&apos;re reading this, the door is still open.
@@ -158,12 +152,8 @@ export function WaitlistFlow() {
               </p>
             </div>
 
-            <div className="mx-auto mt-10 max-w-[28rem]">
-              <EmailCapture
-                buttonText="Get me on the list"
-                successMessage="You're on the list. Keep an eye on your inbox."
-                variant="dark"
-              />
+            <div className="mx-auto mt-10">
+              <JoinButton text="Join Conversation Club" variant="dark" />
             </div>
           </div>
         </div>
