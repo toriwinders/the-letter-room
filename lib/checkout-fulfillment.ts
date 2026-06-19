@@ -51,16 +51,14 @@ function getBestAddress(session: Stripe.Checkout.Session) {
 function buildConfirmationEmailHtml() {
   return `
 <div style="font-family:sans-serif;font-size:16px;line-height:1.6;color:#222;">
-  <p>You're in.</p>
-  <p>I have a theory that most of us are one good question away from the conversation we actually want to be having. The problem isn't that we don't have the people. It's that we sit down and default to the same four topics.</p>
-  <p>That's what this is for.</p>
-  <p>Every month, you'll get an envelope in the mail with two things:</p>
-  <p><strong>The Letter</strong> — a personal essay from me on something I can't stop thinking about. Not advice. Not a how-to. Just the kind of thing you'd talk about if dinner went an hour longer than planned.</p>
-  <p><strong>The Conversation Card</strong> — one theme and a few prompts that are better than "so what's new." The kind of questions that make somebody set their phone down.</p>
-  <p>Your first envelope ships the first week of next month. When it shows up, don't save it for later. Open it. Bring the card somewhere.</p>
-  <p>A dinner. A long drive. A Tuesday night on the couch with someone you used to talk to for hours.</p>
-  <p>See what happens.</p>
-  <p>You're one of the first people in this, and I don't take that lightly. If you have a friend who came to mind while reading this — you know the one — send them to <a href="https://conversationclub.co">conversationclub.co</a>.</p>
+  <p>Hey!</p>
+  <p>You just joined Conversation Club and I'm genuinely thrilled about it.</p>
+  <p>Here's what happens next: your first letter ships the first week of next month. Inside you'll find a personal essay (written by me) and a conversation card. The essay sets the mood. The card gives you something to bring to your next dinner, your next long drive, your next "we should do this more often" moment.</p>
+  <p>A few things worth knowing:</p>
+  <p>Letters go out the first week of every month. If you subscribed after the last day of the month, your first one ships the following month.</p>
+  <p>When yours arrives, I'd love to see it and for you to share feedback with me directly. Tag <a href="https://www.instagram.com/conversation__club">@conversation__club</a> if you post it.</p>
+  <p>And if you know someone who would love this, send them to <a href="https://conversationclub.co">conversationclub.co</a>. The kind of person who asks the question nobody else thought to ask. You know the one!</p>
+  <p>That's it for now. Really glad you're here : )</p>
   <p>-tori</p>
 </div>
   `;
@@ -72,28 +70,24 @@ async function sendConfirmationEmail(to: string) {
   const { data, error } = await resend.emails.send({
     from: getResendFromEmail(),
     to: [to],
-    subject: "You're in. Welcome to The Conversation Club.",
+    subject: "Welcome to Conversation Club",
     html: buildConfirmationEmailHtml(),
     text: [
-      "You're in.",
+      "Hey!",
       "",
-      "I have a theory that most of us are one good question away from the conversation we actually want to be having. The problem isn't that we don't have the people. It's that we sit down and default to the same four topics.",
+      "You just joined Conversation Club and I'm genuinely thrilled about it.",
       "",
-      "That's what this is for.",
+      "Here's what happens next: your first letter ships the first week of next month. Inside you'll find a personal essay (written by me) and a conversation card. The essay sets the mood. The card gives you something to bring to your next dinner, your next long drive, your next \"we should do this more often\" moment.",
       "",
-      "Every month, you'll get an envelope in the mail with two things:",
+      "A few things worth knowing:",
       "",
-      "The Letter — a personal essay from me on something I can't stop thinking about. Not advice. Not a how-to. Just the kind of thing you'd talk about if dinner went an hour longer than planned.",
+      "Letters go out the first week of every month. If you subscribed after the last day of the month, your first one ships the following month.",
       "",
-      "The Conversation Card — one theme and a few prompts that are better than \"so what's new.\" The kind of questions that make somebody set their phone down.",
+      "When yours arrives, I'd love to see it and for you to share feedback with me directly. Tag @conversation__club if you post it.",
       "",
-      "Your first envelope ships the first week of next month. When it shows up, don't save it for later. Open it. Bring the card somewhere.",
+      "And if you know someone who would love this, send them to conversationclub.co. The kind of person who asks the question nobody else thought to ask. You know the one!",
       "",
-      "A dinner. A long drive. A Tuesday night on the couch with someone you used to talk to for hours.",
-      "",
-      "See what happens.",
-      "",
-      "You're one of the first people in this, and I don't take that lightly. If you have a friend who came to mind while reading this — you know the one — send them to conversationclub.co.",
+      "That's it for now. Really glad you're here : )",
       "",
       "-tori",
     ].join("\n"),
