@@ -28,11 +28,16 @@ const testimonials = [
     name: "Susy",
     location: "London, UK",
   },
+  {
+    quote:
+      "I brought the questions and excerpt to dinner with three of my longtime girlfriends (11 years of friendship). The questions made our conversation more robust and emotional. We were able to pause, appreciate how deep our friendships run, and reflect on how lucky we are to have each other. They all thought the idea was so cute. I also love that I can bring the same card to a completely different group of friends later and hear entirely different responses.",
+    name: "Ellen",
+    location: "Chicago, IL",
+  },
 ] as const;
 
 const cardStyles = [
   { background: "var(--color-ivory)", color: "var(--color-espresso)" },
-  { background: "var(--color-gold)", color: "var(--color-plum)" },
   { background: "var(--color-stone)", color: "var(--color-espresso)" },
 ] as const;
 
@@ -66,7 +71,7 @@ export function Testimonials() {
       className="section-band section-band-testimonials section-gap text-center"
     >
       <div className="section-inner">
-        <p className="eyebrow">Word of mouth</p>
+        <p className="eyebrow">Heard around the table</p>
         <h2
           id="testimonials-heading"
           className="section-title mx-auto mt-4 max-w-[40rem]"
