@@ -1,5 +1,6 @@
 import { FaqList } from "@/components/faq-list";
 import { ProductPreview } from "@/components/product-preview";
+import { Testimonials } from "@/components/testimonials";
 import { JoinButton } from "@/components/join-button";
 import { StickyCta } from "@/components/sticky-cta";
 
@@ -93,6 +94,8 @@ export function WaitlistFlow() {
       </section>
 
       <ProductPreview />
+
+      <Testimonials />
 
       {/* Who This Is For */}
       <section

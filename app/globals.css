@@ -476,6 +476,88 @@ footer .brand-name {
   transform: rotate(180deg);
 }
 
+/* ── Testimonials ── */
+
+.section-band-testimonials {
+  background: var(--color-plum);
+  color: var(--color-ivory);
+  overflow: hidden;
+}
+
+.section-band-testimonials .eyebrow {
+  color: var(--color-gold);
+}
+
+.section-band-testimonials .section-title {
+  color: var(--color-ivory);
+}
+
+.marquee {
+  width: 100%;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1.25rem;
+  padding-inline: 0.625rem;
+  animation: marquee-scroll 60s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.testimonial-card {
+  display: flex;
+  flex: 0 0 auto;
+  width: min(82vw, 22rem);
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 1.75rem 1.5rem;
+  text-align: left;
+}
+
+.testimonial-quote {
+  margin: 0;
+  font-family: var(--font-brand);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.testimonial-attr {
+  margin-top: 1.25rem;
+  font-family: var(--font-copy);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /* ── Animations ── */
 
 @keyframes subtle-rotate {
@@ -513,6 +595,16 @@ footer .brand-name {
 
   .product-image-rotate {
     animation: none;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+
+  .marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
 }
 
