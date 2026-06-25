@@ -18,7 +18,7 @@ export function ProductPreview() {
             Everything arrives in an envelope designed to feel like it matters.
           </p>
 
-          <div className="mx-auto mt-12 max-w-[44rem] overflow-hidden rounded-[4px] sm:mt-16">
+          <div className="mx-auto mt-12 max-w-[44rem] overflow-hidden rounded-[4px] sm:mt-16 lg:max-w-[56rem]">
             <img
               src="/images/table-dip.jpg"
               alt="The Conversation Club letter and cards on a table beside fresh bread and burrata"

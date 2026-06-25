@@ -129,7 +129,7 @@ export function WaitlistFlow() {
               </p>
             </div>
 
-            <div className="mx-auto mt-10 max-w-[44rem] overflow-hidden rounded-[4px]">
+            <div className="mx-auto mt-10 max-w-[44rem] overflow-hidden rounded-[4px] lg:max-w-[56rem]">
               <img
                 src="/images/table-placecard.jpg"
                 alt="A dinner table set with place cards, candles, and a charcuterie board"
@@ -174,15 +174,6 @@ export function WaitlistFlow() {
 
             <div className="mx-auto mt-10">
               <JoinButton text="Join Conversation Club" variant="dark" />
-            </div>
-
-            <div className="mx-auto mt-12 max-w-[40rem] overflow-hidden rounded-[4px]">
-              <img
-                src="/images/dinner-burrata.jpg"
-                alt="A candlelit table with burrata, bread, and white flowers"
-                loading="lazy"
-                className="w-full"
-              />
             </div>
           </div>
         </div>
