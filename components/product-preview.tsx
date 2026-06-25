@@ -57,6 +57,15 @@ export function ProductPreview() {
               </p>
             </div>
           </div>
+
+          <div className="mx-auto mt-12 max-w-[44rem] overflow-hidden rounded-[4px] sm:mt-16">
+            <img
+              src="/images/table-dip.jpg"
+              alt="The conversation cards on a table beside fresh bread and burrata"
+              loading="lazy"
+              className="w-full"
+            />
+          </div>
         </div>
       </div>
     </section>

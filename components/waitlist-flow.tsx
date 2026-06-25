@@ -25,6 +25,14 @@ export function WaitlistFlow() {
           </p>
         </div>
 
+        <div className="mx-auto mt-10 max-w-[40rem] overflow-hidden rounded-[4px]">
+          <img
+            src="/images/hero-cards.jpg"
+            alt="The Conversation Club letter and conversation cards on a table set for dinner"
+            className="w-full"
+          />
+        </div>
+
         <div className="mx-auto mt-10">
           <JoinButton />
         </div>
@@ -55,6 +63,15 @@ export function WaitlistFlow() {
               <p className="mt-5">
                 So this is a reason to create more of those moments.
               </p>
+            </div>
+
+            <div className="mx-auto mt-10 max-w-[34rem] overflow-hidden rounded-[4px]">
+              <img
+                src="/images/flowers.jpg"
+                alt="A vase of ranunculus in soft morning light"
+                loading="lazy"
+                className="w-full"
+              />
             </div>
 
             {/* Author card */}
@@ -121,6 +138,15 @@ export function WaitlistFlow() {
               </p>
             </div>
 
+            <div className="mx-auto mt-10 max-w-[44rem] overflow-hidden rounded-[4px]">
+              <img
+                src="/images/table-placecard.jpg"
+                alt="A dinner table set with place cards, candles, and a charcuterie board"
+                loading="lazy"
+                className="w-full"
+              />
+            </div>
+
             <div className="mx-auto mt-10">
               <JoinButton />
             </div>
@@ -157,6 +183,15 @@ export function WaitlistFlow() {
 
             <div className="mx-auto mt-10">
               <JoinButton text="Join Conversation Club" variant="dark" />
+            </div>
+
+            <div className="mx-auto mt-12 max-w-[40rem] overflow-hidden rounded-[4px]">
+              <img
+                src="/images/dinner-burrata.jpg"
+                alt="A candlelit table with burrata, bread, and white flowers"
+                loading="lazy"
+                className="w-full"
+              />
             </div>
           </div>
         </div>
