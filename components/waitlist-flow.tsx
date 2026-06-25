@@ -65,15 +65,6 @@ export function WaitlistFlow() {
               </p>
             </div>
 
-            <div className="mx-auto mt-10 max-w-[34rem] overflow-hidden rounded-[4px]">
-              <img
-                src="/images/flowers.jpg"
-                alt="A vase of ranunculus in soft morning light"
-                loading="lazy"
-                className="w-full"
-              />
-            </div>
-
             {/* Author card */}
             <div className="mx-auto mt-10 max-w-[34rem]">
               <a

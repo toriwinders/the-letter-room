@@ -18,51 +18,10 @@ export function ProductPreview() {
             Everything arrives in an envelope designed to feel like it matters.
           </p>
 
-          {/* Product images — always side by side: letter left, cards right */}
-          <div className="mx-auto mt-12 flex max-w-[48rem] items-start justify-center gap-6 sm:gap-12">
-            {/* The Letter */}
-            <div className="w-full max-w-[10rem] sm:max-w-[18rem]">
-              <div className="product-image-rotate" style={{ animationDelay: "0s" }}>
-                <img
-                  src="/images/letter.png"
-                  alt="The Letter"
-                  className="w-full"
-                />
-              </div>
-              <p className="mt-3 text-[0.8125rem] sm:text-[0.9375rem] text-[var(--color-plum)]" style={{ fontFamily: "var(--font-brand)" }}>
-                The Letter
-              </p>
-            </div>
-
-            {/* The Conversation Card — front and back stacked */}
-            <div className="w-full max-w-[10rem] sm:max-w-[18rem]">
-              <div className="flex flex-col gap-3 sm:gap-4">
-                <div className="product-image-rotate" style={{ animationDelay: "0.2s" }}>
-                  <img
-                    src="/images/conversation-cards.png"
-                    alt="Conversation Card front"
-                    className="w-full"
-                  />
-                </div>
-                <div className="product-image-rotate" style={{ animationDelay: "0.4s" }}>
-                  <img
-                    src="/images/conversation-cards-2.png"
-                    alt="Conversation Card back"
-                    className="w-full"
-                  />
-                </div>
-              </div>
-              <p className="mt-3 text-[0.8125rem] sm:text-[0.9375rem] text-[var(--color-plum)]" style={{ fontFamily: "var(--font-brand)" }}>
-                The Conversation Card
-              </p>
-            </div>
-          </div>
-
           <div className="mx-auto mt-12 max-w-[44rem] overflow-hidden rounded-[4px] sm:mt-16">
             <img
               src="/images/table-dip.jpg"
-              alt="The conversation cards on a table beside fresh bread and burrata"
-              loading="lazy"
+              alt="The Conversation Club letter and cards on a table beside fresh bread and burrata"
               className="w-full"
             />
           </div>
