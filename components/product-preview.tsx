@@ -17,14 +17,14 @@ export function ProductPreview() {
           <p className="mx-auto mt-4 max-w-[48rem] text-[1.125rem] leading-[1.65] text-[var(--color-espresso)]">
             Everything arrives in an envelope designed to feel like it matters.
           </p>
+        </div>
 
-          <div className="mx-auto mt-12 max-w-[44rem] overflow-hidden rounded-[4px] sm:mt-16 lg:max-w-[56rem]">
-            <img
-              src="/images/table-dip.jpg"
-              alt="The Conversation Club letter and cards on a table beside fresh bread and burrata"
-              className="w-full"
-            />
-          </div>
+        <div className="mt-12 overflow-hidden rounded-[4px] sm:mt-16">
+          <img
+            src="/images/table-dip.jpg"
+            alt="The Conversation Club letter and cards on a table beside fresh bread and burrata"
+            className="w-full"
+          />
         </div>
       </div>
     </section>

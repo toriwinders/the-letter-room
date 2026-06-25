@@ -128,19 +128,19 @@ export function WaitlistFlow() {
                 This is a small, beautiful, offline thing for people who already know they want more of the real stuff.
               </p>
             </div>
+          </div>
 
-            <div className="mx-auto mt-10 max-w-[44rem] overflow-hidden rounded-[4px] lg:max-w-[56rem]">
-              <img
-                src="/images/table-placecard.jpg"
-                alt="A dinner table set with place cards, candles, and a charcuterie board"
-                loading="lazy"
-                className="w-full"
-              />
-            </div>
+          <div className="mt-10 overflow-hidden rounded-[4px]">
+            <img
+              src="/images/table-placecard.jpg"
+              alt="A dinner table set with place cards, candles, and a charcuterie board"
+              loading="lazy"
+              className="w-full"
+            />
+          </div>
 
-            <div className="mx-auto mt-10">
-              <JoinButton />
-            </div>
+          <div className="mt-10">
+            <JoinButton />
           </div>
         </div>
       </section>
