@@ -1,5 +1,39 @@
 @import "tailwindcss";
 
+/* ── Noe Display (self-hosted) ── */
+
+@font-face {
+  font-family: "Noe Display";
+  src: url("/fonts/NoeDisplay-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noe Display";
+  src: url("/fonts/NoeDisplay-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noe Display";
+  src: url("/fonts/NoeDisplay-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noe Display";
+  src: url("/fonts/NoeDisplay-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-background: #F5F0E8;
   --color-plum: #3D1C2A;

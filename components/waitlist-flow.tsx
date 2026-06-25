@@ -25,7 +25,7 @@ export function WaitlistFlow() {
           </p>
         </div>
 
-        <div className="mx-auto mt-10 max-w-[40rem] overflow-hidden rounded-[4px]">
+        <div className="mx-auto mt-10 max-w-[40rem] overflow-hidden rounded-[4px] lg:-mx-16 lg:w-[56rem] lg:max-w-none">
           <img
             src="/images/hero-cards.jpg"
             alt="The Conversation Club letter and conversation cards on a table set for dinner"
